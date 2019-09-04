@@ -1,0 +1,164 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "C:\Users\aaromal\OneDrive - Australian National University\Desktop\BAL_CAR_Nios_Code\Qsys.qsys" --block-symbol-file --output-directory="C:\Users\aaromal\OneDrive - Australian National University\Desktop\BAL_CAR_Nios_Code\Qsys" --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading BAL_CAR_Nios_Code/Qsys.qsys
+Progress: Reading input file
+Progress: Adding LED [altera_avalon_pio 18.1]
+Progress: Parameterizing module LED
+Progress: Adding adc_ltc2308_0 [adc_ltc2308 1.1]
+Progress: Parameterizing module adc_ltc2308_0
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding dc_motor_left [TERASIC_DC_MOTOR_PWM 2.0]
+Progress: Parameterizing module dc_motor_left
+Progress: Adding dc_motor_right [TERASIC_DC_MOTOR_PWM 2.0]
+Progress: Parameterizing module dc_motor_right
+Progress: Adding esp32_io [altera_avalon_pio 18.1]
+Progress: Parameterizing module esp32_io
+Progress: Adding ir_rx [TERASIC_IRM 1.0]
+Progress: Parameterizing module ir_rx
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart
+Progress: Adding mm_clock_crossing_bridge_0 [altera_avalon_mm_clock_crossing_bridge 18.1]
+Progress: Parameterizing module mm_clock_crossing_bridge_0
+Progress: Adding motor_measure_left [motor_measure 1.0]
+Progress: Parameterizing module motor_measure_left
+Progress: Adding motor_measure_right [motor_measure 1.0]
+Progress: Parameterizing module motor_measure_right
+Progress: Adding motor_run_0 [motor_run 1.0]
+Progress: Parameterizing module motor_run_0
+Progress: Adding motor_run_left_0 [motor_run_left 1.0]
+Progress: Parameterizing module motor_run_left_0
+Progress: Adding mpu_i2c [i2c_opencores 12.0]
+Progress: Parameterizing module mpu_i2c
+Progress: Adding mpu_int [altera_avalon_pio 18.1]
+Progress: Parameterizing module mpu_int
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pll_0 [altera_pll 18.1]
+Progress: Parameterizing module pll_0
+Progress: Adding sonic_distance_0 [sonic_distance 1.0]
+Progress: Parameterizing module sonic_distance_0
+Progress: Adding sw [altera_avalon_pio 18.1]
+Progress: Parameterizing module sw
+Progress: Adding sysid_qsys [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module sysid_qsys
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
+Progress: Adding uart_bt [altera_up_avalon_rs232 17.1]
+Progress: Parameterizing module uart_bt
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Qsys.esp32_io: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Qsys.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: Qsys.mpu_int: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Qsys.pll_0: The legal reference clock frequency is 5.0 MHz..700.0 MHz
+Info: Qsys.pll_0: Able to implement PLL with user settings
+Info: Qsys.sw: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Qsys.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: Qsys.sysid_qsys: Time stamp will be automatically updated when this component is generated.
+Warning: Qsys.pll_0: pll_0.locked must be exported, or connected to a matching conduit.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "C:\Users\aaromal\OneDrive - Australian National University\Desktop\BAL_CAR_Nios_Code\Qsys.qsys" --synthesis=VERILOG --output-directory="C:\Users\aaromal\OneDrive - Australian National University\Desktop\BAL_CAR_Nios_Code\Qsys\synthesis" --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading BAL_CAR_Nios_Code/Qsys.qsys
+Progress: Reading input file
+Progress: Adding LED [altera_avalon_pio 18.1]
+Progress: Parameterizing module LED
+Progress: Adding adc_ltc2308_0 [adc_ltc2308 1.1]
+Progress: Parameterizing module adc_ltc2308_0
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding dc_motor_left [TERASIC_DC_MOTOR_PWM 2.0]
+Progress: Parameterizing module dc_motor_left
+Progress: Adding dc_motor_right [TERASIC_DC_MOTOR_PWM 2.0]
+Progress: Parameterizing module dc_motor_right
+Progress: Adding esp32_io [altera_avalon_pio 18.1]
+Progress: Parameterizing module esp32_io
+Progress: Adding ir_rx [TERASIC_IRM 1.0]
+Progress: Parameterizing module ir_rx
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart
+Progress: Adding mm_clock_crossing_bridge_0 [altera_avalon_mm_clock_crossing_bridge 18.1]
+Progress: Parameterizing module mm_clock_crossing_bridge_0
+Progress: Adding motor_measure_left [motor_measure 1.0]
+Progress: Parameterizing module motor_measure_left
+Progress: Adding motor_measure_right [motor_measure 1.0]
+Progress: Parameterizing module motor_measure_right
+Progress: Adding motor_run_0 [motor_run 1.0]
+Progress: Parameterizing module motor_run_0
+Progress: Adding motor_run_left_0 [motor_run_left 1.0]
+Progress: Parameterizing module motor_run_left_0
+Progress: Adding mpu_i2c [i2c_opencores 12.0]
+Progress: Parameterizing module mpu_i2c
+Progress: Adding mpu_int [altera_avalon_pio 18.1]
+Progress: Parameterizing module mpu_int
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pll_0 [altera_pll 18.1]
+Progress: Parameterizing module pll_0
+Progress: Adding sonic_distance_0 [sonic_distance 1.0]
+Progress: Parameterizing module sonic_distance_0
+Progress: Adding sw [altera_avalon_pio 18.1]
+Progress: Parameterizing module sw
+Progress: Adding sysid_qsys [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module sysid_qsys
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
+Progress: Adding uart_bt [altera_up_avalon_rs232 17.1]
+Progress: Parameterizing module uart_bt
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Qsys.esp32_io: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Qsys.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: Qsys.mpu_int: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Qsys.pll_0: The legal reference clock frequency is 5.0 MHz..700.0 MHz
+Info: Qsys.pll_0: Able to implement PLL with user settings
+Info: Qsys.sw: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Qsys.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: Qsys.sysid_qsys: Time stamp will be automatically updated when this component is generated.
+Warning: Qsys.pll_0: pll_0.locked must be exported, or connected to a matching conduit.
+Info: Qsys: Generating Qsys "Qsys" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master motor_run_0.avalon_master and slave dc_motor_right.avalon_slave because the master has address signal 4 bit wide, but the slave is 2 bit wide.
+Info: Interconnect is inserted between master motor_run_0.avalon_master and slave dc_motor_right.avalon_slave because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master motor_run_left_0.avalon_master and slave dc_motor_left.avalon_slave because the master has address signal 4 bit wide, but the slave is 2 bit wide.
+Info: Interconnect is inserted between master motor_run_left_0.avalon_master and slave dc_motor_left.avalon_slave because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Inserting clock-crossing logic between cmd_demux.src3 and cmd_mux_003.sink0
+Info: Inserting clock-crossing logic between rsp_demux_003.src0 and rsp_mux.sink3
+Info: LED: Starting RTL generation for module 'Qsys_LED'
+Info: LED:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Qsys_LED --dir=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0026_LED_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0026_LED_gen//Qsys_LED_component_configuration.pl  --do_build_sim=0  ]
+Info: LED: Done RTL generation for module 'Qsys_LED'
+Info: LED: "Qsys" instantiated altera_avalon_pio "LED"
+Info: adc_ltc2308_0: "Qsys" instantiated adc_ltc2308 "adc_ltc2308_0"
+Info: dc_motor_left: "Qsys" instantiated TERASIC_DC_MOTOR_PWM "dc_motor_left"
+Info: esp32_io: Starting RTL generation for module 'Qsys_esp32_io'
+Info: esp32_io:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Qsys_esp32_io --dir=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0029_esp32_io_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0029_esp32_io_gen//Qsys_esp32_io_component_configuration.pl  --do_build_sim=0  ]
+Info: esp32_io: Done RTL generation for module 'Qsys_esp32_io'
+Info: esp32_io: "Qsys" instantiated altera_avalon_pio "esp32_io"
+Info: ir_rx: "Qsys" instantiated TERASIC_IRM "ir_rx"
+Info: jtag_uart: Starting RTL generation for module 'Qsys_jtag_uart'
+Info: jtag_uart:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Qsys_jtag_uart --dir=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0031_jtag_uart_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0031_jtag_uart_gen//Qsys_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart: Done RTL generation for module 'Qsys_jtag_uart'
+Info: jtag_uart: "Qsys" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info: mm_clock_crossing_bridge_0: "Qsys" instantiated altera_avalon_mm_clock_crossing_bridge "mm_clock_crossing_bridge_0"
+Info: motor_measure_left: "Qsys" instantiated motor_measure "motor_measure_left"
+Info: motor_run_0: "Qsys" instantiated motor_run "motor_run_0"
+Info: mpu_i2c: "Qsys" instantiated i2c_opencores "mpu_i2c"
+Info: mpu_int: Starting RTL generation for module 'Qsys_mpu_int'
+Info: mpu_int:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Qsys_mpu_int --dir=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0036_mpu_int_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0036_mpu_int_gen//Qsys_mpu_int_component_configuration.pl  --do_build_sim=0  ]
+Info: mpu_int: Done RTL generation for module 'Qsys_mpu_int'
+Info: mpu_int: "Qsys" instantiated altera_avalon_pio "mpu_int"
+Info: nios2_gen2_0: "Qsys" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Error: Generation stopped, 18 or more modules remaining
+Info: Qsys: Done "Qsys" with 28 modules, 24 files
+Error: qsys-generate failed with exit code 1: 1 Error, 1 Warning
+Info: Stopping: Create HDL design files for synthesis

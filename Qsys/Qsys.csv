@@ -1,0 +1,47 @@
+# system info Qsys on 2019.08.27.19:38:24
+system_info:
+name,value
+DEVICE,5CSEBA6U23I7
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1566898664
+#
+#
+# Files generated for Qsys on 2019.08.27.19:38:24
+files:
+filepath,kind,attributes,module,is_top
+simulation/Qsys.v,VERILOG,,Qsys,true
+simulation/submodules/Qsys_LED.v,VERILOG,,Qsys_LED,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+Qsys.LED,Qsys_LED
+Qsys.adc_ltc2308_0,Qsys_adc_ltc2308_0
+Qsys.dc_motor_left,Qsys_dc_motor_left
+Qsys.dc_motor_right,Qsys_dc_motor_left
+Qsys.esp32_io,Qsys_esp32_io
+Qsys.ir_rx,TERASIC_IRM
+Qsys.jtag_uart,Qsys_jtag_uart
+Qsys.mm_clock_crossing_bridge_0,altera_avalon_mm_clock_crossing_bridge
+Qsys.motor_measure_left,Qsys_motor_measure_left
+Qsys.motor_measure_right,Qsys_motor_measure_left
+Qsys.motor_run_0,motor_run
+Qsys.mpu_i2c,i2c_opencores
+Qsys.mpu_int,Qsys_mpu_int
+Qsys.nios2_gen2_0,Qsys_nios2_gen2_0
+Qsys.onchip_memory2_0,Qsys_onchip_memory2_0
+Qsys.pll_0,Qsys_pll_0
+Qsys.sonic_distance_0,Qsys_sonic_distance_0
+Qsys.sw,Qsys_sw
+Qsys.sysid_qsys,Qsys_sysid_qsys
+Qsys.timer_0,Qsys_timer_0
+Qsys.uart_bt,Qsys_uart_bt
+Qsys.mm_interconnect_0,Qsys_mm_interconnect_0
+Qsys.mm_interconnect_1,Qsys_mm_interconnect_1
+Qsys.mm_interconnect_2,Qsys_mm_interconnect_2
+Qsys.irq_mapper,Qsys_irq_mapper
+Qsys.irq_synchronizer,altera_irq_clock_crosser
+Qsys.irq_synchronizer_001,altera_irq_clock_crosser
+Qsys.rst_controller,altera_reset_controller
+Qsys.rst_controller_001,altera_reset_controller
+Qsys.rst_controller_002,altera_reset_controller

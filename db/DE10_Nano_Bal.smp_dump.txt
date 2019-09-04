@@ -1,0 +1,48 @@
+
+State Machine - |DE10_Nano_Bal|Qsys:u0|sonic_distance:sonic_distance_0|state
+Name state.011 state.010 state.001 state.000 state.100 
+state.000 0 0 0 0 0 
+state.001 0 0 1 1 0 
+state.010 0 1 0 1 0 
+state.011 1 0 0 1 0 
+state.100 0 0 0 1 1 
+
+State Machine - |DE10_Nano_Bal|Qsys:u0|i2c_opencores:mpu_i2c|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|c_state
+Name c_state.ST_IDLE c_state.ST_STOP c_state.ST_ACK c_state.ST_WRITE c_state.ST_READ c_state.ST_START 
+c_state.ST_IDLE 0 0 0 0 0 0 
+c_state.ST_START 1 0 0 0 0 1 
+c_state.ST_READ 1 0 0 0 1 0 
+c_state.ST_WRITE 1 0 0 1 0 0 
+c_state.ST_ACK 1 0 1 0 0 0 
+c_state.ST_STOP 1 1 0 0 0 0 
+
+State Machine - |DE10_Nano_Bal|Qsys:u0|motor_run:motor_run_right|state
+Name state.011 state.010 state.001 state.000 state.100 
+state.000 0 0 0 0 0 
+state.001 0 0 1 1 0 
+state.010 0 1 0 1 0 
+state.011 1 0 0 1 0 
+state.100 0 0 0 1 1 
+
+State Machine - |DE10_Nano_Bal|Qsys:u0|motor_run:motor_run_left|state
+Name state.011 state.010 state.001 state.000 state.100 
+state.000 0 0 0 0 0 
+state.001 0 0 1 1 0 
+state.010 0 1 0 1 0 
+state.011 1 0 0 1 0 
+state.100 0 0 0 1 1 
+
+State Machine - |DE10_Nano_Bal|Qsys:u0|TERASIC_IRM:ir_rx|IRDA_RECEIVE_Terasic:IRDA_RECEIVE_Terasic_inst|state
+Name state.IDLE state.DATAREAD state.GUIDANCE 
+state.IDLE 0 0 0 
+state.GUIDANCE 1 0 1 
+state.DATAREAD 1 1 0 
+
+State Machine - |DE10_Nano_Bal|Qsys:u0|Qsys_nios2_gen2_0:nios2_gen2_0|Qsys_nios2_gen2_0_cpu:cpu|Qsys_nios2_gen2_0_cpu_nios2_oci:the_Qsys_nios2_gen2_0_cpu_nios2_oci|Qsys_nios2_gen2_0_cpu_debug_slave_wrapper:the_Qsys_nios2_gen2_0_cpu_debug_slave_wrapper|Qsys_nios2_gen2_0_cpu_debug_slave_tck:the_Qsys_nios2_gen2_0_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="simulation/submodules/Qsys_LED.v" type="VERILOG" library="LED" />
+ <file path="simulation/Qsys.v" type="VERILOG" />
+ <topLevel name="Qsys" />
+ <deviceFamily name="cyclonev" />
+ <modelMap
+   controllerPath="Qsys.onchip_memory2_0"
+   modelPath="Qsys.onchip_memory2_0" />
+</simPackage>

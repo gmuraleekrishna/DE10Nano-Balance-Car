@@ -1,0 +1,42 @@
+module motor_run(
+	input	clk,
+	input	reset_n,
+	//
+	output s_cs,
+	output [1:0] s_address,
+	output s_write,
+	output [31:0] s_writedata,
+	output s_read
+);
+
+`define REG_TOTAL_DUR	2'd0
+`define REG_HIGH_DUR	2'd1
+`define REG_CONTROL		2'd2
+
+case(state) begin
+	2'd0: begin // high dur
+		s_cs = 1'b0;
+		s_writedata = 31'd3500;
+		s_address = `REG_HIGH_DUR;
+		s_write = 1'b1;
+		s_cs = 1'b1;
+	end
+	2'd1: begin // total dur
+		s_cs = 1'b0;
+		s_writedata = 31'd7000;
+		s_address = `REG_TOTAL_DUR;
+		s_write = 1'b1;
+		s_cs = 1'b1;
+	end
+	2'd3: begin
+		s_cs = 1'b0;
+		s_writedata = {29'b0, 1'b0, 1'b1, 1'b1}; // 29'd0, motor_fast_decay, motor_forward, motor_go
+		s_address = `REG_TOTAL_DUR;
+		s_write = 1'b1;
+		s_cs = 1'b1;
+	end
+endcase
+
+
+
+endmodule 
