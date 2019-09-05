@@ -1,27 +1,15 @@
-<<<<<<< HEAD
 Fitter Status : Successful - Wed Sep 04 23:05:48 2019
-=======
-Fitter Status : Successful - Thu Sep 05 13:57:56 2019
->>>>>>> Add direction control
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : DE10_Nano_Bal
 Top-level Entity Name : DE10_Nano_Bal
 Family : Cyclone V
 Device : 5CSEBA6U23I7
 Timing Models : Final
-<<<<<<< HEAD
 Logic utilization (in ALMs) : 2,461 / 41,910 ( 6 % )
 Total registers : 3932
 Total pins : 142 / 314 ( 45 % )
 Total virtual pins : 0
 Total block memory bits : 2,492,336 / 5,662,720 ( 44 % )
-=======
-Logic utilization (in ALMs) : 2,526 / 41,910 ( 6 % )
-Total registers : 4149
-Total pins : 142 / 314 ( 45 % )
-Total virtual pins : 0
-Total block memory bits : 2,492,320 / 5,662,720 ( 44 % )
->>>>>>> Add direction control
 Total RAM Blocks : 318 / 553 ( 58 % )
 Total DSP Blocks : 3 / 112 ( 3 % )
 Total HSSI RX PCSs : 0

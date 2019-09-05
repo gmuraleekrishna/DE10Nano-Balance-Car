@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <preferences>
  <debug showDebugMenu="0" />
-<<<<<<< HEAD
  <systemtable filter="All Interfaces">
   <columns>
    <connections preferredWidth="223" />
@@ -14,20 +13,6 @@
  <library
    expandedCategories="Library/Qsys Interconnect/Memory-Mapped Alpha,Library/Qsys Interconnect,Library/University Program,Library/Processors and Peripherals/Peripherals,Library,Library/Basic Functions/On Chip Memory,Library/Processors and Peripherals,Library/Basic Functions,Library/University Program/Generic IO,Project" />
  <window width="1366" height="728" x="0" y="0" />
-=======
- <systemtable filter="Qsys.clk" showClockDomains="1" showResetDomains="0">
-  <columns>
-   <connections preferredWidth="207" />
-   <irq preferredWidth="34" />
-   <export preferredWidth="361" />
-   <name preferredWidth="481" />
-   <inputclock preferredWidth="224" />
-   <description preferredWidth="206" />
-  </columns>
- </systemtable>
- <library expandedCategories="Project,Library" />
- <window width="1920" height="1040" x="0" y="0" />
->>>>>>> Add direction control
  <hdlexample language="VERILOG" />
  <generation simulation="NONE" />
 </preferences>

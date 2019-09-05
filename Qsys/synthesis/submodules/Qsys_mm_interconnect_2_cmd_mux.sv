@@ -45,11 +45,7 @@
 //   PIPELINE_ARB:        1
 //   PKT_TRANS_LOCK:      65 (arbitration locking enabled)
 //   ST_DATA_W:           103
-<<<<<<< HEAD
 //   ST_CHANNEL_W:        11
-=======
-//   ST_CHANNEL_W:        12
->>>>>>> Add direction control
 // ------------------------------------------
 
 module Qsys_mm_interconnect_2_cmd_mux
@@ -59,11 +55,7 @@ module Qsys_mm_interconnect_2_cmd_mux
     // ----------------------
     input                       sink0_valid,
     input [103-1   : 0]  sink0_data,
-<<<<<<< HEAD
     input [11-1: 0]  sink0_channel,
-=======
-    input [12-1: 0]  sink0_channel,
->>>>>>> Add direction control
     input                       sink0_startofpacket,
     input                       sink0_endofpacket,
     output                      sink0_ready,
@@ -74,11 +66,7 @@ module Qsys_mm_interconnect_2_cmd_mux
     // ----------------------
     output                      src_valid,
     output [103-1    : 0] src_data,
-<<<<<<< HEAD
     output [11-1 : 0] src_channel,
-=======
-    output [12-1 : 0] src_channel,
->>>>>>> Add direction control
     output                      src_startofpacket,
     output                      src_endofpacket,
     input                       src_ready,
@@ -89,20 +77,12 @@ module Qsys_mm_interconnect_2_cmd_mux
     input clk,
     input reset
 );
-<<<<<<< HEAD
     localparam PAYLOAD_W        = 103 + 11 + 2;
-=======
-    localparam PAYLOAD_W        = 103 + 12 + 2;
->>>>>>> Add direction control
     localparam NUM_INPUTS       = 1;
     localparam SHARE_COUNTER_W  = 1;
     localparam PIPELINE_ARB     = 1;
     localparam ST_DATA_W        = 103;
-<<<<<<< HEAD
     localparam ST_CHANNEL_W     = 11;
-=======
-    localparam ST_CHANNEL_W     = 12;
->>>>>>> Add direction control
     localparam PKT_TRANS_LOCK   = 65;
 
     assign	src_valid			=  sink0_valid;

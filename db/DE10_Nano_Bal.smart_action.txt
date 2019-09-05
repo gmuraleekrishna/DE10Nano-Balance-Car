@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 FIT
-=======
-DONE
->>>>>>> Add direction control

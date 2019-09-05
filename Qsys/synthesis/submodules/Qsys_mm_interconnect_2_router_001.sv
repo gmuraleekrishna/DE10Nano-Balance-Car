@@ -50,15 +50,9 @@ module Qsys_mm_interconnect_2_router_001_default_decode
                DEFAULT_DESTID = 7 
    )
   (output [89 - 86 : 0] default_destination_id,
-<<<<<<< HEAD
    output [11-1 : 0] default_wr_channel,
    output [11-1 : 0] default_rd_channel,
    output [11-1 : 0] default_src_channel
-=======
-   output [12-1 : 0] default_wr_channel,
-   output [12-1 : 0] default_rd_channel,
-   output [12-1 : 0] default_src_channel
->>>>>>> Add direction control
   );
 
   assign default_destination_id = 
@@ -69,11 +63,7 @@ module Qsys_mm_interconnect_2_router_001_default_decode
       assign default_src_channel = '0;
     end
     else begin : default_channel_assignment
-<<<<<<< HEAD
       assign default_src_channel = 11'b1 << DEFAULT_CHANNEL;
-=======
-      assign default_src_channel = 12'b1 << DEFAULT_CHANNEL;
->>>>>>> Add direction control
     end
   endgenerate
 
@@ -83,13 +73,8 @@ module Qsys_mm_interconnect_2_router_001_default_decode
       assign default_rd_channel = '0;
     end
     else begin : default_rw_channel_assignment
-<<<<<<< HEAD
       assign default_wr_channel = 11'b1 << DEFAULT_WR_CHANNEL;
       assign default_rd_channel = 11'b1 << DEFAULT_RD_CHANNEL;
-=======
-      assign default_wr_channel = 12'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 12'b1 << DEFAULT_RD_CHANNEL;
->>>>>>> Add direction control
     end
   endgenerate
 
@@ -118,11 +103,7 @@ module Qsys_mm_interconnect_2_router_001
     // -------------------
     output                          src_valid,
     output reg [103-1    : 0] src_data,
-<<<<<<< HEAD
     output reg [11-1 : 0] src_channel,
-=======
-    output reg [12-1 : 0] src_channel,
->>>>>>> Add direction control
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -138,11 +119,7 @@ module Qsys_mm_interconnect_2_router_001
     localparam PKT_PROTECTION_H = 93;
     localparam PKT_PROTECTION_L = 91;
     localparam ST_DATA_W = 103;
-<<<<<<< HEAD
     localparam ST_CHANNEL_W = 11;
-=======
-    localparam ST_CHANNEL_W = 12;
->>>>>>> Add direction control
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 63;
@@ -188,11 +165,7 @@ module Qsys_mm_interconnect_2_router_001
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
     wire [PKT_DEST_ID_W-1:0] default_destid;
-<<<<<<< HEAD
     wire [11-1 : 0] default_src_channel;
-=======
-    wire [12-1 : 0] default_src_channel;
->>>>>>> Add direction control
 
 
 
@@ -218,21 +191,13 @@ module Qsys_mm_interconnect_2_router_001
 
     // ( 0x1080000 .. 0x1100000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 25'h1080000   ) begin
-<<<<<<< HEAD
             src_channel = 11'b10;
-=======
-            src_channel = 12'b10;
->>>>>>> Add direction control
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
     end
 
     // ( 0x1100800 .. 0x1101000 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 25'h1100800   ) begin
-<<<<<<< HEAD
             src_channel = 11'b01;
-=======
-            src_channel = 12'b01;
->>>>>>> Add direction control
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
     end
 

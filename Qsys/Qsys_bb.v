@@ -11,10 +11,6 @@ module Qsys (
 	dc_motor_right_conduit_end_motor_in1,
 	dc_motor_right_conduit_end_motor_in2,
 	dc_motor_right_conduit_end_pwm,
-<<<<<<< HEAD
-=======
-	direction_controller_0_conduit_leds_array_export,
->>>>>>> Add direction control
 	esp32_io_external_connection_export,
 	ir_rx_conduit_end_export,
 	led_external_connection_export,
@@ -41,10 +37,6 @@ module Qsys (
 	output		dc_motor_right_conduit_end_motor_in1;
 	output		dc_motor_right_conduit_end_motor_in2;
 	output		dc_motor_right_conduit_end_pwm;
-<<<<<<< HEAD
-=======
-	inout	[7:0]	direction_controller_0_conduit_leds_array_export;
->>>>>>> Add direction control
 	input	[2:0]	esp32_io_external_connection_export;
 	input		ir_rx_conduit_end_export;
 	output	[7:0]	led_external_connection_export;
