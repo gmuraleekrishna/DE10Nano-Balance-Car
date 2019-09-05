@@ -29,7 +29,11 @@
 // Generation parameters:
 //   output_name:         Qsys_mm_interconnect_2_rsp_demux
 //   ST_DATA_W:           103
+<<<<<<< HEAD
 //   ST_CHANNEL_W:        11
+=======
+//   ST_CHANNEL_W:        12
+>>>>>>> Add direction control
 //   NUM_OUTPUTS:         1
 //   VALID_WIDTH:         1
 // ------------------------------------------
@@ -47,7 +51,11 @@ module Qsys_mm_interconnect_2_rsp_demux
     // -------------------
     input  [1-1      : 0]   sink_valid,
     input  [103-1    : 0]   sink_data, // ST_DATA_W=103
+<<<<<<< HEAD
     input  [11-1 : 0]   sink_channel, // ST_CHANNEL_W=11
+=======
+    input  [12-1 : 0]   sink_channel, // ST_CHANNEL_W=12
+>>>>>>> Add direction control
     input                         sink_startofpacket,
     input                         sink_endofpacket,
     output                        sink_ready,
@@ -57,7 +65,11 @@ module Qsys_mm_interconnect_2_rsp_demux
     // -------------------
     output reg                      src0_valid,
     output reg [103-1    : 0] src0_data, // ST_DATA_W=103
+<<<<<<< HEAD
     output reg [11-1 : 0] src0_channel, // ST_CHANNEL_W=11
+=======
+    output reg [12-1 : 0] src0_channel, // ST_CHANNEL_W=12
+>>>>>>> Add direction control
     output reg                      src0_startofpacket,
     output reg                      src0_endofpacket,
     input                           src0_ready,
@@ -94,7 +106,11 @@ module Qsys_mm_interconnect_2_rsp_demux
     // -------------------
     assign ready_vector[0] = src0_ready;
 
+<<<<<<< HEAD
     assign sink_ready = |(sink_channel & {{10{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
+=======
+    assign sink_ready = |(sink_channel & {{11{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
+>>>>>>> Add direction control
 
 endmodule
 

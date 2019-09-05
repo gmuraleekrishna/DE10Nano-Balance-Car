@@ -38,6 +38,23 @@ state.IDLE 0 0 0
 state.GUIDANCE 1 0 1 
 state.DATAREAD 1 1 0 
 
+<<<<<<< HEAD
+=======
+State Machine - |DE10_Nano_Bal|Qsys:u0|direction_controller:direction_controller_0|ledsarray:ledsarray1|state
+Name state.ledsout state.wait2 state.wait1 state.ledsin state.test 
+state.test 0 0 0 0 0 
+state.ledsin 0 0 0 1 1 
+state.wait1 0 0 1 0 1 
+state.wait2 0 1 0 0 1 
+state.ledsout 1 0 0 0 1 
+
+State Machine - |DE10_Nano_Bal|Qsys:u0|direction_controller:direction_controller_0|ledsarray:ledsarray1|direction
+Name direction.infinite direction.out direction.in 
+direction.infinite 0 0 0 
+direction.in 1 0 1 
+direction.out 1 1 0 
+
+>>>>>>> Add direction control
 State Machine - |DE10_Nano_Bal|Qsys:u0|Qsys_nios2_gen2_0:nios2_gen2_0|Qsys_nios2_gen2_0_cpu:cpu|Qsys_nios2_gen2_0_cpu_nios2_oci:the_Qsys_nios2_gen2_0_cpu_nios2_oci|Qsys_nios2_gen2_0_cpu_debug_slave_wrapper:the_Qsys_nios2_gen2_0_cpu_debug_slave_wrapper|Qsys_nios2_gen2_0_cpu_debug_slave_tck:the_Qsys_nios2_gen2_0_cpu_debug_slave_tck|DRsize
 Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
 DRsize.000 0 0 0 0 0 0 

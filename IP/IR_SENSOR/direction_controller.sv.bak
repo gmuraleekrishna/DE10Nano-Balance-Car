@@ -1,0 +1,42 @@
+module cartop (
+ input logic CLOCK_50, // clock
+ input logic KEY[0], // reset
+ inout tri [7:0] leds, // reflectance sensor inout
+ //output logic [1:0] LED // motor PWM signals
+ output logic MTR_PWMB,MTR_PWMA, MTR_STBY
+
+ );
+
+logic [7:0] ledso; // reflectance sensor binary signal
+logic [1:0] Lmotor, Rmotor; // motor binary signals
+assign MTR_STBY = 1'b1;
+
+ // Instantiate reflectance sensor module.
+
+ ledsarray u0 (
+ .clk(CLOCK_50),
+ .leds(leds),
+ .ledso(ledso),
+ .reset(KEY[0])
+ );
+// Instantiate PWM module.
+
+motorcontrol u1 (
+ .clk(CLOCK_50),
+ .reset(KEY[0]),
+ .Lmotor(Lmotor),
+ .Rmotor(Rmotor),
+ .LmotorPW(MTR_PWMB),
+ .RmotorPW(MTR_PWMA)
+ );
+
+//// Instantiate direction module.
+//
+direction_control u2 (
+ .ledso(~ledso),
+ .Lmotor(Lmotor),
+ .Rmotor(Rmotor),
+ .clk(CLOCK_50),
+ .reset(KEY[0])
+ );
+endmodule

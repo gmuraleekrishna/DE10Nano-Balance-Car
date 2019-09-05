@@ -20,7 +20,11 @@
 // Altera Identification hub
 //
 // Parameters
+<<<<<<< HEAD
 //   DESIGN_HASH   : 2b99fbcc2f6ca8d9f24a
+=======
+//   DESIGN_HASH   : 7c746261da08604ca056
+>>>>>>> Add direction control
 //   COUNT         : 1
 //   ROM_WIDTHS    : 4
 //   LATENCIES     : 0
@@ -39,7 +43,11 @@ module alt_sld_fab_alt_sld_fab_ident
 );
 
 
+<<<<<<< HEAD
 wire [127:0] data_0 = { mixed, 12'h0, 32'h0, 80'h2b99fbcc2f6ca8d9f24a };
+=======
+wire [127:0] data_0 = { mixed, 12'h0, 32'h0, 80'h7c746261da08604ca056 };
+>>>>>>> Add direction control
 
 reg [3:0] result_0;
 always @(address_0 or data_0) begin

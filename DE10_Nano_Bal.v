@@ -442,8 +442,16 @@ Qsys u0 (
         .adc_ltc2308_0_conduit_end_SDO                    (ADC_SDO),                     	   //                          .SDO
 		  
   		  //ir		  
+<<<<<<< HEAD
         .ir_rx_conduit_end_export                         (IR_RXD)                           // ir_rx_conduit_end.export
      
+=======
+        .ir_rx_conduit_end_export                         (IR_RXD),                           // ir_rx_conduit_end.export
+		  
+		  // custom
+		  // leds array interface
+		  .direction_controller_0_conduit_leds_array_export (GPIO_1[7:0])
+>>>>>>> Add direction control
 	 );
 	 	
 endmodule //end DE10_Nano_Bal module

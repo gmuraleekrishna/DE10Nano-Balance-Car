@@ -1,5 +1,6 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
+<<<<<<< HEAD
 preplace inst Qsys.motor_run_0 -pg 1 -lvl 2 -y 320
 preplace inst Qsys.dc_motor_right -pg 1 -lvl 5 -y 1470
 preplace inst Qsys.LED -pg 1 -lvl 5 -y 610
@@ -7,6 +8,16 @@ preplace inst Qsys.uart_bt -pg 1 -lvl 5 -y 930
 preplace inst Qsys.onchip_memory2_0 -pg 1 -lvl 4 -y 430
 preplace inst Qsys.sysid_qsys -pg 1 -lvl 5 -y 1050
 preplace inst Qsys.nios2_gen2_0.cpu -pg 1
+=======
+preplace inst Qsys.dc_motor_right -pg 1 -lvl 5 -y 1470
+preplace inst Qsys.LED -pg 1 -lvl 5 -y 610
+preplace inst Qsys.uart_bt -pg 1 -lvl 5 -y 930
+preplace inst Qsys.onchip_memory2_0 -pg 1 -lvl 4 -y 380
+preplace inst Qsys.motor_run_left -pg 1 -lvl 2 -y 120
+preplace inst Qsys.sysid_qsys -pg 1 -lvl 5 -y 1050
+preplace inst Qsys.nios2_gen2_0.cpu -pg 1
+preplace inst Qsys.direction_controller_0 -pg 1 -lvl 2 -y 300
+>>>>>>> Add direction control
 preplace inst Qsys.jtag_uart -pg 1 -lvl 5 -y 1250
 preplace inst Qsys.clk_0 -pg 1 -lvl 1 -y 470
 preplace inst Qsys.nios2_gen2_0.reset_bridge -pg 1
@@ -14,7 +25,11 @@ preplace inst Qsys.nios2_gen2_0.clock_bridge -pg 1
 preplace inst Qsys.esp32_io -pg 1 -lvl 5 -y 300
 preplace inst Qsys.dc_motor_left -pg 1 -lvl 5 -y 1870
 preplace inst Qsys -pg 1 -lvl 1 -y 40 -regy -20
+<<<<<<< HEAD
 preplace inst Qsys.pll_0 -pg 1 -lvl 2 -y 400
+=======
+preplace inst Qsys.pll_0 -pg 1 -lvl 2 -y 460
+>>>>>>> Add direction control
 preplace inst Qsys.timer_0 -pg 1 -lvl 5 -y 1130
 preplace inst Qsys.sonic_distance_0 -pg 1 -lvl 5 -y 830
 preplace inst Qsys.motor_measure_right -pg 1 -lvl 5 -y 1670
@@ -22,6 +37,7 @@ preplace inst Qsys.nios2_gen2_0 -pg 1 -lvl 3 -y 450
 preplace inst Qsys.sw -pg 1 -lvl 5 -y 400
 preplace inst Qsys.mpu_i2c -pg 1 -lvl 5 -y 710
 preplace inst Qsys.motor_measure_left -pg 1 -lvl 5 -y 1570
+<<<<<<< HEAD
 preplace inst Qsys.mm_clock_crossing_bridge_0 -pg 1 -lvl 4 -y 530
 preplace inst Qsys.ir_rx -pg 1 -lvl 4 -y 150
 preplace inst Qsys.adc_ltc2308_0 -pg 1 -lvl 4 -y 30
@@ -51,3 +67,39 @@ preplace netloc INTERCONNECT<net_container>Qsys</net_container>(SLAVE)dc_motor_r
 preplace netloc FAN_OUT<net_container>Qsys</net_container>(SLAVE)ir_rx.interrupt_sender,(SLAVE)jtag_uart.irq,(MASTER)nios2_gen2_0.irq,(SLAVE)mpu_int.irq,(SLAVE)uart_bt.interrupt,(SLAVE)timer_0.irq,(SLAVE)mpu_i2c.interrupt_sender) 1 3 2 1140 800 1550
 levelinfo -pg 1 0 200 1820
 levelinfo -hier Qsys 210 240 480 860 1340 1660 1810
+=======
+preplace inst Qsys.mm_clock_crossing_bridge_0 -pg 1 -lvl 4 -y 480
+preplace inst Qsys.ir_rx -pg 1 -lvl 4 -y 150
+preplace inst Qsys.adc_ltc2308_0 -pg 1 -lvl 4 -y 30
+preplace inst Qsys.mpu_int -pg 1 -lvl 5 -y 1350
+preplace inst Qsys.motor_run_right -pg 1 -lvl 2 -y 560
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)mpu_int.external_connection,(SLAVE)Qsys.mpu_int_external_connection) 1 0 5 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)Qsys.direction_controller_0_conduit_leds_array,(SLAVE)direction_controller_0.conduit_leds_array) 1 0 2 NJ 370 NJ
+preplace netloc FAN_OUT<net_container>Qsys</net_container>(SLAVE)LED.s1,(MASTER)mm_clock_crossing_bridge_0.m0,(SLAVE)ir_rx.avalon_slave,(SLAVE)sw.s1,(SLAVE)adc_ltc2308_0.slave,(SLAVE)esp32_io.s1) 1 3 2 1310 280 1580
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)Qsys.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>Qsys</net_container>(SLAVE)jtag_uart.clk,(SLAVE)motor_measure_right.clock,(SLAVE)timer_0.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)uart_bt.clk,(SLAVE)motor_measure_left.clock,(MASTER)pll_0.outclk0,(SLAVE)onchip_memory2_0.clk1,(SLAVE)mm_clock_crossing_bridge_0.s0_clk,(SLAVE)sysid_qsys.clk,(SLAVE)mpu_int.clk) 1 2 3 720 590 1310 960 1540
+preplace netloc FAN_OUT<net_container>Qsys</net_container>(SLAVE)LED.clk,(SLAVE)ir_rx.clock_sink,(SLAVE)sw.clk,(SLAVE)motor_run_right.clock,(SLAVE)direction_controller_0.clock,(SLAVE)esp32_io.clk,(SLAVE)dc_motor_right.clock,(SLAVE)motor_run_left.clock,(SLAVE)dc_motor_left.clock,(SLAVE)pll_0.refclk,(MASTER)clk_0.clk,(SLAVE)adc_ltc2308_0.clock_sink,(SLAVE)mpu_i2c.clock,(SLAVE)sonic_distance_0.clock_sink,(SLAVE)mm_clock_crossing_bridge_0.m0_clk) 1 1 4 430 110 NJ 110 1270 470 1560
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)Qsys.motor_measure_right_conduit_end,(SLAVE)motor_measure_right.conduit_end) 1 0 5 NJ 1720 NJ 1720 NJ 1720 NJ 1720 NJ
+preplace netloc POINT_TO_POINT<net_container>Qsys</net_container>(MASTER)motor_run_right.avalon_master,(SLAVE)dc_motor_right.avalon_slave) 1 2 3 700 1480 NJ 1480 NJ
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)Qsys.motor_measure_left_conduit_end,(SLAVE)motor_measure_left.conduit_end) 1 0 5 NJ 1620 NJ 1620 NJ 1620 NJ 1620 NJ
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)ir_rx.conduit_end,(SLAVE)Qsys.ir_rx_conduit_end) 1 0 4 NJ 220 NJ 220 NJ 220 NJ
+preplace netloc INTERCONNECT<net_container>Qsys</net_container>(SLAVE)sysid_qsys.control_slave,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)mpu_i2c.avalon_slave_0,(SLAVE)onchip_memory2_0.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)motor_measure_left.avalon_slave_0,(SLAVE)timer_0.s1,(SLAVE)mm_clock_crossing_bridge_0.s0,(SLAVE)mpu_int.s1,(SLAVE)sonic_distance_0.avalon_slave_0,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)motor_measure_right.avalon_slave_0,(SLAVE)uart_bt.avalon_rs232_slave) 1 2 3 780 610 1250 720 1580
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)esp32_io.external_connection,(SLAVE)Qsys.esp32_io_external_connection) 1 0 5 NJ 270 NJ 270 NJ 320 NJ 320 NJ
+preplace netloc POINT_TO_POINT<net_container>Qsys</net_container>(SLAVE)motor_run_right.conduit_end,(SLAVE)direction_controller_0.conduit_end_right_motor) 1 1 1 450
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)Qsys.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)mpu_i2c.export,(SLAVE)Qsys.mpu_i2c_export) 1 0 5 NJ 780 NJ 780 NJ 780 NJ 780 NJ
+preplace netloc INTERCONNECT<net_container>Qsys</net_container>(SLAVE)motor_measure_right.reset,(SLAVE)mpu_int.reset,(SLAVE)esp32_io.reset,(SLAVE)direction_controller_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)ir_rx.clock_sink_reset,(SLAVE)LED.reset,(SLAVE)dc_motor_left.reset,(SLAVE)motor_run_right.reset,(SLAVE)timer_0.reset,(SLAVE)sw.reset,(SLAVE)mm_clock_crossing_bridge_0.m0_reset,(SLAVE)mm_clock_crossing_bridge_0.s0_reset,(SLAVE)pll_0.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)dc_motor_right.reset,(SLAVE)sysid_qsys.reset,(SLAVE)adc_ltc2308_0.reset_sink,(SLAVE)sonic_distance_0.reset_sink,(SLAVE)motor_run_left.reset,(SLAVE)uart_bt.reset,(SLAVE)motor_measure_left.reset,(SLAVE)jtag_uart.reset,(SLAVE)mpu_i2c.clock_reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)nios2_gen2_0.reset) 1 1 4 410 430 760 390 1290 300 1520
+preplace netloc POINT_TO_POINT<net_container>Qsys</net_container>(SLAVE)adc_ltc2308_0.clock_sink_adc,(MASTER)pll_0.outclk1) 1 2 2 NJ 410 1210
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)Qsys.dc_motor_right_conduit_end,(SLAVE)dc_motor_right.conduit_end) 1 0 5 NJ 1520 NJ 1520 NJ 1520 NJ 1520 NJ
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)LED.external_connection,(SLAVE)Qsys.led_external_connection) 1 0 5 NJ 650 NJ 650 NJ 640 NJ 640 NJ
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)sw.external_connection,(SLAVE)Qsys.sw_external_connection) 1 0 5 NJ 290 NJ 290 NJ 340 NJ 340 NJ
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)Qsys.sonic_distance_0_conduit_end,(SLAVE)sonic_distance_0.conduit_end) 1 0 5 NJ 880 NJ 880 NJ 880 NJ 880 NJ
+preplace netloc POINT_TO_POINT<net_container>Qsys</net_container>(SLAVE)motor_run_left.conduit_end,(SLAVE)direction_controller_0.conduit_end_left_motor) 1 1 1 450
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)adc_ltc2308_0.conduit_end,(SLAVE)Qsys.adc_ltc2308_0_conduit_end) 1 0 4 NJ 80 NJ 80 NJ 80 NJ
+preplace netloc POINT_TO_POINT<net_container>Qsys</net_container>(SLAVE)dc_motor_left.avalon_slave,(MASTER)motor_run_left.avalon_master) 1 2 3 740 1880 NJ 1880 NJ
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)uart_bt.external_interface,(SLAVE)Qsys.uart_bt_external_interface) 1 0 5 NJ 980 NJ 980 NJ 980 NJ 980 NJ
+preplace netloc EXPORT<net_container>Qsys</net_container>(SLAVE)dc_motor_left.conduit_end,(SLAVE)Qsys.dc_motor_left_conduit_end) 1 0 5 NJ 1920 NJ 1920 NJ 1920 NJ 1920 NJ
+preplace netloc FAN_OUT<net_container>Qsys</net_container>(SLAVE)jtag_uart.irq,(SLAVE)ir_rx.interrupt_sender,(SLAVE)mpu_int.irq,(MASTER)nios2_gen2_0.irq,(SLAVE)timer_0.irq,(SLAVE)uart_bt.interrupt,(SLAVE)mpu_i2c.interrupt_sender) 1 3 2 1230 1000 1600
+levelinfo -pg 1 0 200 1840
+levelinfo -hier Qsys 210 240 510 970 1370 1680 1830
+>>>>>>> Add direction control

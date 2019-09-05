@@ -18,7 +18,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -26,7 +30,11 @@
    {
       datum baseAddress
       {
+<<<<<<< HEAD
          value = "48";
+=======
+         value = "32";
+>>>>>>> Add direction control
          type = "String";
       }
    }
@@ -74,119 +82,246 @@
    {
       datum _originalDeviceFamily
       {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element Qsys
-   {
-      datum _originalDeviceFamily
-      {
+<<<<<<< HEAD
+=======
          value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+>>>>>>> Add direction control
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+<<<<<<< HEAD
+         value = "Cyclone IV E";
+=======
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+>>>>>>> Add direction control
          type = "String";
       }
    }
@@ -271,7 +406,11 @@
    {
       datum baseAddress
       {
+<<<<<<< HEAD
          value = "64";
+=======
+         value = "48";
+>>>>>>> Add direction control
          type = "String";
       }
    }
@@ -297,7 +436,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -323,7 +466,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -335,6 +482,22 @@
          type = "String";
       }
    }
+<<<<<<< HEAD
+=======
+   element direction_controller_0
+   {
+      datum _sortIndex
+      {
+         value = "23";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+>>>>>>> Add direction control
    element esp32_io
    {
       datum _sortIndex
@@ -344,7 +507,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -352,7 +519,11 @@
    {
       datum baseAddress
       {
+<<<<<<< HEAD
          value = "32";
+=======
+         value = "16";
+>>>>>>> Add direction control
          type = "String";
       }
    }
@@ -365,7 +536,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -373,7 +548,11 @@
    {
       datum baseAddress
       {
+<<<<<<< HEAD
          value = "80";
+=======
+         value = "56";
+>>>>>>> Add direction control
          type = "String";
       }
    }
@@ -386,7 +565,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -394,7 +577,11 @@
    {
       datum baseAddress
       {
+<<<<<<< HEAD
          value = "17830048";
+=======
+         value = "17830056";
+>>>>>>> Add direction control
          type = "String";
       }
    }
@@ -407,7 +594,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -428,7 +619,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -449,7 +644,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -496,7 +695,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -517,7 +720,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -559,7 +766,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -580,7 +791,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -601,7 +816,11 @@
    {
       datum baseAddress
       {
+<<<<<<< HEAD
          value = "72";
+=======
+         value = "17830032";
+>>>>>>> Add direction control
          type = "String";
       }
    }
@@ -614,7 +833,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -635,7 +858,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -643,7 +870,11 @@
    {
       datum baseAddress
       {
+<<<<<<< HEAD
          value = "17830032";
+=======
+         value = "17830040";
+>>>>>>> Add direction control
          type = "String";
       }
    }
@@ -656,7 +887,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -677,7 +912,11 @@
       }
       datum sopceditor_expanded
       {
+<<<<<<< HEAD
          value = "1";
+=======
+         value = "0";
+>>>>>>> Add direction control
          type = "boolean";
       }
    }
@@ -685,7 +924,11 @@
    {
       datum baseAddress
       {
+<<<<<<< HEAD
          value = "17830040";
+=======
+         value = "17830048";
+>>>>>>> Add direction control
          type = "String";
       }
    }
@@ -733,6 +976,14 @@
    name="dc_motor_right_conduit_end_1"
    internal="dc_motor_right.conduit_end_1" />
  <interface
+<<<<<<< HEAD
+=======
+   name="direction_controller_0_conduit_leds_array"
+   internal="direction_controller_0.conduit_leds_array"
+   type="conduit"
+   dir="end" />
+ <interface
+>>>>>>> Add direction control
    name="esp32_io_external_connection"
    internal="esp32_io.external_connection"
    type="conduit"
@@ -814,6 +1065,14 @@
    kind="TERASIC_DC_MOTOR_PWM"
    version="2.0"
    enabled="1" />
+<<<<<<< HEAD
+=======
+ <module
+   name="direction_controller_0"
+   kind="direction_controller"
+   version="1.0"
+   enabled="1" />
+>>>>>>> Add direction control
  <module name="esp32_io" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -862,7 +1121,11 @@
   <parameter name="RESPONSE_FIFO_DEPTH" value="16" />
   <parameter name="SLAVE_SYNC_DEPTH" value="2" />
   <parameter name="SYMBOL_WIDTH" value="8" />
+<<<<<<< HEAD
   <parameter name="SYSINFO_ADDR_WIDTH" value="7" />
+=======
+  <parameter name="SYSINFO_ADDR_WIDTH" value="6" />
+>>>>>>> Add direction control
   <parameter name="USE_AUTO_ADDRESS_WIDTH" value="1" />
  </module>
  <module
@@ -916,7 +1179,11 @@
   <parameter name="dataAddrWidth" value="25" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
+<<<<<<< HEAD
   <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sw.s1' start='0x0' end='0x10' type='altera_avalon_pio.s1' /><slave name='dc_motor_left.avalon_slave' start='0x10' end='0x20' type='TERASIC_DC_MOTOR_PWM.avalon_slave' /><slave name='esp32_io.s1' start='0x20' end='0x30' type='altera_avalon_pio.s1' /><slave name='LED.s1' start='0x30' end='0x40' type='altera_avalon_pio.s1' /><slave name='adc_ltc2308_0.slave' start='0x40' end='0x48' type='adc_ltc2308.slave' /><slave name='sonic_distance_0.avalon_slave_0' start='0x48' end='0x50' type='sonic_distance.avalon_slave_0' /><slave name='ir_rx.avalon_slave' start='0x50' end='0x54' type='TERASIC_IRM.avalon_slave' /><slave name='onchip_memory2_0.s1' start='0x1080000' end='0x10C93E0' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x1100800' end='0x1101000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_0.s1' start='0x1101000' end='0x1101020' type='altera_avalon_timer.s1' /><slave name='motor_measure_left.avalon_slave_0' start='0x1101020' end='0x1101040' type='motor_measure.avalon_slave_0' /><slave name='mpu_i2c.avalon_slave_0' start='0x1101040' end='0x1101060' type='i2c_opencores.avalon_slave_0' /><slave name='motor_measure_right.avalon_slave_0' start='0x1101060' end='0x1101080' type='motor_measure.avalon_slave_0' /><slave name='mpu_int.s1' start='0x1101080' end='0x1101090' type='altera_avalon_pio.s1' /><slave name='sysid_qsys.control_slave' start='0x1101090' end='0x1101098' type='altera_avalon_sysid_qsys.control_slave' /><slave name='uart_bt.avalon_rs232_slave' start='0x1101098' end='0x11010A0' type='altera_up_avalon_rs232.avalon_rs232_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x11010A0' end='0x11010A8' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+=======
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sw.s1' start='0x0' end='0x10' type='altera_avalon_pio.s1' /><slave name='esp32_io.s1' start='0x10' end='0x20' type='altera_avalon_pio.s1' /><slave name='LED.s1' start='0x20' end='0x30' type='altera_avalon_pio.s1' /><slave name='adc_ltc2308_0.slave' start='0x30' end='0x38' type='adc_ltc2308.slave' /><slave name='ir_rx.avalon_slave' start='0x38' end='0x3C' type='TERASIC_IRM.avalon_slave' /><slave name='onchip_memory2_0.s1' start='0x1080000' end='0x10C93E0' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x1100800' end='0x1101000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_0.s1' start='0x1101000' end='0x1101020' type='altera_avalon_timer.s1' /><slave name='motor_measure_left.avalon_slave_0' start='0x1101020' end='0x1101040' type='motor_measure.avalon_slave_0' /><slave name='mpu_i2c.avalon_slave_0' start='0x1101040' end='0x1101060' type='i2c_opencores.avalon_slave_0' /><slave name='motor_measure_right.avalon_slave_0' start='0x1101060' end='0x1101080' type='motor_measure.avalon_slave_0' /><slave name='mpu_int.s1' start='0x1101080' end='0x1101090' type='altera_avalon_pio.s1' /><slave name='sonic_distance_0.avalon_slave_0' start='0x1101090' end='0x1101098' type='sonic_distance.avalon_slave_0' /><slave name='sysid_qsys.control_slave' start='0x1101098' end='0x11010A0' type='altera_avalon_sysid_qsys.control_slave' /><slave name='uart_bt.avalon_rs232_slave' start='0x11010A0' end='0x11010A8' type='altera_up_avalon_rs232.avalon_rs232_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x11010A8' end='0x11010B0' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+>>>>>>> Add direction control
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -1384,7 +1651,11 @@
    start="nios2_gen2_0.data_master"
    end="jtag_uart.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
+<<<<<<< HEAD
   <parameter name="baseAddress" value="0x011010a0" />
+=======
+  <parameter name="baseAddress" value="0x011010a8" />
+>>>>>>> Add direction control
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1393,7 +1664,11 @@
    start="nios2_gen2_0.data_master"
    end="uart_bt.avalon_rs232_slave">
   <parameter name="arbitrationPriority" value="1" />
+<<<<<<< HEAD
   <parameter name="baseAddress" value="0x01101098" />
+=======
+  <parameter name="baseAddress" value="0x011010a0" />
+>>>>>>> Add direction control
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1427,7 +1702,11 @@
    kind="avalon"
    version="18.1"
    start="nios2_gen2_0.data_master"
+<<<<<<< HEAD
    end="sysid_qsys.control_slave">
+=======
+   end="sonic_distance_0.avalon_slave_0">
+>>>>>>> Add direction control
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x01101090" />
   <parameter name="defaultConnection" value="false" />
@@ -1436,6 +1715,18 @@
    kind="avalon"
    version="18.1"
    start="nios2_gen2_0.data_master"
+<<<<<<< HEAD
+=======
+   end="sysid_qsys.control_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x01101098" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_gen2_0.data_master"
+>>>>>>> Add direction control
    end="nios2_gen2_0.debug_mem_slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x01100800" />
@@ -1501,6 +1792,7 @@
    start="mm_clock_crossing_bridge_0.m0"
    end="ir_rx.avalon_slave">
   <parameter name="arbitrationPriority" value="1" />
+<<<<<<< HEAD
   <parameter name="baseAddress" value="0x0050" />
   <parameter name="defaultConnection" value="false" />
  </connection>
@@ -1520,6 +1812,9 @@
    end="sonic_distance_0.avalon_slave_0">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0048" />
+=======
+  <parameter name="baseAddress" value="0x0038" />
+>>>>>>> Add direction control
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1528,7 +1823,11 @@
    start="mm_clock_crossing_bridge_0.m0"
    end="LED.s1">
   <parameter name="arbitrationPriority" value="1" />
+<<<<<<< HEAD
   <parameter name="baseAddress" value="0x0030" />
+=======
+  <parameter name="baseAddress" value="0x0020" />
+>>>>>>> Add direction control
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1537,7 +1836,11 @@
    start="mm_clock_crossing_bridge_0.m0"
    end="esp32_io.s1">
   <parameter name="arbitrationPriority" value="1" />
+<<<<<<< HEAD
   <parameter name="baseAddress" value="0x0020" />
+=======
+  <parameter name="baseAddress" value="0x0010" />
+>>>>>>> Add direction control
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1555,7 +1858,11 @@
    start="mm_clock_crossing_bridge_0.m0"
    end="adc_ltc2308_0.slave">
   <parameter name="arbitrationPriority" value="1" />
+<<<<<<< HEAD
   <parameter name="baseAddress" value="0x0040" />
+=======
+  <parameter name="baseAddress" value="0x0030" />
+>>>>>>> Add direction control
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection kind="clock" version="18.1" start="clk_0.clk" end="LED.clk" />
@@ -1586,6 +1893,14 @@
    kind="clock"
    version="18.1"
    start="clk_0.clk"
+<<<<<<< HEAD
+=======
+   end="direction_controller_0.clock" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clk_0.clk"
+>>>>>>> Add direction control
    end="sonic_distance_0.clock_sink" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="ir_rx.clock_sink" />
  <connection
@@ -1639,6 +1954,31 @@
    start="pll_0.outclk1"
    end="adc_ltc2308_0.clock_sink_adc" />
  <connection
+<<<<<<< HEAD
+=======
+   kind="conduit"
+   version="18.1"
+   start="motor_run_left.conduit_end"
+   end="direction_controller_0.conduit_end_left_motor">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="motor_run_right.conduit_end"
+   end="direction_controller_0.conduit_end_right_motor">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+>>>>>>> Add direction control
    kind="interrupt"
    version="18.1"
    start="nios2_gen2_0.irq"
@@ -1649,15 +1989,25 @@
    kind="interrupt"
    version="18.1"
    start="nios2_gen2_0.irq"
+<<<<<<< HEAD
    end="ir_rx.interrupt_sender">
   <parameter name="irqNumber" value="1" />
+=======
+   end="mpu_i2c.interrupt_sender">
+  <parameter name="irqNumber" value="2" />
+>>>>>>> Add direction control
  </connection>
  <connection
    kind="interrupt"
    version="18.1"
    start="nios2_gen2_0.irq"
+<<<<<<< HEAD
    end="mpu_i2c.interrupt_sender">
   <parameter name="irqNumber" value="2" />
+=======
+   end="ir_rx.interrupt_sender">
+  <parameter name="irqNumber" value="1" />
+>>>>>>> Add direction control
  </connection>
  <connection
    kind="interrupt"
@@ -1767,6 +2117,14 @@
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
+<<<<<<< HEAD
+=======
+   end="direction_controller_0.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+>>>>>>> Add direction control
    end="onchip_memory2_0.reset1" />
  <connection
    kind="reset"

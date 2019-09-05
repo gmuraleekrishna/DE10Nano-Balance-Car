@@ -1,5 +1,9 @@
 Info: Starting: Create block symbol file (.bsf)
+<<<<<<< HEAD
 Info: qsys-generate "C:\Users\aaromal\OneDrive - Australian National University\Desktop\BAL_CAR_Nios_Code\Qsys.qsys" --block-symbol-file --output-directory="C:\Users\aaromal\OneDrive - Australian National University\Desktop\BAL_CAR_Nios_Code\Qsys" --family="Cyclone V" --part=5CSEBA6U23I7
+=======
+Info: qsys-generate "D:\4\Embedded System\Project\Demon\BAL_CAR_Nios_Code\Qsys.qsys" --block-symbol-file --output-directory="D:\4\Embedded System\Project\Demon\BAL_CAR_Nios_Code\Qsys" --family="Cyclone V" --part=5CSEBA6U23I7
+>>>>>>> Add direction control
 Progress: Loading BAL_CAR_Nios_Code/Qsys.qsys
 Progress: Reading input file
 Progress: Adding LED [altera_avalon_pio 18.1]
@@ -12,6 +16,11 @@ Progress: Adding dc_motor_left [TERASIC_DC_MOTOR_PWM 2.0]
 Progress: Parameterizing module dc_motor_left
 Progress: Adding dc_motor_right [TERASIC_DC_MOTOR_PWM 2.0]
 Progress: Parameterizing module dc_motor_right
+<<<<<<< HEAD
+=======
+Progress: Adding direction_controller_0 [direction_controller 1.0]
+Progress: Parameterizing module direction_controller_0
+>>>>>>> Add direction control
 Progress: Adding esp32_io [altera_avalon_pio 18.1]
 Progress: Parameterizing module esp32_io
 Progress: Adding ir_rx [TERASIC_IRM 1.0]
@@ -24,10 +33,17 @@ Progress: Adding motor_measure_left [motor_measure 1.0]
 Progress: Parameterizing module motor_measure_left
 Progress: Adding motor_measure_right [motor_measure 1.0]
 Progress: Parameterizing module motor_measure_right
+<<<<<<< HEAD
 Progress: Adding motor_run_0 [motor_run 1.0]
 Progress: Parameterizing module motor_run_0
 Progress: Adding motor_run_left_0 [motor_run_left 1.0]
 Progress: Parameterizing module motor_run_left_0
+=======
+Progress: Adding motor_run_left [motor_run 1.0]
+Progress: Parameterizing module motor_run_left
+Progress: Adding motor_run_right [motor_run 1.0]
+Progress: Parameterizing module motor_run_right
+>>>>>>> Add direction control
 Progress: Adding mpu_i2c [i2c_opencores 12.0]
 Progress: Parameterizing module mpu_i2c
 Progress: Adding mpu_int [altera_avalon_pio 18.1]
@@ -65,7 +81,11 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
+<<<<<<< HEAD
 Info: qsys-generate "C:\Users\aaromal\OneDrive - Australian National University\Desktop\BAL_CAR_Nios_Code\Qsys.qsys" --synthesis=VERILOG --output-directory="C:\Users\aaromal\OneDrive - Australian National University\Desktop\BAL_CAR_Nios_Code\Qsys\synthesis" --family="Cyclone V" --part=5CSEBA6U23I7
+=======
+Info: qsys-generate "D:\4\Embedded System\Project\Demon\BAL_CAR_Nios_Code\Qsys.qsys" --synthesis=VERILOG --output-directory="D:\4\Embedded System\Project\Demon\BAL_CAR_Nios_Code\Qsys\synthesis" --family="Cyclone V" --part=5CSEBA6U23I7
+>>>>>>> Add direction control
 Progress: Loading BAL_CAR_Nios_Code/Qsys.qsys
 Progress: Reading input file
 Progress: Adding LED [altera_avalon_pio 18.1]
@@ -78,6 +98,11 @@ Progress: Adding dc_motor_left [TERASIC_DC_MOTOR_PWM 2.0]
 Progress: Parameterizing module dc_motor_left
 Progress: Adding dc_motor_right [TERASIC_DC_MOTOR_PWM 2.0]
 Progress: Parameterizing module dc_motor_right
+<<<<<<< HEAD
+=======
+Progress: Adding direction_controller_0 [direction_controller 1.0]
+Progress: Parameterizing module direction_controller_0
+>>>>>>> Add direction control
 Progress: Adding esp32_io [altera_avalon_pio 18.1]
 Progress: Parameterizing module esp32_io
 Progress: Adding ir_rx [TERASIC_IRM 1.0]
@@ -90,10 +115,17 @@ Progress: Adding motor_measure_left [motor_measure 1.0]
 Progress: Parameterizing module motor_measure_left
 Progress: Adding motor_measure_right [motor_measure 1.0]
 Progress: Parameterizing module motor_measure_right
+<<<<<<< HEAD
 Progress: Adding motor_run_0 [motor_run 1.0]
 Progress: Parameterizing module motor_run_0
 Progress: Adding motor_run_left_0 [motor_run_left 1.0]
 Progress: Parameterizing module motor_run_left_0
+=======
+Progress: Adding motor_run_left [motor_run 1.0]
+Progress: Parameterizing module motor_run_left
+Progress: Adding motor_run_right [motor_run 1.0]
+Progress: Parameterizing module motor_run_right
+>>>>>>> Add direction control
 Progress: Adding mpu_i2c [i2c_opencores 12.0]
 Progress: Parameterizing module mpu_i2c
 Progress: Adding mpu_int [altera_avalon_pio 18.1]
@@ -128,6 +160,7 @@ Info: Qsys.sysid_qsys: System ID is not assigned automatically. Edit the System 
 Info: Qsys.sysid_qsys: Time stamp will be automatically updated when this component is generated.
 Warning: Qsys.pll_0: pll_0.locked must be exported, or connected to a matching conduit.
 Info: Qsys: Generating Qsys "Qsys" for QUARTUS_SYNTH
+<<<<<<< HEAD
 Info: Interconnect is inserted between master motor_run_0.avalon_master and slave dc_motor_right.avalon_slave because the master has address signal 4 bit wide, but the slave is 2 bit wide.
 Info: Interconnect is inserted between master motor_run_0.avalon_master and slave dc_motor_right.avalon_slave because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
 Info: Interconnect is inserted between master motor_run_left_0.avalon_master and slave dc_motor_left.avalon_slave because the master has address signal 4 bit wide, but the slave is 2 bit wide.
@@ -136,21 +169,44 @@ Info: Inserting clock-crossing logic between cmd_demux.src3 and cmd_mux_003.sink
 Info: Inserting clock-crossing logic between rsp_demux_003.src0 and rsp_mux.sink3
 Info: LED: Starting RTL generation for module 'Qsys_LED'
 Info: LED:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Qsys_LED --dir=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0026_LED_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0026_LED_gen//Qsys_LED_component_configuration.pl  --do_build_sim=0  ]
+=======
+Info: Interconnect is inserted between master motor_run_right.avalon_master and slave dc_motor_right.avalon_slave because the master has address signal 4 bit wide, but the slave is 2 bit wide.
+Info: Interconnect is inserted between master motor_run_right.avalon_master and slave dc_motor_right.avalon_slave because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master motor_run_left.avalon_master and slave dc_motor_left.avalon_slave because the master has address signal 4 bit wide, but the slave is 2 bit wide.
+Info: Interconnect is inserted between master motor_run_left.avalon_master and slave dc_motor_left.avalon_slave because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Inserting clock-crossing logic between cmd_demux.src3 and cmd_mux_003.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src5 and cmd_mux_005.sink0
+Info: Inserting clock-crossing logic between rsp_demux_003.src0 and rsp_mux.sink3
+Info: Inserting clock-crossing logic between rsp_demux_005.src0 and rsp_mux.sink5
+Info: LED: Starting RTL generation for module 'Qsys_LED'
+Info: LED:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Qsys_LED --dir=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0009_LED_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0009_LED_gen//Qsys_LED_component_configuration.pl  --do_build_sim=0  ]
+>>>>>>> Add direction control
 Info: LED: Done RTL generation for module 'Qsys_LED'
 Info: LED: "Qsys" instantiated altera_avalon_pio "LED"
 Info: adc_ltc2308_0: "Qsys" instantiated adc_ltc2308 "adc_ltc2308_0"
 Info: dc_motor_left: "Qsys" instantiated TERASIC_DC_MOTOR_PWM "dc_motor_left"
+<<<<<<< HEAD
 Info: esp32_io: Starting RTL generation for module 'Qsys_esp32_io'
 Info: esp32_io:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Qsys_esp32_io --dir=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0029_esp32_io_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0029_esp32_io_gen//Qsys_esp32_io_component_configuration.pl  --do_build_sim=0  ]
+=======
+Info: direction_controller_0: "Qsys" instantiated direction_controller "direction_controller_0"
+Info: esp32_io: Starting RTL generation for module 'Qsys_esp32_io'
+Info: esp32_io:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Qsys_esp32_io --dir=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0013_esp32_io_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0013_esp32_io_gen//Qsys_esp32_io_component_configuration.pl  --do_build_sim=0  ]
+>>>>>>> Add direction control
 Info: esp32_io: Done RTL generation for module 'Qsys_esp32_io'
 Info: esp32_io: "Qsys" instantiated altera_avalon_pio "esp32_io"
 Info: ir_rx: "Qsys" instantiated TERASIC_IRM "ir_rx"
 Info: jtag_uart: Starting RTL generation for module 'Qsys_jtag_uart'
+<<<<<<< HEAD
 Info: jtag_uart:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Qsys_jtag_uart --dir=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0031_jtag_uart_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/aaromal/AppData/Local/Temp/alt8143_6587757056372055405.dir/0031_jtag_uart_gen//Qsys_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+=======
+Info: jtag_uart:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Qsys_jtag_uart --dir=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0015_jtag_uart_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0015_jtag_uart_gen//Qsys_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+>>>>>>> Add direction control
 Info: jtag_uart: Done RTL generation for module 'Qsys_jtag_uart'
 Info: jtag_uart: "Qsys" instantiated altera_avalon_jtag_uart "jtag_uart"
 Info: mm_clock_crossing_bridge_0: "Qsys" instantiated altera_avalon_mm_clock_crossing_bridge "mm_clock_crossing_bridge_0"
 Info: motor_measure_left: "Qsys" instantiated motor_measure "motor_measure_left"
+<<<<<<< HEAD
 Info: motor_run_0: "Qsys" instantiated motor_run "motor_run_0"
 Info: mpu_i2c: "Qsys" instantiated i2c_opencores "mpu_i2c"
 Info: mpu_int: Starting RTL generation for module 'Qsys_mpu_int'
@@ -162,3 +218,120 @@ Error: Generation stopped, 18 or more modules remaining
 Info: Qsys: Done "Qsys" with 28 modules, 24 files
 Error: qsys-generate failed with exit code 1: 1 Error, 1 Warning
 Info: Stopping: Create HDL design files for synthesis
+=======
+Info: motor_run_left: "Qsys" instantiated motor_run "motor_run_left"
+Info: mpu_i2c: "Qsys" instantiated i2c_opencores "mpu_i2c"
+Info: mpu_int: Starting RTL generation for module 'Qsys_mpu_int'
+Info: mpu_int:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Qsys_mpu_int --dir=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0020_mpu_int_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0020_mpu_int_gen//Qsys_mpu_int_component_configuration.pl  --do_build_sim=0  ]
+Info: mpu_int: Done RTL generation for module 'Qsys_mpu_int'
+Info: mpu_int: "Qsys" instantiated altera_avalon_pio "mpu_int"
+Info: nios2_gen2_0: "Qsys" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'Qsys_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Qsys_onchip_memory2_0 --dir=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0021_onchip_memory2_0_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0021_onchip_memory2_0_gen//Qsys_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'Qsys_onchip_memory2_0'
+Info: onchip_memory2_0: "Qsys" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: pll_0: "Qsys" instantiated altera_pll "pll_0"
+Info: sonic_distance_0: "Qsys" instantiated sonic_distance "sonic_distance_0"
+Info: sw: Starting RTL generation for module 'Qsys_sw'
+Info: sw:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Qsys_sw --dir=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0024_sw_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0024_sw_gen//Qsys_sw_component_configuration.pl  --do_build_sim=0  ]
+Info: sw: Done RTL generation for module 'Qsys_sw'
+Info: sw: "Qsys" instantiated altera_avalon_pio "sw"
+Info: sysid_qsys: "Qsys" instantiated altera_avalon_sysid_qsys "sysid_qsys"
+Info: timer_0: Starting RTL generation for module 'Qsys_timer_0'
+Info: timer_0:   Generation command is [exec D:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I D:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=Qsys_timer_0 --dir=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0026_timer_0_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0026_timer_0_gen//Qsys_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0: Done RTL generation for module 'Qsys_timer_0'
+Info: timer_0: "Qsys" instantiated altera_avalon_timer "timer_0"
+Info: uart_bt: Starting Generation of RS232 UART
+Info: uart_bt: "Qsys" instantiated altera_up_avalon_rs232 "uart_bt"
+Info: mm_interconnect_0: "Qsys" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: mm_interconnect_1: "Qsys" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_2: "Qsys" instantiated altera_mm_interconnect "mm_interconnect_2"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_3: "Qsys" instantiated altera_mm_interconnect "mm_interconnect_3"
+Info: irq_mapper: "Qsys" instantiated altera_irq_mapper "irq_mapper"
+Info: irq_synchronizer: "Qsys" instantiated altera_irq_clock_crosser "irq_synchronizer"
+Info: rst_controller: "Qsys" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'Qsys_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec D:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I D:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Qsys_nios2_gen2_0_cpu --dir=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0031_cpu_gen/ --quartus_bindir=D:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/AKSHAY~1/AppData/Local/Temp/alt8143_1476711732118976614.dir/0031_cpu_gen//Qsys_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2019.09.05 13:42:39 (*) Starting Nios II generation
+Info: cpu: # 2019.09.05 13:42:39 (*)   Checking for plaintext license.
+Info: cpu: # 2019.09.05 13:42:41 (*)   Couldn't query license setup in Quartus directory D:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2019.09.05 13:42:41 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2019.09.05 13:42:41 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2019.09.05 13:42:41 (*)   Plaintext license not found.
+Info: cpu: # 2019.09.05 13:42:41 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2019.09.05 13:42:42 (*)   Couldn't query license setup in Quartus directory D:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2019.09.05 13:42:42 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2019.09.05 13:42:42 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2019.09.05 13:42:42 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: cpu: # 2019.09.05 13:42:42 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2019.09.05 13:42:42 (*)   Creating all objects for CPU
+Info: cpu: # 2019.09.05 13:42:42 (*)     Testbench
+Info: cpu: # 2019.09.05 13:42:43 (*)     Instruction decoding
+Info: cpu: # 2019.09.05 13:42:43 (*)       Instruction fields
+Info: cpu: # 2019.09.05 13:42:43 (*)       Instruction decodes
+Info: cpu: # 2019.09.05 13:42:44 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2019.09.05 13:42:45 (*)       Instruction controls
+Info: cpu: # 2019.09.05 13:42:45 (*)     Pipeline frontend
+Info: cpu: # 2019.09.05 13:42:45 (*)     Pipeline backend
+Info: cpu: # 2019.09.05 13:42:53 (*)   Generating RTL from CPU objects
+Info: cpu: # 2019.09.05 13:42:58 (*)   Creating encrypted RTL
+Info: cpu: # 2019.09.05 13:42:59 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'Qsys_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: motor_run_right_avalon_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "motor_run_right_avalon_master_translator"
+Info: dc_motor_right_avalon_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "dc_motor_right_avalon_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_2" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_avalon_jtag_slave_agent: "mm_interconnect_2" instantiated altera_merlin_slave_agent "jtag_uart_avalon_jtag_slave_agent"
+Info: jtag_uart_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_2" instantiated altera_avalon_sc_fifo "jtag_uart_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_2" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_2" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_2" instantiated altera_merlin_router "router_002"
+Info: router_009: "mm_interconnect_2" instantiated altera_merlin_router "router_009"
+Info: nios2_gen2_0_data_master_limiter: "mm_interconnect_2" instantiated altera_merlin_traffic_limiter "nios2_gen2_0_data_master_limiter"
+Info: Reusing file D:/4/Embedded System/Project/Demon/BAL_CAR_Nios_Code/Qsys/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: cmd_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_007: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_mux_007"
+Info: Reusing file D:/4/Embedded System/Project/Demon/BAL_CAR_Nios_Code/Qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_003: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_demux_003"
+Info: rsp_demux_007: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_demux_007"
+Info: rsp_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/4/Embedded System/Project/Demon/BAL_CAR_Nios_Code/Qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file D:/4/Embedded System/Project/Demon/BAL_CAR_Nios_Code/Qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: crosser: "mm_interconnect_2" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file D:/4/Embedded System/Project/Demon/BAL_CAR_Nios_Code/Qsys/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file D:/4/Embedded System/Project/Demon/BAL_CAR_Nios_Code/Qsys/synthesis/submodules/altera_std_synchronizer_nocut.v
+Info: avalon_st_adapter: "mm_interconnect_2" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: router: "mm_interconnect_3" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_3" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_3" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/4/Embedded System/Project/Demon/BAL_CAR_Nios_Code/Qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_3" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/4/Embedded System/Project/Demon/BAL_CAR_Nios_Code/Qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: Qsys: Done "Qsys" with 57 modules, 95 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
+>>>>>>> Add direction control

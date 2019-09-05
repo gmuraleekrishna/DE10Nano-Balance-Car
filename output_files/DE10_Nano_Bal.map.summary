@@ -1,13 +1,24 @@
+<<<<<<< HEAD
 Analysis & Synthesis Status : Successful - Wed Sep 04 23:02:49 2019
+=======
+Analysis & Synthesis Status : Successful - Thu Sep 05 13:53:11 2019
+>>>>>>> Add direction control
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : DE10_Nano_Bal
 Top-level Entity Name : DE10_Nano_Bal
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
+<<<<<<< HEAD
 Total registers : 3731
 Total pins : 142
 Total virtual pins : 0
 Total block memory bits : 2,492,336
+=======
+Total registers : 3924
+Total pins : 142
+Total virtual pins : 0
+Total block memory bits : 2,492,320
+>>>>>>> Add direction control
 Total DSP Blocks : 3
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

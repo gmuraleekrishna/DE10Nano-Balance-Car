@@ -5,8 +5,11 @@ JedecChain;
 
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
+<<<<<<< HEAD
 	P ActionCode(Cfg)
 		Device PartName(5CSEBA6U23) Path("C:/Users/aaromal/OneDrive - Australian National University/Desktop/BAL_CAR_Nios_Code/output_files/") File("DE10_Nano_Bal_time_limited.sof") MfrSpec(OpMask(1));
+=======
+>>>>>>> Add direction control
 
 ChainEnd;
 

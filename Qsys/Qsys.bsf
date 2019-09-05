@@ -20,21 +20,32 @@ refer to the applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
+<<<<<<< HEAD
 	(rect 0 0 528 824)
 	(text "Qsys" (rect 249 -1 271 11)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 808 20 820)(font "Arial" ))
+=======
+	(rect 0 0 656 864)
+	(text "Qsys" (rect 313 -1 335 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 848 20 860)(font "Arial" ))
+>>>>>>> Add direction control
 	(port
 		(pt 0 120)
 		(input)
 		(text "adc_ltc2308_0_conduit_end_SDO" (rect 0 0 136 12)(font "Arial" (font_size 8)))
 		(text "adc_ltc2308_0_conduit_end_SDO" (rect 4 109 178 120)(font "Arial" (font_size 8)))
+<<<<<<< HEAD
 		(line (pt 0 120)(pt 224 120)(line_width 1))
+=======
+		(line (pt 0 120)(pt 288 120)(line_width 1))
+>>>>>>> Add direction control
 	)
 	(port
 		(pt 0 160)
 		(input)
 		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
 		(text "clk_clk" (rect 4 149 46 160)(font "Arial" (font_size 8)))
+<<<<<<< HEAD
 		(line (pt 0 160)(pt 224 160)(line_width 1))
 	)
 	(port
@@ -99,68 +110,167 @@ refer to the applicable agreement for further details.
 		(text "uart_bt_external_interface_RXD" (rect 0 0 132 12)(font "Arial" (font_size 8)))
 		(text "uart_bt_external_interface_RXD" (rect 4 765 184 776)(font "Arial" (font_size 8)))
 		(line (pt 0 776)(pt 224 776)(line_width 1))
+=======
+		(line (pt 0 160)(pt 288 160)(line_width 1))
+	)
+	(port
+		(pt 0 384)
+		(input)
+		(text "esp32_io_external_connection_export[2..0]" (rect 0 0 169 12)(font "Arial" (font_size 8)))
+		(text "esp32_io_external_connection_export[2..0]" (rect 4 373 250 384)(font "Arial" (font_size 8)))
+		(line (pt 0 384)(pt 288 384)(line_width 3))
+	)
+	(port
+		(pt 0 424)
+		(input)
+		(text "ir_rx_conduit_end_export" (rect 0 0 102 12)(font "Arial" (font_size 8)))
+		(text "ir_rx_conduit_end_export" (rect 4 413 148 424)(font "Arial" (font_size 8)))
+		(line (pt 0 424)(pt 288 424)(line_width 1))
+	)
+	(port
+		(pt 0 504)
+		(input)
+		(text "motor_measure_left_conduit_end_ab[1..0]" (rect 0 0 169 12)(font "Arial" (font_size 8)))
+		(text "motor_measure_left_conduit_end_ab[1..0]" (rect 4 493 238 504)(font "Arial" (font_size 8)))
+		(line (pt 0 504)(pt 288 504)(line_width 3))
+	)
+	(port
+		(pt 0 544)
+		(input)
+		(text "motor_measure_right_conduit_end_ab[1..0]" (rect 0 0 174 12)(font "Arial" (font_size 8)))
+		(text "motor_measure_right_conduit_end_ab[1..0]" (rect 4 533 244 544)(font "Arial" (font_size 8)))
+		(line (pt 0 544)(pt 288 544)(line_width 3))
+	)
+	(port
+		(pt 0 640)
+		(input)
+		(text "mpu_int_external_connection_export" (rect 0 0 146 12)(font "Arial" (font_size 8)))
+		(text "mpu_int_external_connection_export" (rect 4 629 208 640)(font "Arial" (font_size 8)))
+		(line (pt 0 640)(pt 288 640)(line_width 1))
+	)
+	(port
+		(pt 0 680)
+		(input)
+		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 669 82 680)(font "Arial" (font_size 8)))
+		(line (pt 0 680)(pt 288 680)(line_width 1))
+	)
+	(port
+		(pt 0 720)
+		(input)
+		(text "sonic_distance_0_conduit_end_echo" (rect 0 0 146 12)(font "Arial" (font_size 8)))
+		(text "sonic_distance_0_conduit_end_echo" (rect 4 709 202 720)(font "Arial" (font_size 8)))
+		(line (pt 0 720)(pt 288 720)(line_width 1))
+	)
+	(port
+		(pt 0 776)
+		(input)
+		(text "sw_external_connection_export[3..0]" (rect 0 0 145 12)(font "Arial" (font_size 8)))
+		(text "sw_external_connection_export[3..0]" (rect 4 765 214 776)(font "Arial" (font_size 8)))
+		(line (pt 0 776)(pt 288 776)(line_width 3))
+	)
+	(port
+		(pt 0 816)
+		(input)
+		(text "uart_bt_external_interface_RXD" (rect 0 0 132 12)(font "Arial" (font_size 8)))
+		(text "uart_bt_external_interface_RXD" (rect 4 805 184 816)(font "Arial" (font_size 8)))
+		(line (pt 0 816)(pt 288 816)(line_width 1))
+>>>>>>> Add direction control
 	)
 	(port
 		(pt 0 72)
 		(output)
 		(text "adc_ltc2308_0_conduit_end_CONVST" (rect 0 0 158 12)(font "Arial" (font_size 8)))
 		(text "adc_ltc2308_0_conduit_end_CONVST" (rect 4 61 196 72)(font "Arial" (font_size 8)))
+<<<<<<< HEAD
 		(line (pt 0 72)(pt 224 72)(line_width 1))
+=======
+		(line (pt 0 72)(pt 288 72)(line_width 1))
+>>>>>>> Add direction control
 	)
 	(port
 		(pt 0 88)
 		(output)
 		(text "adc_ltc2308_0_conduit_end_SCK" (rect 0 0 136 12)(font "Arial" (font_size 8)))
 		(text "adc_ltc2308_0_conduit_end_SCK" (rect 4 77 178 88)(font "Arial" (font_size 8)))
+<<<<<<< HEAD
 		(line (pt 0 88)(pt 224 88)(line_width 1))
+=======
+		(line (pt 0 88)(pt 288 88)(line_width 1))
+>>>>>>> Add direction control
 	)
 	(port
 		(pt 0 104)
 		(output)
 		(text "adc_ltc2308_0_conduit_end_SDI" (rect 0 0 132 12)(font "Arial" (font_size 8)))
 		(text "adc_ltc2308_0_conduit_end_SDI" (rect 4 93 178 104)(font "Arial" (font_size 8)))
+<<<<<<< HEAD
 		(line (pt 0 104)(pt 224 104)(line_width 1))
+=======
+		(line (pt 0 104)(pt 288 104)(line_width 1))
+>>>>>>> Add direction control
 	)
 	(port
 		(pt 0 200)
 		(output)
 		(text "dc_motor_left_conduit_end_motor_in1" (rect 0 0 154 12)(font "Arial" (font_size 8)))
 		(text "dc_motor_left_conduit_end_motor_in1" (rect 4 189 214 200)(font "Arial" (font_size 8)))
+<<<<<<< HEAD
 		(line (pt 0 200)(pt 224 200)(line_width 1))
+=======
+		(line (pt 0 200)(pt 288 200)(line_width 1))
+>>>>>>> Add direction control
 	)
 	(port
 		(pt 0 216)
 		(output)
 		(text "dc_motor_left_conduit_end_motor_in2" (rect 0 0 155 12)(font "Arial" (font_size 8)))
 		(text "dc_motor_left_conduit_end_motor_in2" (rect 4 205 214 216)(font "Arial" (font_size 8)))
+<<<<<<< HEAD
 		(line (pt 0 216)(pt 224 216)(line_width 1))
+=======
+		(line (pt 0 216)(pt 288 216)(line_width 1))
+>>>>>>> Add direction control
 	)
 	(port
 		(pt 0 232)
 		(output)
 		(text "dc_motor_left_conduit_end_pwm" (rect 0 0 134 12)(font "Arial" (font_size 8)))
 		(text "dc_motor_left_conduit_end_pwm" (rect 4 221 178 232)(font "Arial" (font_size 8)))
+<<<<<<< HEAD
 		(line (pt 0 232)(pt 224 232)(line_width 1))
+=======
+		(line (pt 0 232)(pt 288 232)(line_width 1))
+>>>>>>> Add direction control
 	)
 	(port
 		(pt 0 272)
 		(output)
 		(text "dc_motor_right_conduit_end_motor_in1" (rect 0 0 159 12)(font "Arial" (font_size 8)))
 		(text "dc_motor_right_conduit_end_motor_in1" (rect 4 261 220 272)(font "Arial" (font_size 8)))
+<<<<<<< HEAD
 		(line (pt 0 272)(pt 224 272)(line_width 1))
+=======
+		(line (pt 0 272)(pt 288 272)(line_width 1))
+>>>>>>> Add direction control
 	)
 	(port
 		(pt 0 288)
 		(output)
 		(text "dc_motor_right_conduit_end_motor_in2" (rect 0 0 160 12)(font "Arial" (font_size 8)))
 		(text "dc_motor_right_conduit_end_motor_in2" (rect 4 277 220 288)(font "Arial" (font_size 8)))
+<<<<<<< HEAD
 		(line (pt 0 288)(pt 224 288)(line_width 1))
+=======
+		(line (pt 0 288)(pt 288 288)(line_width 1))
+>>>>>>> Add direction control
 	)
 	(port
 		(pt 0 304)
 		(output)
 		(text "dc_motor_right_conduit_end_pwm" (rect 0 0 139 12)(font "Arial" (font_size 8)))
 		(text "dc_motor_right_conduit_end_pwm" (rect 4 293 184 304)(font "Arial" (font_size 8)))
+<<<<<<< HEAD
 		(line (pt 0 304)(pt 224 304)(line_width 1))
 	)
 	(port
@@ -278,5 +388,135 @@ refer to the applicable agreement for further details.
 		(line (pt 528 0)(pt 528 824)(line_width 1))
 		(line (pt 0 824)(pt 528 824)(line_width 1))
 		(line (pt 0 0)(pt 0 824)(line_width 1))
+=======
+		(line (pt 0 304)(pt 288 304)(line_width 1))
+	)
+	(port
+		(pt 0 464)
+		(output)
+		(text "led_external_connection_export[7..0]" (rect 0 0 145 12)(font "Arial" (font_size 8)))
+		(text "led_external_connection_export[7..0]" (rect 4 453 220 464)(font "Arial" (font_size 8)))
+		(line (pt 0 464)(pt 288 464)(line_width 3))
+	)
+	(port
+		(pt 0 736)
+		(output)
+		(text "sonic_distance_0_conduit_end_trigger" (rect 0 0 152 12)(font "Arial" (font_size 8)))
+		(text "sonic_distance_0_conduit_end_trigger" (rect 4 725 220 736)(font "Arial" (font_size 8)))
+		(line (pt 0 736)(pt 288 736)(line_width 1))
+	)
+	(port
+		(pt 0 832)
+		(output)
+		(text "uart_bt_external_interface_TXD" (rect 0 0 129 12)(font "Arial" (font_size 8)))
+		(text "uart_bt_external_interface_TXD" (rect 4 821 184 832)(font "Arial" (font_size 8)))
+		(line (pt 0 832)(pt 288 832)(line_width 1))
+	)
+	(port
+		(pt 0 344)
+		(bidir)
+		(text "direction_controller_0_conduit_leds_array_export[7..0]" (rect 0 0 217 12)(font "Arial" (font_size 8)))
+		(text "direction_controller_0_conduit_leds_array_export[7..0]" (rect 4 333 328 344)(font "Arial" (font_size 8)))
+		(line (pt 0 344)(pt 288 344)(line_width 3))
+	)
+	(port
+		(pt 0 584)
+		(bidir)
+		(text "mpu_i2c_export_scl_pad_io" (rect 0 0 113 12)(font "Arial" (font_size 8)))
+		(text "mpu_i2c_export_scl_pad_io" (rect 4 573 154 584)(font "Arial" (font_size 8)))
+		(line (pt 0 584)(pt 288 584)(line_width 1))
+	)
+	(port
+		(pt 0 600)
+		(bidir)
+		(text "mpu_i2c_export_sda_pad_io" (rect 0 0 116 12)(font "Arial" (font_size 8)))
+		(text "mpu_i2c_export_sda_pad_io" (rect 4 589 154 600)(font "Arial" (font_size 8)))
+		(line (pt 0 600)(pt 288 600)(line_width 1))
+	)
+	(drawing
+		(text "adc_ltc2308_0_conduit_end" (rect 127 43 404 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "CONVST" (rect 293 67 622 144)(font "Arial" (color 0 0 0)))
+		(text "SCK" (rect 293 83 604 176)(font "Arial" (color 0 0 0)))
+		(text "SDI" (rect 293 99 604 208)(font "Arial" (color 0 0 0)))
+		(text "SDO" (rect 293 115 604 240)(font "Arial" (color 0 0 0)))
+		(text "clk" (rect 273 131 564 275)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 293 155 604 320)(font "Arial" (color 0 0 0)))
+		(text "dc_motor_left_conduit_end" (rect 129 171 408 355)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "motor_in1" (rect 293 195 640 400)(font "Arial" (color 0 0 0)))
+		(text "motor_in2" (rect 293 211 640 432)(font "Arial" (color 0 0 0)))
+		(text "pwm" (rect 293 227 604 464)(font "Arial" (color 0 0 0)))
+		(text "dc_motor_right_conduit_end" (rect 122 243 400 499)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "motor_in1" (rect 293 267 640 544)(font "Arial" (color 0 0 0)))
+		(text "motor_in2" (rect 293 283 640 576)(font "Arial" (color 0 0 0)))
+		(text "pwm" (rect 293 299 604 608)(font "Arial" (color 0 0 0)))
+		(text "direction_controller_0_conduit_leds_array" (rect 44 315 334 643)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 293 339 622 688)(font "Arial" (color 0 0 0)))
+		(text "esp32_io_external_connection" (rect 113 355 394 723)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 293 379 622 768)(font "Arial" (color 0 0 0)))
+		(text "ir_rx_conduit_end" (rect 184 395 470 803)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 293 419 622 848)(font "Arial" (color 0 0 0)))
+		(text "led_external_connection" (rect 149 435 436 883)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 293 459 622 928)(font "Arial" (color 0 0 0)))
+		(text "motor_measure_left_conduit_end" (rect 91 475 362 963)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "ab" (rect 293 499 598 1008)(font "Arial" (color 0 0 0)))
+		(text "motor_measure_right_conduit_end" (rect 84 515 354 1043)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "ab" (rect 293 539 598 1088)(font "Arial" (color 0 0 0)))
+		(text "mpu_i2c_export" (rect 196 555 476 1123)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "scl_pad_io" (rect 293 579 646 1168)(font "Arial" (color 0 0 0)))
+		(text "sda_pad_io" (rect 293 595 646 1200)(font "Arial" (color 0 0 0)))
+		(text "mpu_int_external_connection" (rect 119 611 400 1235)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 293 635 622 1280)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 259 651 548 1315)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 293 675 628 1360)(font "Arial" (color 0 0 0)))
+		(text "sonic_distance_0_conduit_end" (rect 110 691 388 1395)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "echo" (rect 293 715 610 1440)(font "Arial" (color 0 0 0)))
+		(text "trigger" (rect 293 731 628 1472)(font "Arial" (color 0 0 0)))
+		(text "sw_external_connection" (rect 149 747 430 1507)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 293 771 622 1552)(font "Arial" (color 0 0 0)))
+		(text "uart_bt_external_interface" (rect 134 787 424 1587)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "RXD" (rect 293 811 604 1632)(font "Arial" (color 0 0 0)))
+		(text "TXD" (rect 293 827 604 1664)(font "Arial" (color 0 0 0)))
+		(text " Qsys " (rect 630 848 1296 1706)(font "Arial" ))
+		(line (pt 288 32)(pt 368 32)(line_width 1))
+		(line (pt 368 32)(pt 368 848)(line_width 1))
+		(line (pt 288 848)(pt 368 848)(line_width 1))
+		(line (pt 288 32)(pt 288 848)(line_width 1))
+		(line (pt 289 52)(pt 289 124)(line_width 1))
+		(line (pt 290 52)(pt 290 124)(line_width 1))
+		(line (pt 289 140)(pt 289 164)(line_width 1))
+		(line (pt 290 140)(pt 290 164)(line_width 1))
+		(line (pt 289 180)(pt 289 236)(line_width 1))
+		(line (pt 290 180)(pt 290 236)(line_width 1))
+		(line (pt 289 252)(pt 289 308)(line_width 1))
+		(line (pt 290 252)(pt 290 308)(line_width 1))
+		(line (pt 289 324)(pt 289 348)(line_width 1))
+		(line (pt 290 324)(pt 290 348)(line_width 1))
+		(line (pt 289 364)(pt 289 388)(line_width 1))
+		(line (pt 290 364)(pt 290 388)(line_width 1))
+		(line (pt 289 404)(pt 289 428)(line_width 1))
+		(line (pt 290 404)(pt 290 428)(line_width 1))
+		(line (pt 289 444)(pt 289 468)(line_width 1))
+		(line (pt 290 444)(pt 290 468)(line_width 1))
+		(line (pt 289 484)(pt 289 508)(line_width 1))
+		(line (pt 290 484)(pt 290 508)(line_width 1))
+		(line (pt 289 524)(pt 289 548)(line_width 1))
+		(line (pt 290 524)(pt 290 548)(line_width 1))
+		(line (pt 289 564)(pt 289 604)(line_width 1))
+		(line (pt 290 564)(pt 290 604)(line_width 1))
+		(line (pt 289 620)(pt 289 644)(line_width 1))
+		(line (pt 290 620)(pt 290 644)(line_width 1))
+		(line (pt 289 660)(pt 289 684)(line_width 1))
+		(line (pt 290 660)(pt 290 684)(line_width 1))
+		(line (pt 289 700)(pt 289 740)(line_width 1))
+		(line (pt 290 700)(pt 290 740)(line_width 1))
+		(line (pt 289 756)(pt 289 780)(line_width 1))
+		(line (pt 290 756)(pt 290 780)(line_width 1))
+		(line (pt 289 796)(pt 289 836)(line_width 1))
+		(line (pt 290 796)(pt 290 836)(line_width 1))
+		(line (pt 0 0)(pt 656 0)(line_width 1))
+		(line (pt 656 0)(pt 656 864)(line_width 1))
+		(line (pt 0 864)(pt 656 864)(line_width 1))
+		(line (pt 0 0)(pt 0 864)(line_width 1))
+>>>>>>> Add direction control
 	)
 )

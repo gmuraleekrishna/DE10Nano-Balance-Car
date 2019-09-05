@@ -56,10 +56,24 @@
 					"strict" : false
 				},
 				{
+<<<<<<< HEAD
+=======
+					"name" : "MTRR_N",
+					"strict" : false
+				},
+				{
+>>>>>>> Add direction control
 					"name" : "MTR_PWMB",
 					"strict" : false
 				},
 				{
+<<<<<<< HEAD
+=======
+					"name" : "MTRL_P",
+					"strict" : false
+				},
+				{
+>>>>>>> Add direction control
 					"name" : "MTRL_N",
 					"strict" : false
 				},
@@ -76,6 +90,41 @@
 					"strict" : false
 				},
 				{
+<<<<<<< HEAD
+=======
+					"name" : "GPIO_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[7]",
+					"strict" : false
+				},
+				{
+>>>>>>> Add direction control
 					"name" : "MPU_SDA_SDI",
 					"strict" : false
 				},
@@ -120,6 +169,7 @@
 					"strict" : false
 				},
 				{
+<<<<<<< HEAD
 					"name" : "MTRL_A",
 					"strict" : false
 				},
@@ -133,6 +183,21 @@
 				},
 				{
 					"name" : "MTRR_B",
+=======
+					"name" : "MTRR_A",
+					"strict" : false
+				},
+				{
+					"name" : "MTRR_B",
+					"strict" : false
+				},
+				{
+					"name" : "MTRL_A",
+					"strict" : false
+				},
+				{
+					"name" : "MTRL_B",
+>>>>>>> Add direction control
 					"strict" : false
 				},
 				{
@@ -140,11 +205,19 @@
 					"strict" : false
 				},
 				{
+<<<<<<< HEAD
 					"name" : "ADC_SDO",
 					"strict" : false
 				},
 				{
 					"name" : "SONIC_ECHO",
+=======
+					"name" : "SONIC_ECHO",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SDO",
+>>>>>>> Add direction control
 					"strict" : false
 				}
 			]

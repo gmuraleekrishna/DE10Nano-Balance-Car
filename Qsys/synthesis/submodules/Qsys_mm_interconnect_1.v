@@ -9,6 +9,7 @@
 module Qsys_mm_interconnect_1 (
 		input  wire        clk_0_clk_clk,                                    //                                  clk_0_clk.clk
 		input  wire        motor_run_left_reset_reset_bridge_in_reset_reset, // motor_run_left_reset_reset_bridge_in_reset.reset
+<<<<<<< HEAD
 		input  wire [6:0]  mm_clock_crossing_bridge_0_m0_address,            //              mm_clock_crossing_bridge_0_m0.address
 		output wire        mm_clock_crossing_bridge_0_m0_waitrequest,        //                                           .waitrequest
 		input  wire [0:0]  mm_clock_crossing_bridge_0_m0_burstcount,         //                                           .burstcount
@@ -19,22 +20,28 @@ module Qsys_mm_interconnect_1 (
 		input  wire        mm_clock_crossing_bridge_0_m0_write,              //                                           .write
 		input  wire [31:0] mm_clock_crossing_bridge_0_m0_writedata,          //                                           .writedata
 		input  wire        mm_clock_crossing_bridge_0_m0_debugaccess,        //                                           .debugaccess
+=======
+>>>>>>> Add direction control
 		input  wire [3:0]  motor_run_left_avalon_master_address,             //               motor_run_left_avalon_master.address
 		output wire        motor_run_left_avalon_master_waitrequest,         //                                           .waitrequest
 		input  wire        motor_run_left_avalon_master_chipselect,          //                                           .chipselect
 		input  wire        motor_run_left_avalon_master_write,               //                                           .write
 		input  wire [31:0] motor_run_left_avalon_master_writedata,           //                                           .writedata
+<<<<<<< HEAD
 		output wire [0:0]  adc_ltc2308_0_slave_address,                      //                        adc_ltc2308_0_slave.address
 		output wire        adc_ltc2308_0_slave_write,                        //                                           .write
 		output wire        adc_ltc2308_0_slave_read,                         //                                           .read
 		input  wire [15:0] adc_ltc2308_0_slave_readdata,                     //                                           .readdata
 		output wire [15:0] adc_ltc2308_0_slave_writedata,                    //                                           .writedata
 		output wire        adc_ltc2308_0_slave_chipselect,                   //                                           .chipselect
+=======
+>>>>>>> Add direction control
 		output wire [1:0]  dc_motor_left_avalon_slave_address,               //                 dc_motor_left_avalon_slave.address
 		output wire        dc_motor_left_avalon_slave_write,                 //                                           .write
 		output wire        dc_motor_left_avalon_slave_read,                  //                                           .read
 		input  wire [31:0] dc_motor_left_avalon_slave_readdata,              //                                           .readdata
 		output wire [31:0] dc_motor_left_avalon_slave_writedata,             //                                           .writedata
+<<<<<<< HEAD
 		output wire        dc_motor_left_avalon_slave_chipselect,            //                                           .chipselect
 		output wire [1:0]  esp32_io_s1_address,                              //                                esp32_io_s1.address
 		input  wire [31:0] esp32_io_s1_readdata,                             //                                           .readdata
@@ -535,13 +542,33 @@ module Qsys_mm_interconnect_1 (
 	wire  [33:0] avalon_st_adapter_006_out_0_data;                                                 // avalon_st_adapter_006:out_0_data -> adc_ltc2308_0_slave_agent:rdata_fifo_sink_data
 	wire         avalon_st_adapter_006_out_0_ready;                                                // adc_ltc2308_0_slave_agent:rdata_fifo_sink_ready -> avalon_st_adapter_006:out_0_ready
 	wire   [0:0] avalon_st_adapter_006_out_0_error;                                                // avalon_st_adapter_006:out_0_error -> adc_ltc2308_0_slave_agent:rdata_fifo_sink_error
+=======
+		output wire        dc_motor_left_avalon_slave_chipselect             //                                           .chipselect
+	);
+
+	wire         motor_run_left_avalon_master_translator_avalon_universal_master_0_waitrequest;   // dc_motor_left_avalon_slave_translator:uav_waitrequest -> motor_run_left_avalon_master_translator:uav_waitrequest
+	wire  [31:0] motor_run_left_avalon_master_translator_avalon_universal_master_0_readdata;      // dc_motor_left_avalon_slave_translator:uav_readdata -> motor_run_left_avalon_master_translator:uav_readdata
+	wire         motor_run_left_avalon_master_translator_avalon_universal_master_0_debugaccess;   // motor_run_left_avalon_master_translator:uav_debugaccess -> dc_motor_left_avalon_slave_translator:uav_debugaccess
+	wire   [3:0] motor_run_left_avalon_master_translator_avalon_universal_master_0_address;       // motor_run_left_avalon_master_translator:uav_address -> dc_motor_left_avalon_slave_translator:uav_address
+	wire         motor_run_left_avalon_master_translator_avalon_universal_master_0_read;          // motor_run_left_avalon_master_translator:uav_read -> dc_motor_left_avalon_slave_translator:uav_read
+	wire   [3:0] motor_run_left_avalon_master_translator_avalon_universal_master_0_byteenable;    // motor_run_left_avalon_master_translator:uav_byteenable -> dc_motor_left_avalon_slave_translator:uav_byteenable
+	wire         motor_run_left_avalon_master_translator_avalon_universal_master_0_readdatavalid; // dc_motor_left_avalon_slave_translator:uav_readdatavalid -> motor_run_left_avalon_master_translator:uav_readdatavalid
+	wire         motor_run_left_avalon_master_translator_avalon_universal_master_0_lock;          // motor_run_left_avalon_master_translator:uav_lock -> dc_motor_left_avalon_slave_translator:uav_lock
+	wire         motor_run_left_avalon_master_translator_avalon_universal_master_0_write;         // motor_run_left_avalon_master_translator:uav_write -> dc_motor_left_avalon_slave_translator:uav_write
+	wire  [31:0] motor_run_left_avalon_master_translator_avalon_universal_master_0_writedata;     // motor_run_left_avalon_master_translator:uav_writedata -> dc_motor_left_avalon_slave_translator:uav_writedata
+	wire   [2:0] motor_run_left_avalon_master_translator_avalon_universal_master_0_burstcount;    // motor_run_left_avalon_master_translator:uav_burstcount -> dc_motor_left_avalon_slave_translator:uav_burstcount
+>>>>>>> Add direction control
 
 	altera_merlin_master_translator #(
 		.AV_ADDRESS_W                (4),
 		.AV_DATA_W                   (32),
 		.AV_BURSTCOUNT_W             (1),
 		.AV_BYTEENABLE_W             (4),
+<<<<<<< HEAD
 		.UAV_ADDRESS_W               (7),
+=======
+		.UAV_ADDRESS_W               (4),
+>>>>>>> Add direction control
 		.UAV_BURSTCOUNT_W            (3),
 		.USE_READ                    (0),
 		.USE_WRITE                   (1),
@@ -596,6 +623,7 @@ module Qsys_mm_interconnect_1 (
 		.av_writeresponsevalid  ()                                                                                 //               (terminated)
 	);
 
+<<<<<<< HEAD
 	altera_merlin_master_translator #(
 		.AV_ADDRESS_W                (7),
 		.AV_DATA_W                   (32),
@@ -656,6 +684,8 @@ module Qsys_mm_interconnect_1 (
 		.av_writeresponsevalid  ()                                                                                  //               (terminated)
 	);
 
+=======
+>>>>>>> Add direction control
 	altera_merlin_slave_translator #(
 		.AV_ADDRESS_W                   (2),
 		.AV_DATA_W                      (32),
@@ -663,7 +693,11 @@ module Qsys_mm_interconnect_1 (
 		.AV_BURSTCOUNT_W                (1),
 		.AV_BYTEENABLE_W                (4),
 		.UAV_BYTEENABLE_W               (4),
+<<<<<<< HEAD
 		.UAV_ADDRESS_W                  (7),
+=======
+		.UAV_ADDRESS_W                  (4),
+>>>>>>> Add direction control
 		.UAV_BURSTCOUNT_W               (3),
 		.AV_READLATENCY                 (0),
 		.USE_READDATAVALID              (0),
@@ -683,6 +717,7 @@ module Qsys_mm_interconnect_1 (
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
 	) dc_motor_left_avalon_slave_translator (
+<<<<<<< HEAD
 		.clk                    (clk_0_clk_clk),                                     //                      clk.clk
 		.reset                  (motor_run_left_reset_reset_bridge_in_reset_reset),  //                    reset.reset
 		.uav_address            (dc_motor_left_avalon_slave_agent_m0_address),       // avalon_universal_slave_0.address
@@ -2926,6 +2961,43 @@ module Qsys_mm_interconnect_1 (
 		.out_0_valid    (avalon_st_adapter_006_out_0_valid),                //         .valid
 		.out_0_ready    (avalon_st_adapter_006_out_0_ready),                //         .ready
 		.out_0_error    (avalon_st_adapter_006_out_0_error)                 //         .error
+=======
+		.clk                    (clk_0_clk_clk),                                                                   //                      clk.clk
+		.reset                  (motor_run_left_reset_reset_bridge_in_reset_reset),                                //                    reset.reset
+		.uav_address            (motor_run_left_avalon_master_translator_avalon_universal_master_0_address),       // avalon_universal_slave_0.address
+		.uav_burstcount         (motor_run_left_avalon_master_translator_avalon_universal_master_0_burstcount),    //                         .burstcount
+		.uav_read               (motor_run_left_avalon_master_translator_avalon_universal_master_0_read),          //                         .read
+		.uav_write              (motor_run_left_avalon_master_translator_avalon_universal_master_0_write),         //                         .write
+		.uav_waitrequest        (motor_run_left_avalon_master_translator_avalon_universal_master_0_waitrequest),   //                         .waitrequest
+		.uav_readdatavalid      (motor_run_left_avalon_master_translator_avalon_universal_master_0_readdatavalid), //                         .readdatavalid
+		.uav_byteenable         (motor_run_left_avalon_master_translator_avalon_universal_master_0_byteenable),    //                         .byteenable
+		.uav_readdata           (motor_run_left_avalon_master_translator_avalon_universal_master_0_readdata),      //                         .readdata
+		.uav_writedata          (motor_run_left_avalon_master_translator_avalon_universal_master_0_writedata),     //                         .writedata
+		.uav_lock               (motor_run_left_avalon_master_translator_avalon_universal_master_0_lock),          //                         .lock
+		.uav_debugaccess        (motor_run_left_avalon_master_translator_avalon_universal_master_0_debugaccess),   //                         .debugaccess
+		.av_address             (dc_motor_left_avalon_slave_address),                                              //      avalon_anti_slave_0.address
+		.av_write               (dc_motor_left_avalon_slave_write),                                                //                         .write
+		.av_read                (dc_motor_left_avalon_slave_read),                                                 //                         .read
+		.av_readdata            (dc_motor_left_avalon_slave_readdata),                                             //                         .readdata
+		.av_writedata           (dc_motor_left_avalon_slave_writedata),                                            //                         .writedata
+		.av_chipselect          (dc_motor_left_avalon_slave_chipselect),                                           //                         .chipselect
+		.av_begintransfer       (),                                                                                //              (terminated)
+		.av_beginbursttransfer  (),                                                                                //              (terminated)
+		.av_burstcount          (),                                                                                //              (terminated)
+		.av_byteenable          (),                                                                                //              (terminated)
+		.av_readdatavalid       (1'b0),                                                                            //              (terminated)
+		.av_waitrequest         (1'b0),                                                                            //              (terminated)
+		.av_writebyteenable     (),                                                                                //              (terminated)
+		.av_lock                (),                                                                                //              (terminated)
+		.av_clken               (),                                                                                //              (terminated)
+		.uav_clken              (1'b0),                                                                            //              (terminated)
+		.av_debugaccess         (),                                                                                //              (terminated)
+		.av_outputenable        (),                                                                                //              (terminated)
+		.uav_response           (),                                                                                //              (terminated)
+		.av_response            (2'b00),                                                                           //              (terminated)
+		.uav_writeresponsevalid (),                                                                                //              (terminated)
+		.av_writeresponsevalid  (1'b0)                                                                             //              (terminated)
+>>>>>>> Add direction control
 	);
 
 endmodule

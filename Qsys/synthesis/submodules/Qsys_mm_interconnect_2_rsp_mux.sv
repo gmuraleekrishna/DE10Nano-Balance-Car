@@ -39,13 +39,22 @@
 // ------------------------------------------
 // Generation parameters:
 //   output_name:         Qsys_mm_interconnect_2_rsp_mux
+<<<<<<< HEAD
 //   NUM_INPUTS:          11
 //   ARBITRATION_SHARES:  1 1 1 1 1 1 1 1 1 1 1
+=======
+//   NUM_INPUTS:          12
+//   ARBITRATION_SHARES:  1 1 1 1 1 1 1 1 1 1 1 1
+>>>>>>> Add direction control
 //   ARBITRATION_SCHEME   "no-arb"
 //   PIPELINE_ARB:        0
 //   PKT_TRANS_LOCK:      65 (arbitration locking enabled)
 //   ST_DATA_W:           103
+<<<<<<< HEAD
 //   ST_CHANNEL_W:        11
+=======
+//   ST_CHANNEL_W:        12
+>>>>>>> Add direction control
 // ------------------------------------------
 
 module Qsys_mm_interconnect_2_rsp_mux
@@ -55,88 +64,146 @@ module Qsys_mm_interconnect_2_rsp_mux
     // ----------------------
     input                       sink0_valid,
     input [103-1   : 0]  sink0_data,
+<<<<<<< HEAD
     input [11-1: 0]  sink0_channel,
+=======
+    input [12-1: 0]  sink0_channel,
+>>>>>>> Add direction control
     input                       sink0_startofpacket,
     input                       sink0_endofpacket,
     output                      sink0_ready,
 
     input                       sink1_valid,
     input [103-1   : 0]  sink1_data,
+<<<<<<< HEAD
     input [11-1: 0]  sink1_channel,
+=======
+    input [12-1: 0]  sink1_channel,
+>>>>>>> Add direction control
     input                       sink1_startofpacket,
     input                       sink1_endofpacket,
     output                      sink1_ready,
 
     input                       sink2_valid,
     input [103-1   : 0]  sink2_data,
+<<<<<<< HEAD
     input [11-1: 0]  sink2_channel,
+=======
+    input [12-1: 0]  sink2_channel,
+>>>>>>> Add direction control
     input                       sink2_startofpacket,
     input                       sink2_endofpacket,
     output                      sink2_ready,
 
     input                       sink3_valid,
     input [103-1   : 0]  sink3_data,
+<<<<<<< HEAD
     input [11-1: 0]  sink3_channel,
+=======
+    input [12-1: 0]  sink3_channel,
+>>>>>>> Add direction control
     input                       sink3_startofpacket,
     input                       sink3_endofpacket,
     output                      sink3_ready,
 
     input                       sink4_valid,
     input [103-1   : 0]  sink4_data,
+<<<<<<< HEAD
     input [11-1: 0]  sink4_channel,
+=======
+    input [12-1: 0]  sink4_channel,
+>>>>>>> Add direction control
     input                       sink4_startofpacket,
     input                       sink4_endofpacket,
     output                      sink4_ready,
 
     input                       sink5_valid,
     input [103-1   : 0]  sink5_data,
+<<<<<<< HEAD
     input [11-1: 0]  sink5_channel,
+=======
+    input [12-1: 0]  sink5_channel,
+>>>>>>> Add direction control
     input                       sink5_startofpacket,
     input                       sink5_endofpacket,
     output                      sink5_ready,
 
     input                       sink6_valid,
     input [103-1   : 0]  sink6_data,
+<<<<<<< HEAD
     input [11-1: 0]  sink6_channel,
+=======
+    input [12-1: 0]  sink6_channel,
+>>>>>>> Add direction control
     input                       sink6_startofpacket,
     input                       sink6_endofpacket,
     output                      sink6_ready,
 
     input                       sink7_valid,
     input [103-1   : 0]  sink7_data,
+<<<<<<< HEAD
     input [11-1: 0]  sink7_channel,
+=======
+    input [12-1: 0]  sink7_channel,
+>>>>>>> Add direction control
     input                       sink7_startofpacket,
     input                       sink7_endofpacket,
     output                      sink7_ready,
 
     input                       sink8_valid,
     input [103-1   : 0]  sink8_data,
+<<<<<<< HEAD
     input [11-1: 0]  sink8_channel,
+=======
+    input [12-1: 0]  sink8_channel,
+>>>>>>> Add direction control
     input                       sink8_startofpacket,
     input                       sink8_endofpacket,
     output                      sink8_ready,
 
     input                       sink9_valid,
     input [103-1   : 0]  sink9_data,
+<<<<<<< HEAD
     input [11-1: 0]  sink9_channel,
+=======
+    input [12-1: 0]  sink9_channel,
+>>>>>>> Add direction control
     input                       sink9_startofpacket,
     input                       sink9_endofpacket,
     output                      sink9_ready,
 
     input                       sink10_valid,
     input [103-1   : 0]  sink10_data,
+<<<<<<< HEAD
     input [11-1: 0]  sink10_channel,
+=======
+    input [12-1: 0]  sink10_channel,
+>>>>>>> Add direction control
     input                       sink10_startofpacket,
     input                       sink10_endofpacket,
     output                      sink10_ready,
 
+<<<<<<< HEAD
+=======
+    input                       sink11_valid,
+    input [103-1   : 0]  sink11_data,
+    input [12-1: 0]  sink11_channel,
+    input                       sink11_startofpacket,
+    input                       sink11_endofpacket,
+    output                      sink11_ready,
+
+>>>>>>> Add direction control
 
     // ----------------------
     // Source
     // ----------------------
     output                      src_valid,
     output [103-1    : 0] src_data,
+<<<<<<< HEAD
     output [11-1 : 0] src_channel,
+=======
+    output [12-1 : 0] src_channel,
+>>>>>>> Add direction control
     output                      src_startofpacket,
     output                      src_endofpacket,
     input                       src_ready,
@@ -147,12 +214,21 @@ module Qsys_mm_interconnect_2_rsp_mux
     input clk,
     input reset
 );
+<<<<<<< HEAD
     localparam PAYLOAD_W        = 103 + 11 + 2;
     localparam NUM_INPUTS       = 11;
     localparam SHARE_COUNTER_W  = 1;
     localparam PIPELINE_ARB     = 0;
     localparam ST_DATA_W        = 103;
     localparam ST_CHANNEL_W     = 11;
+=======
+    localparam PAYLOAD_W        = 103 + 12 + 2;
+    localparam NUM_INPUTS       = 12;
+    localparam SHARE_COUNTER_W  = 1;
+    localparam PIPELINE_ARB     = 0;
+    localparam ST_DATA_W        = 103;
+    localparam ST_CHANNEL_W     = 12;
+>>>>>>> Add direction control
     localparam PKT_TRANS_LOCK   = 65;
 
     // ------------------------------------------
@@ -179,6 +255,10 @@ module Qsys_mm_interconnect_2_rsp_mux
     wire [PAYLOAD_W - 1 : 0] sink8_payload;
     wire [PAYLOAD_W - 1 : 0] sink9_payload;
     wire [PAYLOAD_W - 1 : 0] sink10_payload;
+<<<<<<< HEAD
+=======
+    wire [PAYLOAD_W - 1 : 0] sink11_payload;
+>>>>>>> Add direction control
 
     assign valid[0] = sink0_valid;
     assign valid[1] = sink1_valid;
@@ -191,6 +271,10 @@ module Qsys_mm_interconnect_2_rsp_mux
     assign valid[8] = sink8_valid;
     assign valid[9] = sink9_valid;
     assign valid[10] = sink10_valid;
+<<<<<<< HEAD
+=======
+    assign valid[11] = sink11_valid;
+>>>>>>> Add direction control
 
 
     // ------------------------------------------
@@ -211,6 +295,10 @@ module Qsys_mm_interconnect_2_rsp_mux
       lock[8] = sink8_data[65];
       lock[9] = sink9_data[65];
       lock[10] = sink10_data[65];
+<<<<<<< HEAD
+=======
+      lock[11] = sink11_data[65];
+>>>>>>> Add direction control
     end
 
     assign last_cycle = src_valid & src_ready & src_endofpacket & ~(|(lock & grant));
@@ -252,6 +340,10 @@ module Qsys_mm_interconnect_2_rsp_mux
     // 8      |      1       |  0
     // 9      |      1       |  0
     // 10      |      1       |  0
+<<<<<<< HEAD
+=======
+    // 11      |      1       |  0
+>>>>>>> Add direction control
      wire [SHARE_COUNTER_W - 1 : 0] share_0 = 1'd0;
      wire [SHARE_COUNTER_W - 1 : 0] share_1 = 1'd0;
      wire [SHARE_COUNTER_W - 1 : 0] share_2 = 1'd0;
@@ -263,6 +355,10 @@ module Qsys_mm_interconnect_2_rsp_mux
      wire [SHARE_COUNTER_W - 1 : 0] share_8 = 1'd0;
      wire [SHARE_COUNTER_W - 1 : 0] share_9 = 1'd0;
      wire [SHARE_COUNTER_W - 1 : 0] share_10 = 1'd0;
+<<<<<<< HEAD
+=======
+     wire [SHARE_COUNTER_W - 1 : 0] share_11 = 1'd0;
+>>>>>>> Add direction control
 
     // ------------------------------------------
     // Choose the share value corresponding to the grant.
@@ -280,7 +376,12 @@ module Qsys_mm_interconnect_2_rsp_mux
     share_7 & { SHARE_COUNTER_W {next_grant[7]} } |
     share_8 & { SHARE_COUNTER_W {next_grant[8]} } |
     share_9 & { SHARE_COUNTER_W {next_grant[9]} } |
+<<<<<<< HEAD
     share_10 & { SHARE_COUNTER_W {next_grant[10]} };
+=======
+    share_10 & { SHARE_COUNTER_W {next_grant[10]} } |
+    share_11 & { SHARE_COUNTER_W {next_grant[11]} };
+>>>>>>> Add direction control
     end
 
     // ------------------------------------------
@@ -364,11 +465,20 @@ module Qsys_mm_interconnect_2_rsp_mux
 
     wire final_packet_10 = 1'b1;
 
+<<<<<<< HEAD
+=======
+    wire final_packet_11 = 1'b1;
+
+>>>>>>> Add direction control
 
     // ------------------------------------------
     // Concatenate all final_packet signals (wire or reg) into a handy vector.
     // ------------------------------------------
     wire [NUM_INPUTS - 1 : 0] final_packet = {
+<<<<<<< HEAD
+=======
+    final_packet_11,
+>>>>>>> Add direction control
     final_packet_10,
     final_packet_9,
     final_packet_8,
@@ -474,6 +584,10 @@ module Qsys_mm_interconnect_2_rsp_mux
     assign sink8_ready = src_ready && grant[8];
     assign sink9_ready = src_ready && grant[9];
     assign sink10_ready = src_ready && grant[10];
+<<<<<<< HEAD
+=======
+    assign sink11_ready = src_ready && grant[11];
+>>>>>>> Add direction control
 
     assign src_valid = |(grant & valid);
 
@@ -489,7 +603,12 @@ module Qsys_mm_interconnect_2_rsp_mux
       sink7_payload & {PAYLOAD_W {grant[7]} } |
       sink8_payload & {PAYLOAD_W {grant[8]} } |
       sink9_payload & {PAYLOAD_W {grant[9]} } |
+<<<<<<< HEAD
       sink10_payload & {PAYLOAD_W {grant[10]} };
+=======
+      sink10_payload & {PAYLOAD_W {grant[10]} } |
+      sink11_payload & {PAYLOAD_W {grant[11]} };
+>>>>>>> Add direction control
     end
 
     // ------------------------------------------
@@ -518,6 +637,11 @@ module Qsys_mm_interconnect_2_rsp_mux
     sink9_startofpacket,sink9_endofpacket};
     assign sink10_payload = {sink10_channel,sink10_data,
     sink10_startofpacket,sink10_endofpacket};
+<<<<<<< HEAD
+=======
+    assign sink11_payload = {sink11_channel,sink11_data,
+    sink11_startofpacket,sink11_endofpacket};
+>>>>>>> Add direction control
 
     assign {src_channel,src_data,src_startofpacket,src_endofpacket} = src_payload;
 endmodule

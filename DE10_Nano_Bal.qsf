@@ -520,9 +520,16 @@ set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MTRR_A
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MTRR_B
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MTRL_A
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MTRL_B
+<<<<<<< HEAD
 set_global_assignment -name SYSTEMVERILOG_FILE ../../../Downloads/try/try/direction_control.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../../Downloads/try/try/ledsarray.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../../Downloads/try/try/cartop.sv
+=======
+set_global_assignment -name SYSTEMVERILOG_FILE IP/obstacle_avoider/obstacle_avoider.sv
+set_global_assignment -name SYSTEMVERILOG_FILE IP/IR_SENSOR/direction_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE IP/IR_SENSOR/ledsarray.sv
+set_global_assignment -name SYSTEMVERILOG_FILE IP/IR_SENSOR/direction_control.sv
+>>>>>>> Add direction control
 set_global_assignment -name VERILOG_FILE FILTER.v
 set_global_assignment -name VERILOG_FILE DE10_Nano_Bal.v
 set_global_assignment -name SDC_FILE DE10_Nano_Bal.sdc

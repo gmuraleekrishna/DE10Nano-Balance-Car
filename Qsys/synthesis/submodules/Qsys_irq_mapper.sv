@@ -22,7 +22,11 @@
 // Parameters
 //   NUM_RCVRS        : 6
 //   SENDER_IRW_WIDTH : 32
+<<<<<<< HEAD
 //   IRQ_MAP          : 0:3,1:1,2:2,3:4,4:5,5:0
+=======
+//   IRQ_MAP          : 0:3,1:2,2:1,3:4,4:5,5:0
+>>>>>>> Add direction control
 //
 // -------------------------------------------------------
 
@@ -57,8 +61,13 @@ module Qsys_irq_mapper
 	sender_irq = 0;
 
         sender_irq[3] = receiver0_irq;
+<<<<<<< HEAD
         sender_irq[1] = receiver1_irq;
         sender_irq[2] = receiver2_irq;
+=======
+        sender_irq[2] = receiver1_irq;
+        sender_irq[1] = receiver2_irq;
+>>>>>>> Add direction control
         sender_irq[4] = receiver3_irq;
         sender_irq[5] = receiver4_irq;
         sender_irq[0] = receiver5_irq;
