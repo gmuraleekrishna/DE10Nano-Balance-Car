@@ -1,18 +1,10 @@
 module motor_run(
 	input	clk,
-<<<<<<< HEAD
-=======
-	input run,
-	input [31:0] speed,
->>>>>>> Add direction control
 	input	reset_n,
 	output s_cs,
 	output [3:0] s_address,
 	output s_write,
-<<<<<<< HEAD
 	output s_read,
-=======
->>>>>>> Add direction control
 	output [31:0] s_writedata,
 	input waitrequest
 );
@@ -20,13 +12,9 @@ module motor_run(
 	`define REG_TOTAL_DUR 4'h0
 	`define REG_HIGH_DUR	4'h1
 	`define REG_CONTROL	4'd2
-<<<<<<< HEAD
 
 
 	assign s_read = 1'b0;  
-=======
-	
->>>>>>> Add direction control
 	reg [2:0] state;
 	
 	always_ff @(posedge clk) begin
@@ -51,11 +39,7 @@ module motor_run(
 			3'd4: begin
 				s_cs = 1'b0;
 				s_write = 1'b0;
-<<<<<<< HEAD
 				s_writedata = {29'b0, 1'b0, 1'b1, 1'b1}; // 29'd0, motor_fast_decay, motor_forward, motor_go
-=======
-				s_writedata = {29'b0, 1'b0, 1'b1, run}; // 29'd0, motor_fast_decay, motor_forward, motor_go
->>>>>>> Add direction control
 				s_address =`REG_CONTROL;
 				s_write = 1'b1;
 				s_cs = 1'b1;
