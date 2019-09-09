@@ -107,7 +107,7 @@ begin
 	begin
 		tick <= 1;
 	end
-	else if (tick >= 16'd7000)
+	else if (tick >= total_dur)
 	begin
 		tick <= 1;
 	end
@@ -117,7 +117,7 @@ end
 
 always @ (posedge clk)
 begin
-		PWM_OUT <= (tick <= 16'd4000)?1'b1:1'b0;
+		PWM_OUT <= (tick <= high_dur)?1'b1:1'b0;
 end
 
 

@@ -425,7 +425,8 @@ Qsys u0 (
         .uart_bt_external_interface_TXD                   (txd),                    			//                           .TXD
 
 		  //pio 		  
-        .led_external_connection_export                   (LED),                    			// led_external_connection.export
+        //.led_external_connection_export                   (LED),                    			// led_external_connection.export
+		  .direction_controller_0_conduit_end_led_readdata		(LED),
 		  .sw_external_connection_export                    (SW),                     			// sw_external_connection.export
  
  		  //sonic 
@@ -440,7 +441,8 @@ Qsys u0 (
         .adc_ltc2308_0_conduit_end_SCK                    (ADC_SCK),                    		//                          .SCK
         .adc_ltc2308_0_conduit_end_SDI                    (ADC_SDI),                    		//                          .SDI
         .adc_ltc2308_0_conduit_end_SDO                    (ADC_SDO),                     	   //                          .SDO
-
+		  
+  		  //ir		  
         .ir_rx_conduit_end_export                         (IR_RXD),                           // ir_rx_conduit_end.export
 		  
 		  // custom

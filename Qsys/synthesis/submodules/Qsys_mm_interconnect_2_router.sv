@@ -44,25 +44,15 @@
 
 module Qsys_mm_interconnect_2_router_default_decode
   #(
-<<<<<<< HEAD
-     parameter DEFAULT_CHANNEL = 10,
-=======
      parameter DEFAULT_CHANNEL = 11,
->>>>>>> Add direction control
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
                DEFAULT_DESTID = 7 
    )
   (output [89 - 86 : 0] default_destination_id,
-<<<<<<< HEAD
-   output [11-1 : 0] default_wr_channel,
-   output [11-1 : 0] default_rd_channel,
-   output [11-1 : 0] default_src_channel
-=======
    output [12-1 : 0] default_wr_channel,
    output [12-1 : 0] default_rd_channel,
    output [12-1 : 0] default_src_channel
->>>>>>> Add direction control
   );
 
   assign default_destination_id = 
@@ -73,11 +63,7 @@ module Qsys_mm_interconnect_2_router_default_decode
       assign default_src_channel = '0;
     end
     else begin : default_channel_assignment
-<<<<<<< HEAD
-      assign default_src_channel = 11'b1 << DEFAULT_CHANNEL;
-=======
       assign default_src_channel = 12'b1 << DEFAULT_CHANNEL;
->>>>>>> Add direction control
     end
   endgenerate
 
@@ -87,13 +73,8 @@ module Qsys_mm_interconnect_2_router_default_decode
       assign default_rd_channel = '0;
     end
     else begin : default_rw_channel_assignment
-<<<<<<< HEAD
-      assign default_wr_channel = 11'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 11'b1 << DEFAULT_RD_CHANNEL;
-=======
       assign default_wr_channel = 12'b1 << DEFAULT_WR_CHANNEL;
       assign default_rd_channel = 12'b1 << DEFAULT_RD_CHANNEL;
->>>>>>> Add direction control
     end
   endgenerate
 
@@ -122,11 +103,7 @@ module Qsys_mm_interconnect_2_router
     // -------------------
     output                          src_valid,
     output reg [103-1    : 0] src_data,
-<<<<<<< HEAD
-    output reg [11-1 : 0] src_channel,
-=======
     output reg [12-1 : 0] src_channel,
->>>>>>> Add direction control
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -142,11 +119,7 @@ module Qsys_mm_interconnect_2_router
     localparam PKT_PROTECTION_H = 93;
     localparam PKT_PROTECTION_L = 91;
     localparam ST_DATA_W = 103;
-<<<<<<< HEAD
-    localparam ST_CHANNEL_W = 11;
-=======
     localparam ST_CHANNEL_W = 12;
->>>>>>> Add direction control
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 63;
@@ -161,11 +134,7 @@ module Qsys_mm_interconnect_2_router
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-<<<<<<< HEAD
-    localparam PAD0 = log2ceil(64'h80 - 64'h0); 
-=======
     localparam PAD0 = log2ceil(64'h40 - 64'h0); 
->>>>>>> Add direction control
     localparam PAD1 = log2ceil(64'h1100000 - 64'h1080000); 
     localparam PAD2 = log2ceil(64'h1101000 - 64'h1100800); 
     localparam PAD3 = log2ceil(64'h1101020 - 64'h1101000); 
@@ -176,20 +145,13 @@ module Qsys_mm_interconnect_2_router
     localparam PAD8 = log2ceil(64'h1101098 - 64'h1101090); 
     localparam PAD9 = log2ceil(64'h11010a0 - 64'h1101098); 
     localparam PAD10 = log2ceil(64'h11010a8 - 64'h11010a0); 
-<<<<<<< HEAD
-=======
     localparam PAD11 = log2ceil(64'h11010b0 - 64'h11010a8); 
->>>>>>> Add direction control
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-<<<<<<< HEAD
-    localparam ADDR_RANGE = 64'h11010a8;
-=======
     localparam ADDR_RANGE = 64'h11010b0;
->>>>>>> Add direction control
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -213,11 +175,7 @@ module Qsys_mm_interconnect_2_router
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
     wire [PKT_DEST_ID_W-1:0] default_destid;
-<<<<<<< HEAD
-    wire [11-1 : 0] default_src_channel;
-=======
     wire [12-1 : 0] default_src_channel;
->>>>>>> Add direction control
 
 
 
@@ -246,116 +204,68 @@ module Qsys_mm_interconnect_2_router
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
-<<<<<<< HEAD
-    // ( 0x0 .. 0x80 )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 25'h0   ) begin
-            src_channel = 11'b00010000000;
-=======
     // ( 0x0 .. 0x40 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 25'h0   ) begin
             src_channel = 12'b000100000000;
->>>>>>> Add direction control
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
     // ( 0x1080000 .. 0x1100000 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 25'h1080000   ) begin
-<<<<<<< HEAD
-            src_channel = 11'b10000000000;
-=======
             src_channel = 12'b100000000000;
->>>>>>> Add direction control
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
     end
 
     // ( 0x1100800 .. 0x1101000 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 25'h1100800   ) begin
-<<<<<<< HEAD
-            src_channel = 11'b00001000000;
-=======
             src_channel = 12'b000010000000;
->>>>>>> Add direction control
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
     end
 
     // ( 0x1101000 .. 0x1101020 )
     if ( {address[RG:PAD3],{PAD3{1'b0}}} == 25'h1101000   ) begin
-<<<<<<< HEAD
-            src_channel = 11'b00100000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 9;
-=======
             src_channel = 12'b001000000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 10;
->>>>>>> Add direction control
     end
 
     // ( 0x1101020 .. 0x1101040 )
     if ( {address[RG:PAD4],{PAD4{1'b0}}} == 25'h1101020   ) begin
-<<<<<<< HEAD
-            src_channel = 11'b00000010000;
-=======
             src_channel = 12'b000000010000;
->>>>>>> Add direction control
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end
 
     // ( 0x1101040 .. 0x1101060 )
     if ( {address[RG:PAD5],{PAD5{1'b0}}} == 25'h1101040   ) begin
-<<<<<<< HEAD
-            src_channel = 11'b00000001000;
-=======
             src_channel = 12'b000000001000;
->>>>>>> Add direction control
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
     // ( 0x1101060 .. 0x1101080 )
     if ( {address[RG:PAD6],{PAD6{1'b0}}} == 25'h1101060   ) begin
-<<<<<<< HEAD
-            src_channel = 11'b00000000100;
-=======
             src_channel = 12'b000000000100;
->>>>>>> Add direction control
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
     // ( 0x1101080 .. 0x1101090 )
     if ( {address[RG:PAD7],{PAD7{1'b0}}} == 25'h1101080   ) begin
-<<<<<<< HEAD
-            src_channel = 11'b01000000000;
-=======
             src_channel = 12'b010000000000;
->>>>>>> Add direction control
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
     // ( 0x1101090 .. 0x1101098 )
     if ( {address[RG:PAD8],{PAD8{1'b0}}} == 25'h1101090  && read_transaction  ) begin
-<<<<<<< HEAD
-            src_channel = 11'b00000100000;
-=======
-            src_channel = 12'b000000100000;
->>>>>>> Add direction control
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 8;
+            src_channel = 12'b000001000000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 9;
     end
 
     // ( 0x1101098 .. 0x11010a0 )
-<<<<<<< HEAD
-    if ( {address[RG:PAD9],{PAD9{1'b0}}} == 25'h1101098   ) begin
-            src_channel = 11'b00000000010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 10;
-=======
     if ( {address[RG:PAD9],{PAD9{1'b0}}} == 25'h1101098  && read_transaction  ) begin
-            src_channel = 12'b000001000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 9;
->>>>>>> Add direction control
+            src_channel = 12'b000000100000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 8;
     end
 
     // ( 0x11010a0 .. 0x11010a8 )
     if ( {address[RG:PAD10],{PAD10{1'b0}}} == 25'h11010a0   ) begin
-<<<<<<< HEAD
-            src_channel = 11'b00000000001;
-=======
             src_channel = 12'b000000000010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 11;
     end
@@ -363,7 +273,6 @@ module Qsys_mm_interconnect_2_router
     // ( 0x11010a8 .. 0x11010b0 )
     if ( {address[RG:PAD11],{PAD11{1'b0}}} == 25'h11010a8   ) begin
             src_channel = 12'b000000000001;
->>>>>>> Add direction control
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;DE10_Nano_bal/DE10_Nano_bal.elf&apos;" deleteContents="false" description="Delete resource &apos;DE10_Nano_bal/DE10_Nano_bal.elf&apos;" element1="/DE10_Nano_bal/DE10_Nano_bal.elf" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1501236472294"/>&#x0A;<refactoring comment="Delete resource &apos;DE10_Nano_bal/DE10_Nano_bal.elf&apos;" deleteContents="false" description="Delete resource &apos;DE10_Nano_bal/DE10_Nano_bal.elf&apos;" element1="/DE10_Nano_bal/DE10_Nano_bal.elf" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1501240830539"/>
-</session>

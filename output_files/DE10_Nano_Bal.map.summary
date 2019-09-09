@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Wed Sep 04 23:02:49 2019
+Analysis & Synthesis Status : Successful - Tue Sep 10 01:57:09 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : DE10_Nano_Bal
 Top-level Entity Name : DE10_Nano_Bal
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 3731
+Total registers : 4016
 Total pins : 142
 Total virtual pins : 0
-Total block memory bits : 2,492,336
-Total DSP Blocks : 3
+Total block memory bits : 2,492,320
+Total DSP Blocks : 4
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

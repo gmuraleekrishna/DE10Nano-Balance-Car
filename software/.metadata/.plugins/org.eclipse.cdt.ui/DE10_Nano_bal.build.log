@@ -1,9 +1,0 @@
-17:49:58 **** Incremental Build of configuration Nios II for project DE10_Nano_bal ****
-make all 
-Info: Building ../DE10_Nano_bal_bsp/
-D:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../DE10_Nano_bal_bsp/
-[BSP build complete]
-[DE10_Nano_bal build complete]
-
-17:49:59 Build Finished (took 1s.201ms)
-

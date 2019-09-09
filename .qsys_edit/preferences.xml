@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <preferences>
  <debug showDebugMenu="0" />
- <systemtable filter="All Interfaces">
+ <systemtable filter="Qsys.clk" showClockDomains="1" showResetDomains="0">
   <columns>
-   <connections preferredWidth="223" />
+   <connections preferredWidth="255" />
    <irq preferredWidth="34" />
    <export preferredWidth="361" />
-   <name preferredWidth="265" />
+   <name preferredWidth="481" />
    <inputclock preferredWidth="224" />
+   <description preferredWidth="206" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Qsys Interconnect/Memory-Mapped Alpha,Library/Qsys Interconnect,Library/University Program,Library/Processors and Peripherals/Peripherals,Library,Library/Basic Functions/On Chip Memory,Library/Processors and Peripherals,Library/Basic Functions,Library/University Program/Generic IO,Project" />
+ <library expandedCategories="Project,Library" />
  <window width="1366" height="728" x="0" y="0" />
  <hdlexample language="VERILOG" />
  <generation simulation="NONE" />

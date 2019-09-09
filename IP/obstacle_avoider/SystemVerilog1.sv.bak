@@ -1,0 +1,16 @@
+module obstacle_avoider (
+	output s_read,
+	output s_write,
+	output [] s_writedata,
+	input s_readdata,
+	output [] s_address
+	output s_cs,
+	input reset_n,
+	input clk
+);
+
+`define SONIC_REG 
+
+always_ff @(posedge clk) begin
+	
+end

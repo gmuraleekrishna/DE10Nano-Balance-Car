@@ -5,7 +5,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEBA6U23I7
-set_global_assignment -name TOP_LEVEL_ENTITY "DE10_Nano_Bal"
+set_global_assignment -name TOP_LEVEL_ENTITY DE10_Nano_Bal
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.0.2
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:08:14  OCTOBER 14, 2016"
@@ -510,9 +510,6 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name ENABLE_SIGNALTAP OFF
 set_global_assignment -name USE_SIGNALTAP_FILE stp2.stp
 set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
@@ -520,7 +517,10 @@ set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MTRR_A
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MTRR_B
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MTRL_A
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MTRL_B
-
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE IP/pid/pid.sv
 set_global_assignment -name SYSTEMVERILOG_FILE IP/obstacle_avoider/obstacle_avoider.sv
 set_global_assignment -name SYSTEMVERILOG_FILE IP/IR_SENSOR/direction_controller.sv
 set_global_assignment -name SYSTEMVERILOG_FILE IP/IR_SENSOR/ledsarray.sv
@@ -530,4 +530,5 @@ set_global_assignment -name VERILOG_FILE DE10_Nano_Bal.v
 set_global_assignment -name SDC_FILE DE10_Nano_Bal.sdc
 set_global_assignment -name QIP_FILE Qsys/synthesis/Qsys.qip
 set_global_assignment -name SYSTEMVERILOG_FILE IP/motor_run/motor_run.sv
+set_global_assignment -name SYSTEMVERILOG_FILE IP/pid/linearizer.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

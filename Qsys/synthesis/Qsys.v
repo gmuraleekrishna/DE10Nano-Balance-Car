@@ -4,33 +4,6 @@
 
 `timescale 1 ps / 1 ps
 module Qsys (
-<<<<<<< HEAD
-		output wire       adc_ltc2308_0_conduit_end_CONVST,     //       adc_ltc2308_0_conduit_end.CONVST
-		output wire       adc_ltc2308_0_conduit_end_SCK,        //                                .SCK
-		output wire       adc_ltc2308_0_conduit_end_SDI,        //                                .SDI
-		input  wire       adc_ltc2308_0_conduit_end_SDO,        //                                .SDO
-		input  wire       clk_clk,                              //                             clk.clk
-		output wire       dc_motor_left_conduit_end_motor_in1,  //       dc_motor_left_conduit_end.motor_in1
-		output wire       dc_motor_left_conduit_end_motor_in2,  //                                .motor_in2
-		output wire       dc_motor_left_conduit_end_pwm,        //                                .pwm
-		output wire       dc_motor_right_conduit_end_motor_in1, //      dc_motor_right_conduit_end.motor_in1
-		output wire       dc_motor_right_conduit_end_motor_in2, //                                .motor_in2
-		output wire       dc_motor_right_conduit_end_pwm,       //                                .pwm
-		input  wire [2:0] esp32_io_external_connection_export,  //    esp32_io_external_connection.export
-		input  wire       ir_rx_conduit_end_export,             //               ir_rx_conduit_end.export
-		output wire [7:0] led_external_connection_export,       //         led_external_connection.export
-		input  wire [1:0] motor_measure_left_conduit_end_ab,    //  motor_measure_left_conduit_end.ab
-		input  wire [1:0] motor_measure_right_conduit_end_ab,   // motor_measure_right_conduit_end.ab
-		inout  wire       mpu_i2c_export_scl_pad_io,            //                  mpu_i2c_export.scl_pad_io
-		inout  wire       mpu_i2c_export_sda_pad_io,            //                                .sda_pad_io
-		input  wire       mpu_int_external_connection_export,   //     mpu_int_external_connection.export
-		input  wire       reset_reset_n,                        //                           reset.reset_n
-		input  wire       sonic_distance_0_conduit_end_echo,    //    sonic_distance_0_conduit_end.echo
-		output wire       sonic_distance_0_conduit_end_trigger, //                                .trigger
-		input  wire [3:0] sw_external_connection_export,        //          sw_external_connection.export
-		input  wire       uart_bt_external_interface_RXD,       //      uart_bt_external_interface.RXD
-		output wire       uart_bt_external_interface_TXD        //                                .TXD
-=======
 		output wire       adc_ltc2308_0_conduit_end_CONVST,                 //                 adc_ltc2308_0_conduit_end.CONVST
 		output wire       adc_ltc2308_0_conduit_end_SCK,                    //                                          .SCK
 		output wire       adc_ltc2308_0_conduit_end_SDI,                    //                                          .SDI
@@ -42,10 +15,10 @@ module Qsys (
 		output wire       dc_motor_right_conduit_end_motor_in1,             //                dc_motor_right_conduit_end.motor_in1
 		output wire       dc_motor_right_conduit_end_motor_in2,             //                                          .motor_in2
 		output wire       dc_motor_right_conduit_end_pwm,                   //                                          .pwm
+		output wire [7:0] direction_controller_0_conduit_end_led_readdata,  //    direction_controller_0_conduit_end_led.readdata
 		inout  wire [7:0] direction_controller_0_conduit_leds_array_export, // direction_controller_0_conduit_leds_array.export
 		input  wire [2:0] esp32_io_external_connection_export,              //              esp32_io_external_connection.export
 		input  wire       ir_rx_conduit_end_export,                         //                         ir_rx_conduit_end.export
-		output wire [7:0] led_external_connection_export,                   //                   led_external_connection.export
 		input  wire [1:0] motor_measure_left_conduit_end_ab,                //            motor_measure_left_conduit_end.ab
 		input  wire [1:0] motor_measure_right_conduit_end_ab,               //           motor_measure_right_conduit_end.ab
 		inout  wire       mpu_i2c_export_scl_pad_io,                        //                            mpu_i2c_export.scl_pad_io
@@ -57,78 +30,36 @@ module Qsys (
 		input  wire [3:0] sw_external_connection_export,                    //                    sw_external_connection.export
 		input  wire       uart_bt_external_interface_RXD,                   //                uart_bt_external_interface.RXD
 		output wire       uart_bt_external_interface_TXD                    //                                          .TXD
->>>>>>> Add direction control
 	);
 
 	wire         pll_0_outclk0_clk;                                               // pll_0:outclk_0 -> [irq_mapper:clk, irq_synchronizer:sender_clk, irq_synchronizer_001:sender_clk, jtag_uart:clk, mm_clock_crossing_bridge_0:s0_clk, mm_interconnect_2:pll_0_outclk0_clk, motor_measure_left:clk, motor_measure_right:clk, mpu_int:clk, nios2_gen2_0:clk, onchip_memory2_0:clk, rst_controller_001:clk, rst_controller_002:clk, sysid_qsys:clock, timer_0:clk, uart_bt:clk]
 	wire         pll_0_outclk1_clk;                                               // pll_0:outclk_1 -> adc_ltc2308_0:adc_clk
-<<<<<<< HEAD
-=======
-	wire         direction_controller_0_conduit_end_left_motor_run;               // direction_controller_0:left_motor -> motor_run_left:run
-	wire         direction_controller_0_conduit_end_right_motor_run;              // direction_controller_0:right_motor -> motor_run_right:run
->>>>>>> Add direction control
-	wire         motor_run_right_avalon_master_chipselect;                        // motor_run_right:s_cs -> mm_interconnect_0:motor_run_right_avalon_master_chipselect
-	wire         motor_run_right_avalon_master_waitrequest;                       // mm_interconnect_0:motor_run_right_avalon_master_waitrequest -> motor_run_right:waitrequest
-	wire   [3:0] motor_run_right_avalon_master_address;                           // motor_run_right:s_address -> mm_interconnect_0:motor_run_right_avalon_master_address
-	wire         motor_run_right_avalon_master_write;                             // motor_run_right:s_write -> mm_interconnect_0:motor_run_right_avalon_master_write
-	wire  [31:0] motor_run_right_avalon_master_writedata;                         // motor_run_right:s_writedata -> mm_interconnect_0:motor_run_right_avalon_master_writedata
-	wire         mm_interconnect_0_dc_motor_right_avalon_slave_chipselect;        // mm_interconnect_0:dc_motor_right_avalon_slave_chipselect -> dc_motor_right:s_cs
-	wire  [31:0] mm_interconnect_0_dc_motor_right_avalon_slave_readdata;          // dc_motor_right:s_readdata -> mm_interconnect_0:dc_motor_right_avalon_slave_readdata
-	wire   [1:0] mm_interconnect_0_dc_motor_right_avalon_slave_address;           // mm_interconnect_0:dc_motor_right_avalon_slave_address -> dc_motor_right:s_address
-	wire         mm_interconnect_0_dc_motor_right_avalon_slave_read;              // mm_interconnect_0:dc_motor_right_avalon_slave_read -> dc_motor_right:s_read
-	wire         mm_interconnect_0_dc_motor_right_avalon_slave_write;             // mm_interconnect_0:dc_motor_right_avalon_slave_write -> dc_motor_right:s_write
-	wire  [31:0] mm_interconnect_0_dc_motor_right_avalon_slave_writedata;         // mm_interconnect_0:dc_motor_right_avalon_slave_writedata -> dc_motor_right:s_writedata
-	wire         motor_run_left_avalon_master_chipselect;                         // motor_run_left:s_cs -> mm_interconnect_1:motor_run_left_avalon_master_chipselect
-	wire         motor_run_left_avalon_master_waitrequest;                        // mm_interconnect_1:motor_run_left_avalon_master_waitrequest -> motor_run_left:waitrequest
-	wire   [3:0] motor_run_left_avalon_master_address;                            // motor_run_left:s_address -> mm_interconnect_1:motor_run_left_avalon_master_address
-	wire         motor_run_left_avalon_master_write;                              // motor_run_left:s_write -> mm_interconnect_1:motor_run_left_avalon_master_write
-	wire  [31:0] motor_run_left_avalon_master_writedata;                          // motor_run_left:s_writedata -> mm_interconnect_1:motor_run_left_avalon_master_writedata
-<<<<<<< HEAD
-	wire         mm_clock_crossing_bridge_0_m0_waitrequest;                       // mm_interconnect_1:mm_clock_crossing_bridge_0_m0_waitrequest -> mm_clock_crossing_bridge_0:m0_waitrequest
-	wire  [31:0] mm_clock_crossing_bridge_0_m0_readdata;                          // mm_interconnect_1:mm_clock_crossing_bridge_0_m0_readdata -> mm_clock_crossing_bridge_0:m0_readdata
-	wire         mm_clock_crossing_bridge_0_m0_debugaccess;                       // mm_clock_crossing_bridge_0:m0_debugaccess -> mm_interconnect_1:mm_clock_crossing_bridge_0_m0_debugaccess
-	wire   [6:0] mm_clock_crossing_bridge_0_m0_address;                           // mm_clock_crossing_bridge_0:m0_address -> mm_interconnect_1:mm_clock_crossing_bridge_0_m0_address
-	wire         mm_clock_crossing_bridge_0_m0_read;                              // mm_clock_crossing_bridge_0:m0_read -> mm_interconnect_1:mm_clock_crossing_bridge_0_m0_read
-	wire   [3:0] mm_clock_crossing_bridge_0_m0_byteenable;                        // mm_clock_crossing_bridge_0:m0_byteenable -> mm_interconnect_1:mm_clock_crossing_bridge_0_m0_byteenable
-	wire         mm_clock_crossing_bridge_0_m0_readdatavalid;                     // mm_interconnect_1:mm_clock_crossing_bridge_0_m0_readdatavalid -> mm_clock_crossing_bridge_0:m0_readdatavalid
-	wire  [31:0] mm_clock_crossing_bridge_0_m0_writedata;                         // mm_clock_crossing_bridge_0:m0_writedata -> mm_interconnect_1:mm_clock_crossing_bridge_0_m0_writedata
-	wire         mm_clock_crossing_bridge_0_m0_write;                             // mm_clock_crossing_bridge_0:m0_write -> mm_interconnect_1:mm_clock_crossing_bridge_0_m0_write
-	wire   [0:0] mm_clock_crossing_bridge_0_m0_burstcount;                        // mm_clock_crossing_bridge_0:m0_burstcount -> mm_interconnect_1:mm_clock_crossing_bridge_0_m0_burstcount
-=======
->>>>>>> Add direction control
-	wire         mm_interconnect_1_dc_motor_left_avalon_slave_chipselect;         // mm_interconnect_1:dc_motor_left_avalon_slave_chipselect -> dc_motor_left:s_cs
-	wire  [31:0] mm_interconnect_1_dc_motor_left_avalon_slave_readdata;           // dc_motor_left:s_readdata -> mm_interconnect_1:dc_motor_left_avalon_slave_readdata
-	wire   [1:0] mm_interconnect_1_dc_motor_left_avalon_slave_address;            // mm_interconnect_1:dc_motor_left_avalon_slave_address -> dc_motor_left:s_address
-	wire         mm_interconnect_1_dc_motor_left_avalon_slave_read;               // mm_interconnect_1:dc_motor_left_avalon_slave_read -> dc_motor_left:s_read
-	wire         mm_interconnect_1_dc_motor_left_avalon_slave_write;              // mm_interconnect_1:dc_motor_left_avalon_slave_write -> dc_motor_left:s_write
-	wire  [31:0] mm_interconnect_1_dc_motor_left_avalon_slave_writedata;          // mm_interconnect_1:dc_motor_left_avalon_slave_writedata -> dc_motor_left:s_writedata
-<<<<<<< HEAD
-	wire         mm_interconnect_1_ir_rx_avalon_slave_chipselect;                 // mm_interconnect_1:ir_rx_avalon_slave_chipselect -> ir_rx:s_cs_n
-	wire  [31:0] mm_interconnect_1_ir_rx_avalon_slave_readdata;                   // ir_rx:s_readdata -> mm_interconnect_1:ir_rx_avalon_slave_readdata
-	wire         mm_interconnect_1_ir_rx_avalon_slave_read;                       // mm_interconnect_1:ir_rx_avalon_slave_read -> ir_rx:s_read
-	wire         mm_interconnect_1_ir_rx_avalon_slave_write;                      // mm_interconnect_1:ir_rx_avalon_slave_write -> ir_rx:s_write
-	wire  [31:0] mm_interconnect_1_ir_rx_avalon_slave_writedata;                  // mm_interconnect_1:ir_rx_avalon_slave_writedata -> ir_rx:s_writedata
-	wire         mm_interconnect_1_sonic_distance_0_avalon_slave_0_chipselect;    // mm_interconnect_1:sonic_distance_0_avalon_slave_0_chipselect -> sonic_distance_0:av_mm_cs
-	wire  [31:0] mm_interconnect_1_sonic_distance_0_avalon_slave_0_readdata;      // sonic_distance_0:av_mm_readdata -> mm_interconnect_1:sonic_distance_0_avalon_slave_0_readdata
-	wire   [0:0] mm_interconnect_1_sonic_distance_0_avalon_slave_0_address;       // mm_interconnect_1:sonic_distance_0_avalon_slave_0_address -> sonic_distance_0:av_mm_address
-	wire         mm_interconnect_1_sonic_distance_0_avalon_slave_0_read;          // mm_interconnect_1:sonic_distance_0_avalon_slave_0_read -> sonic_distance_0:av_mm_read
-	wire         mm_interconnect_1_led_s1_chipselect;                             // mm_interconnect_1:LED_s1_chipselect -> LED:chipselect
-	wire  [31:0] mm_interconnect_1_led_s1_readdata;                               // LED:readdata -> mm_interconnect_1:LED_s1_readdata
-	wire   [1:0] mm_interconnect_1_led_s1_address;                                // mm_interconnect_1:LED_s1_address -> LED:address
-	wire         mm_interconnect_1_led_s1_write;                                  // mm_interconnect_1:LED_s1_write -> LED:write_n
-	wire  [31:0] mm_interconnect_1_led_s1_writedata;                              // mm_interconnect_1:LED_s1_writedata -> LED:writedata
-	wire  [31:0] mm_interconnect_1_esp32_io_s1_readdata;                          // esp32_io:readdata -> mm_interconnect_1:esp32_io_s1_readdata
-	wire   [1:0] mm_interconnect_1_esp32_io_s1_address;                           // mm_interconnect_1:esp32_io_s1_address -> esp32_io:address
-	wire  [31:0] mm_interconnect_1_sw_s1_readdata;                                // sw:readdata -> mm_interconnect_1:sw_s1_readdata
-	wire   [1:0] mm_interconnect_1_sw_s1_address;                                 // mm_interconnect_1:sw_s1_address -> sw:address
-	wire         mm_interconnect_1_adc_ltc2308_0_slave_chipselect;                // mm_interconnect_1:adc_ltc2308_0_slave_chipselect -> adc_ltc2308_0:slave_chipselect_n
-	wire  [15:0] mm_interconnect_1_adc_ltc2308_0_slave_readdata;                  // adc_ltc2308_0:slave_readdata -> mm_interconnect_1:adc_ltc2308_0_slave_readdata
-	wire   [0:0] mm_interconnect_1_adc_ltc2308_0_slave_address;                   // mm_interconnect_1:adc_ltc2308_0_slave_address -> adc_ltc2308_0:slave_addr
-	wire         mm_interconnect_1_adc_ltc2308_0_slave_read;                      // mm_interconnect_1:adc_ltc2308_0_slave_read -> adc_ltc2308_0:slave_read_n
-	wire         mm_interconnect_1_adc_ltc2308_0_slave_write;                     // mm_interconnect_1:adc_ltc2308_0_slave_write -> adc_ltc2308_0:slave_wrtie_n
-	wire  [15:0] mm_interconnect_1_adc_ltc2308_0_slave_writedata;                 // mm_interconnect_1:adc_ltc2308_0_slave_writedata -> adc_ltc2308_0:slave_wriredata
-=======
->>>>>>> Add direction control
+	wire         direction_controller_0_conduit_end_left_motor_run;               // direction_controller_0:left_motor -> motor_run_right:run
+	wire  [20:0] direction_controller_0_conduit_end_left_motor_speed;             // direction_controller_0:left_motor_speed -> motor_run_right:speed
+	wire         direction_controller_0_conduit_end_right_motor_run;              // direction_controller_0:right_motor -> motor_run_left:run
+	wire  [20:0] direction_controller_0_conduit_end_right_motor_speed;            // direction_controller_0:right_motor_speed -> motor_run_left:speed
+	wire         motor_run_left_avalon_master_chipselect;                         // motor_run_left:s_cs -> mm_interconnect_0:motor_run_left_avalon_master_chipselect
+	wire         motor_run_left_avalon_master_waitrequest;                        // mm_interconnect_0:motor_run_left_avalon_master_waitrequest -> motor_run_left:waitrequest
+	wire   [3:0] motor_run_left_avalon_master_address;                            // motor_run_left:s_address -> mm_interconnect_0:motor_run_left_avalon_master_address
+	wire         motor_run_left_avalon_master_write;                              // motor_run_left:s_write -> mm_interconnect_0:motor_run_left_avalon_master_write
+	wire  [31:0] motor_run_left_avalon_master_writedata;                          // motor_run_left:s_writedata -> mm_interconnect_0:motor_run_left_avalon_master_writedata
+	wire         mm_interconnect_0_dc_motor_left_avalon_slave_chipselect;         // mm_interconnect_0:dc_motor_left_avalon_slave_chipselect -> dc_motor_left:s_cs
+	wire  [31:0] mm_interconnect_0_dc_motor_left_avalon_slave_readdata;           // dc_motor_left:s_readdata -> mm_interconnect_0:dc_motor_left_avalon_slave_readdata
+	wire   [1:0] mm_interconnect_0_dc_motor_left_avalon_slave_address;            // mm_interconnect_0:dc_motor_left_avalon_slave_address -> dc_motor_left:s_address
+	wire         mm_interconnect_0_dc_motor_left_avalon_slave_read;               // mm_interconnect_0:dc_motor_left_avalon_slave_read -> dc_motor_left:s_read
+	wire         mm_interconnect_0_dc_motor_left_avalon_slave_write;              // mm_interconnect_0:dc_motor_left_avalon_slave_write -> dc_motor_left:s_write
+	wire  [31:0] mm_interconnect_0_dc_motor_left_avalon_slave_writedata;          // mm_interconnect_0:dc_motor_left_avalon_slave_writedata -> dc_motor_left:s_writedata
+	wire         motor_run_right_avalon_master_chipselect;                        // motor_run_right:s_cs -> mm_interconnect_1:motor_run_right_avalon_master_chipselect
+	wire         motor_run_right_avalon_master_waitrequest;                       // mm_interconnect_1:motor_run_right_avalon_master_waitrequest -> motor_run_right:waitrequest
+	wire   [3:0] motor_run_right_avalon_master_address;                           // motor_run_right:s_address -> mm_interconnect_1:motor_run_right_avalon_master_address
+	wire         motor_run_right_avalon_master_write;                             // motor_run_right:s_write -> mm_interconnect_1:motor_run_right_avalon_master_write
+	wire  [31:0] motor_run_right_avalon_master_writedata;                         // motor_run_right:s_writedata -> mm_interconnect_1:motor_run_right_avalon_master_writedata
+	wire         mm_interconnect_1_dc_motor_right_avalon_slave_chipselect;        // mm_interconnect_1:dc_motor_right_avalon_slave_chipselect -> dc_motor_right:s_cs
+	wire  [31:0] mm_interconnect_1_dc_motor_right_avalon_slave_readdata;          // dc_motor_right:s_readdata -> mm_interconnect_1:dc_motor_right_avalon_slave_readdata
+	wire   [1:0] mm_interconnect_1_dc_motor_right_avalon_slave_address;           // mm_interconnect_1:dc_motor_right_avalon_slave_address -> dc_motor_right:s_address
+	wire         mm_interconnect_1_dc_motor_right_avalon_slave_read;              // mm_interconnect_1:dc_motor_right_avalon_slave_read -> dc_motor_right:s_read
+	wire         mm_interconnect_1_dc_motor_right_avalon_slave_write;             // mm_interconnect_1:dc_motor_right_avalon_slave_write -> dc_motor_right:s_write
+	wire  [31:0] mm_interconnect_1_dc_motor_right_avalon_slave_writedata;         // mm_interconnect_1:dc_motor_right_avalon_slave_writedata -> dc_motor_right:s_writedata
 	wire  [31:0] nios2_gen2_0_data_master_readdata;                               // mm_interconnect_2:nios2_gen2_0_data_master_readdata -> nios2_gen2_0:d_readdata
 	wire         nios2_gen2_0_data_master_waitrequest;                            // mm_interconnect_2:nios2_gen2_0_data_master_waitrequest -> nios2_gen2_0:d_waitrequest
 	wire         nios2_gen2_0_data_master_debugaccess;                            // nios2_gen2_0:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_2:nios2_gen2_0_data_master_debugaccess
@@ -175,13 +106,10 @@ module Qsys (
 	wire         mm_interconnect_2_motor_measure_left_avalon_slave_0_read;        // mm_interconnect_2:motor_measure_left_avalon_slave_0_read -> motor_measure_left:s_read
 	wire         mm_interconnect_2_motor_measure_left_avalon_slave_0_write;       // mm_interconnect_2:motor_measure_left_avalon_slave_0_write -> motor_measure_left:s_write
 	wire  [31:0] mm_interconnect_2_motor_measure_left_avalon_slave_0_writedata;   // mm_interconnect_2:motor_measure_left_avalon_slave_0_writedata -> motor_measure_left:s_writedata
-<<<<<<< HEAD
-=======
 	wire         mm_interconnect_2_sonic_distance_0_avalon_slave_0_chipselect;    // mm_interconnect_2:sonic_distance_0_avalon_slave_0_chipselect -> sonic_distance_0:av_mm_cs
 	wire  [31:0] mm_interconnect_2_sonic_distance_0_avalon_slave_0_readdata;      // sonic_distance_0:av_mm_readdata -> mm_interconnect_2:sonic_distance_0_avalon_slave_0_readdata
 	wire   [0:0] mm_interconnect_2_sonic_distance_0_avalon_slave_0_address;       // mm_interconnect_2:sonic_distance_0_avalon_slave_0_address -> sonic_distance_0:av_mm_address
 	wire         mm_interconnect_2_sonic_distance_0_avalon_slave_0_read;          // mm_interconnect_2:sonic_distance_0_avalon_slave_0_read -> sonic_distance_0:av_mm_read
->>>>>>> Add direction control
 	wire  [31:0] mm_interconnect_2_sysid_qsys_control_slave_readdata;             // sysid_qsys:readdata -> mm_interconnect_2:sysid_qsys_control_slave_readdata
 	wire   [0:0] mm_interconnect_2_sysid_qsys_control_slave_address;              // mm_interconnect_2:sysid_qsys_control_slave_address -> sysid_qsys:address
 	wire  [31:0] mm_interconnect_2_nios2_gen2_0_debug_mem_slave_readdata;         // nios2_gen2_0:debug_mem_slave_readdata -> mm_interconnect_2:nios2_gen2_0_debug_mem_slave_readdata
@@ -195,11 +123,7 @@ module Qsys (
 	wire  [31:0] mm_interconnect_2_mm_clock_crossing_bridge_0_s0_readdata;        // mm_clock_crossing_bridge_0:s0_readdata -> mm_interconnect_2:mm_clock_crossing_bridge_0_s0_readdata
 	wire         mm_interconnect_2_mm_clock_crossing_bridge_0_s0_waitrequest;     // mm_clock_crossing_bridge_0:s0_waitrequest -> mm_interconnect_2:mm_clock_crossing_bridge_0_s0_waitrequest
 	wire         mm_interconnect_2_mm_clock_crossing_bridge_0_s0_debugaccess;     // mm_interconnect_2:mm_clock_crossing_bridge_0_s0_debugaccess -> mm_clock_crossing_bridge_0:s0_debugaccess
-<<<<<<< HEAD
-	wire   [6:0] mm_interconnect_2_mm_clock_crossing_bridge_0_s0_address;         // mm_interconnect_2:mm_clock_crossing_bridge_0_s0_address -> mm_clock_crossing_bridge_0:s0_address
-=======
 	wire   [5:0] mm_interconnect_2_mm_clock_crossing_bridge_0_s0_address;         // mm_interconnect_2:mm_clock_crossing_bridge_0_s0_address -> mm_clock_crossing_bridge_0:s0_address
->>>>>>> Add direction control
 	wire         mm_interconnect_2_mm_clock_crossing_bridge_0_s0_read;            // mm_interconnect_2:mm_clock_crossing_bridge_0_s0_read -> mm_clock_crossing_bridge_0:s0_read
 	wire   [3:0] mm_interconnect_2_mm_clock_crossing_bridge_0_s0_byteenable;      // mm_interconnect_2:mm_clock_crossing_bridge_0_s0_byteenable -> mm_clock_crossing_bridge_0:s0_byteenable
 	wire         mm_interconnect_2_mm_clock_crossing_bridge_0_s0_readdatavalid;   // mm_clock_crossing_bridge_0:s0_readdatavalid -> mm_interconnect_2:mm_clock_crossing_bridge_0_s0_readdatavalid
@@ -223,8 +147,6 @@ module Qsys (
 	wire         mm_interconnect_2_onchip_memory2_0_s1_write;                     // mm_interconnect_2:onchip_memory2_0_s1_write -> onchip_memory2_0:write
 	wire  [31:0] mm_interconnect_2_onchip_memory2_0_s1_writedata;                 // mm_interconnect_2:onchip_memory2_0_s1_writedata -> onchip_memory2_0:writedata
 	wire         mm_interconnect_2_onchip_memory2_0_s1_clken;                     // mm_interconnect_2:onchip_memory2_0_s1_clken -> onchip_memory2_0:clken
-<<<<<<< HEAD
-=======
 	wire         mm_clock_crossing_bridge_0_m0_waitrequest;                       // mm_interconnect_3:mm_clock_crossing_bridge_0_m0_waitrequest -> mm_clock_crossing_bridge_0:m0_waitrequest
 	wire  [31:0] mm_clock_crossing_bridge_0_m0_readdata;                          // mm_interconnect_3:mm_clock_crossing_bridge_0_m0_readdata -> mm_clock_crossing_bridge_0:m0_readdata
 	wire         mm_clock_crossing_bridge_0_m0_debugaccess;                       // mm_clock_crossing_bridge_0:m0_debugaccess -> mm_interconnect_3:mm_clock_crossing_bridge_0_m0_debugaccess
@@ -255,24 +177,16 @@ module Qsys (
 	wire         mm_interconnect_3_adc_ltc2308_0_slave_read;                      // mm_interconnect_3:adc_ltc2308_0_slave_read -> adc_ltc2308_0:slave_read_n
 	wire         mm_interconnect_3_adc_ltc2308_0_slave_write;                     // mm_interconnect_3:adc_ltc2308_0_slave_write -> adc_ltc2308_0:slave_wrtie_n
 	wire  [15:0] mm_interconnect_3_adc_ltc2308_0_slave_writedata;                 // mm_interconnect_3:adc_ltc2308_0_slave_writedata -> adc_ltc2308_0:slave_wriredata
->>>>>>> Add direction control
 	wire         irq_mapper_receiver0_irq;                                        // uart_bt:irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver3_irq;                                        // jtag_uart:av_irq -> irq_mapper:receiver3_irq
 	wire         irq_mapper_receiver4_irq;                                        // timer_0:irq -> irq_mapper:receiver4_irq
 	wire         irq_mapper_receiver5_irq;                                        // mpu_int:irq -> irq_mapper:receiver5_irq
 	wire  [31:0] nios2_gen2_0_irq_irq;                                            // irq_mapper:sender_irq -> nios2_gen2_0:irq
 	wire         irq_mapper_receiver1_irq;                                        // irq_synchronizer:sender_irq -> irq_mapper:receiver1_irq
-<<<<<<< HEAD
-	wire   [0:0] irq_synchronizer_receiver_irq;                                   // ir_rx:irq -> irq_synchronizer:receiver_irq
-	wire         irq_mapper_receiver2_irq;                                        // irq_synchronizer_001:sender_irq -> irq_mapper:receiver2_irq
-	wire   [0:0] irq_synchronizer_001_receiver_irq;                               // mpu_i2c:wb_inta_o -> irq_synchronizer_001:receiver_irq
-	wire         rst_controller_reset_out_reset;                                  // rst_controller:reset_out -> [LED:reset_n, adc_ltc2308_0:slave_reset_n, dc_motor_left:reset_n, dc_motor_right:reset_n, esp32_io:reset_n, ir_rx:reset_n, irq_synchronizer:receiver_reset, irq_synchronizer_001:receiver_reset, mm_clock_crossing_bridge_0:m0_reset, mm_interconnect_0:motor_run_right_reset_reset_bridge_in_reset_reset, mm_interconnect_1:motor_run_left_reset_reset_bridge_in_reset_reset, mm_interconnect_2:mpu_i2c_clock_reset_reset_bridge_in_reset_reset, motor_run_left:reset_n, motor_run_right:reset_n, mpu_i2c:wb_rst_i, sonic_distance_0:av_mm_rst, sw:reset_n]
-=======
 	wire   [0:0] irq_synchronizer_receiver_irq;                                   // mpu_i2c:wb_inta_o -> irq_synchronizer:receiver_irq
 	wire         irq_mapper_receiver2_irq;                                        // irq_synchronizer_001:sender_irq -> irq_mapper:receiver2_irq
 	wire   [0:0] irq_synchronizer_001_receiver_irq;                               // ir_rx:irq -> irq_synchronizer_001:receiver_irq
-	wire         rst_controller_reset_out_reset;                                  // rst_controller:reset_out -> [LED:reset_n, adc_ltc2308_0:slave_reset_n, dc_motor_left:reset_n, dc_motor_right:reset_n, direction_controller_0:reset_n, esp32_io:reset_n, ir_rx:reset_n, irq_synchronizer:receiver_reset, irq_synchronizer_001:receiver_reset, mm_clock_crossing_bridge_0:m0_reset, mm_interconnect_0:motor_run_right_reset_reset_bridge_in_reset_reset, mm_interconnect_1:motor_run_left_reset_reset_bridge_in_reset_reset, mm_interconnect_2:mpu_i2c_clock_reset_reset_bridge_in_reset_reset, mm_interconnect_3:mm_clock_crossing_bridge_0_m0_reset_reset_bridge_in_reset_reset, motor_run_left:reset_n, motor_run_right:reset_n, mpu_i2c:wb_rst_i, sonic_distance_0:av_mm_rst, sw:reset_n]
->>>>>>> Add direction control
+	wire         rst_controller_reset_out_reset;                                  // rst_controller:reset_out -> [LED:reset_n, adc_ltc2308_0:slave_reset_n, dc_motor_left:reset_n, dc_motor_right:reset_n, direction_controller_0:reset_n, esp32_io:reset_n, ir_rx:reset_n, irq_synchronizer:receiver_reset, irq_synchronizer_001:receiver_reset, mm_clock_crossing_bridge_0:m0_reset, mm_interconnect_0:motor_run_left_reset_reset_bridge_in_reset_reset, mm_interconnect_1:motor_run_right_reset_reset_bridge_in_reset_reset, mm_interconnect_2:mpu_i2c_clock_reset_reset_bridge_in_reset_reset, mm_interconnect_3:mm_clock_crossing_bridge_0_m0_reset_reset_bridge_in_reset_reset, motor_run_left:reset_n, motor_run_right:reset_n, mpu_i2c:wb_rst_i, sonic_distance_0:av_mm_rst, sw:reset_n]
 	wire         rst_controller_001_reset_out_reset;                              // rst_controller_001:reset_out -> [irq_mapper:reset, irq_synchronizer:sender_reset, irq_synchronizer_001:sender_reset, jtag_uart:rst_n, mm_interconnect_2:nios2_gen2_0_reset_reset_bridge_in_reset_reset, nios2_gen2_0:reset_n, onchip_memory2_0:reset, rst_translator:in_reset]
 	wire         rst_controller_001_reset_out_reset_req;                          // rst_controller_001:reset_req -> [nios2_gen2_0:reset_req, onchip_memory2_0:reset_req, rst_translator:reset_req_in]
 	wire         nios2_gen2_0_debug_reset_request_reset;                          // nios2_gen2_0:debug_reset_request -> rst_controller_001:reset_in1
@@ -281,38 +195,21 @@ module Qsys (
 	Qsys_LED led (
 		.clk        (clk_clk),                             //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),     //               reset.reset_n
-<<<<<<< HEAD
-		.address    (mm_interconnect_1_led_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_1_led_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_1_led_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_1_led_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_1_led_s1_readdata),   //                    .readdata
-=======
 		.address    (mm_interconnect_3_led_s1_address),    //                  s1.address
 		.write_n    (~mm_interconnect_3_led_s1_write),     //                    .write_n
 		.writedata  (mm_interconnect_3_led_s1_writedata),  //                    .writedata
 		.chipselect (mm_interconnect_3_led_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_3_led_s1_readdata),   //                    .readdata
->>>>>>> Add direction control
-		.out_port   (led_external_connection_export)       // external_connection.export
+		.out_port   ()                                     // external_connection.export
 	);
 
 	adc_ltc2308_fifo adc_ltc2308_0 (
-<<<<<<< HEAD
-		.slave_chipselect_n (~mm_interconnect_1_adc_ltc2308_0_slave_chipselect), //          slave.chipselect_n
-		.slave_read_n       (~mm_interconnect_1_adc_ltc2308_0_slave_read),       //               .read_n
-		.slave_readdata     (mm_interconnect_1_adc_ltc2308_0_slave_readdata),    //               .readdata
-		.slave_addr         (mm_interconnect_1_adc_ltc2308_0_slave_address),     //               .address
-		.slave_wrtie_n      (~mm_interconnect_1_adc_ltc2308_0_slave_write),      //               .write_n
-		.slave_wriredata    (mm_interconnect_1_adc_ltc2308_0_slave_writedata),   //               .writedata
-=======
 		.slave_chipselect_n (~mm_interconnect_3_adc_ltc2308_0_slave_chipselect), //          slave.chipselect_n
 		.slave_read_n       (~mm_interconnect_3_adc_ltc2308_0_slave_read),       //               .read_n
 		.slave_readdata     (mm_interconnect_3_adc_ltc2308_0_slave_readdata),    //               .readdata
 		.slave_addr         (mm_interconnect_3_adc_ltc2308_0_slave_address),     //               .address
 		.slave_wrtie_n      (~mm_interconnect_3_adc_ltc2308_0_slave_write),      //               .write_n
 		.slave_wriredata    (mm_interconnect_3_adc_ltc2308_0_slave_writedata),   //               .writedata
->>>>>>> Add direction control
 		.ADC_CONVST         (adc_ltc2308_0_conduit_end_CONVST),                  //    conduit_end.export
 		.ADC_SCK            (adc_ltc2308_0_conduit_end_SCK),                     //               .export
 		.ADC_SDI            (adc_ltc2308_0_conduit_end_SDI),                     //               .export
@@ -325,49 +222,40 @@ module Qsys (
 	TERASIC_DC_MOTOR_PWM dc_motor_left (
 		.clk          (clk_clk),                                                 //        clock.clk
 		.reset_n      (~rst_controller_reset_out_reset),                         //        reset.reset_n
-		.s_address    (motor_run_left_avalon_master_address),    // avalon_slave.address
-		.s_cs         (motor_run_left_avalon_master_chipselect), //             .chipselect
-		.s_read       (),       //             .read
-		.s_readdata   (),   //             .readdata
-		.s_write      (motor_run_left_avalon_master_write),      //             .write
-		.s_writedata  (motor_run_left_avalon_master_writedata),  //             .writedata
+		.s_address    (mm_interconnect_0_dc_motor_left_avalon_slave_address),    // avalon_slave.address
+		.s_cs         (mm_interconnect_0_dc_motor_left_avalon_slave_chipselect), //             .chipselect
+		.s_read       (mm_interconnect_0_dc_motor_left_avalon_slave_read),       //             .read
+		.s_readdata   (mm_interconnect_0_dc_motor_left_avalon_slave_readdata),   //             .readdata
+		.s_write      (mm_interconnect_0_dc_motor_left_avalon_slave_write),      //             .write
+		.s_writedata  (mm_interconnect_0_dc_motor_left_avalon_slave_writedata),  //             .writedata
 		.DC_MOTOR_IN1 (dc_motor_left_conduit_end_motor_in1),                     //  conduit_end.motor_in1
 		.DC_MOTOR_IN2 (dc_motor_left_conduit_end_motor_in2),                     //             .motor_in2
 		.PWM          (dc_motor_left_conduit_end_pwm)                            //             .pwm
-<<<<<<< HEAD
 	);
 
-=======
-	);
-
->>>>>>> Add direction control
 	TERASIC_DC_MOTOR_PWM dc_motor_right (
 		.clk          (clk_clk),                                                  //        clock.clk
 		.reset_n      (~rst_controller_reset_out_reset),                          //        reset.reset_n
-		.s_address    (motor_run_right_avalon_master_address),    // avalon_slave.address
-		.s_cs         (motor_run_right_avalon_master_chipselect), //             .chipselect
-		.s_read       (),       //             .read
-		.s_readdata   (),   //             .readdata
-		.s_write      (motor_run_right_avalon_master_write),      //             .write
-		.s_writedata  (motor_run_right_avalon_master_writedata),  //             .writedata
+		.s_address    (mm_interconnect_1_dc_motor_right_avalon_slave_address),    // avalon_slave.address
+		.s_cs         (mm_interconnect_1_dc_motor_right_avalon_slave_chipselect), //             .chipselect
+		.s_read       (mm_interconnect_1_dc_motor_right_avalon_slave_read),       //             .read
+		.s_readdata   (mm_interconnect_1_dc_motor_right_avalon_slave_readdata),   //             .readdata
+		.s_write      (mm_interconnect_1_dc_motor_right_avalon_slave_write),      //             .write
+		.s_writedata  (mm_interconnect_1_dc_motor_right_avalon_slave_writedata),  //             .writedata
 		.DC_MOTOR_IN1 (dc_motor_right_conduit_end_motor_in1),                     //  conduit_end.motor_in1
 		.DC_MOTOR_IN2 (dc_motor_right_conduit_end_motor_in2),                     //             .motor_in2
 		.PWM          (dc_motor_right_conduit_end_pwm)                            //             .pwm
 	);
 
-<<<<<<< HEAD
-	Qsys_esp32_io esp32_io (
-		.clk      (clk_clk),                                //                 clk.clk
-		.reset_n  (~rst_controller_reset_out_reset),        //               reset.reset_n
-		.address  (mm_interconnect_1_esp32_io_s1_address),  //                  s1.address
-		.readdata (mm_interconnect_1_esp32_io_s1_readdata), //                    .readdata
-=======
 	direction_controller direction_controller_0 (
-		.clk         (clk_clk),                                            //                   clock.clk
-		.reset_n     (~rst_controller_reset_out_reset),                    //                   reset.reset_n
-		.leds_array  (direction_controller_0_conduit_leds_array_export),   //      conduit_leds_array.export
-		.left_motor  (direction_controller_0_conduit_end_left_motor_run),  //  conduit_end_left_motor.run
-		.right_motor (direction_controller_0_conduit_end_right_motor_run)  // conduit_end_right_motor.run
+		.clk               (clk_clk),                                              //                   clock.clk
+		.reset_n           (~rst_controller_reset_out_reset),                      //                   reset.reset_n
+		.leds_array        (direction_controller_0_conduit_leds_array_export),     //      conduit_leds_array.export
+		.left_motor        (direction_controller_0_conduit_end_left_motor_run),    //  conduit_end_left_motor.run
+		.left_motor_speed  (direction_controller_0_conduit_end_left_motor_speed),  //                        .speed
+		.right_motor       (direction_controller_0_conduit_end_right_motor_run),   // conduit_end_right_motor.run
+		.right_motor_speed (direction_controller_0_conduit_end_right_motor_speed), //                        .speed
+		.LED               (direction_controller_0_conduit_end_led_readdata)       //         conduit_end_led.readdata
 	);
 
 	Qsys_esp32_io esp32_io (
@@ -375,22 +263,10 @@ module Qsys (
 		.reset_n  (~rst_controller_reset_out_reset),        //               reset.reset_n
 		.address  (mm_interconnect_3_esp32_io_s1_address),  //                  s1.address
 		.readdata (mm_interconnect_3_esp32_io_s1_readdata), //                    .readdata
->>>>>>> Add direction control
 		.in_port  (esp32_io_external_connection_export)     // external_connection.export
 	);
 
 	TERASIC_IRM ir_rx (
-<<<<<<< HEAD
-		.s_read      (mm_interconnect_1_ir_rx_avalon_slave_read),        //     avalon_slave.read
-		.s_cs_n      (~mm_interconnect_1_ir_rx_avalon_slave_chipselect), //                 .chipselect_n
-		.s_readdata  (mm_interconnect_1_ir_rx_avalon_slave_readdata),    //                 .readdata
-		.s_write     (mm_interconnect_1_ir_rx_avalon_slave_write),       //                 .write
-		.s_writedata (mm_interconnect_1_ir_rx_avalon_slave_writedata),   //                 .writedata
-		.clk         (clk_clk),                                          //       clock_sink.clk
-		.reset_n     (~rst_controller_reset_out_reset),                  // clock_sink_reset.reset_n
-		.ir          (ir_rx_conduit_end_export),                         //      conduit_end.export
-		.irq         (irq_synchronizer_receiver_irq)                     // interrupt_sender.irq
-=======
 		.s_read      (mm_interconnect_3_ir_rx_avalon_slave_read),        //     avalon_slave.read
 		.s_cs_n      (~mm_interconnect_3_ir_rx_avalon_slave_chipselect), //                 .chipselect_n
 		.s_readdata  (mm_interconnect_3_ir_rx_avalon_slave_readdata),    //                 .readdata
@@ -400,7 +276,6 @@ module Qsys (
 		.reset_n     (~rst_controller_reset_out_reset),                  // clock_sink_reset.reset_n
 		.ir          (ir_rx_conduit_end_export),                         //      conduit_end.export
 		.irq         (irq_synchronizer_001_receiver_irq)                 // interrupt_sender.irq
->>>>>>> Add direction control
 	);
 
 	Qsys_jtag_uart jtag_uart (
@@ -419,11 +294,7 @@ module Qsys (
 	altera_avalon_mm_clock_crossing_bridge #(
 		.DATA_WIDTH          (32),
 		.SYMBOL_WIDTH        (8),
-<<<<<<< HEAD
-		.HDL_ADDR_WIDTH      (7),
-=======
 		.HDL_ADDR_WIDTH      (6),
->>>>>>> Add direction control
 		.BURSTCOUNT_WIDTH    (1),
 		.COMMAND_FIFO_DEPTH  (16),
 		.RESPONSE_FIFO_DEPTH (16),
@@ -481,45 +352,27 @@ module Qsys (
 	);
 
 	motor_run motor_run_left (
-<<<<<<< HEAD
-		.clk         (clk_clk),                                  //         clock.clk
-		.reset_n     (~rst_controller_reset_out_reset),          //         reset.reset_n
-		.s_cs        (motor_run_left_avalon_master_chipselect),  // avalon_master.chipselect
-		.s_address   (motor_run_left_avalon_master_address),     //              .address
-		.s_write     (motor_run_left_avalon_master_write),       //              .write
-		.s_writedata (motor_run_left_avalon_master_writedata),   //              .writedata
-		.waitrequest (motor_run_left_avalon_master_waitrequest)  //              .waitrequest
+		.clk         (clk_clk),                                              //         clock.clk
+		.reset_n     (~rst_controller_reset_out_reset),                      //         reset.reset_n
+		.s_cs        (motor_run_left_avalon_master_chipselect),              // avalon_master.chipselect
+		.s_address   (motor_run_left_avalon_master_address),                 //              .address
+		.s_write     (motor_run_left_avalon_master_write),                   //              .write
+		.s_writedata (motor_run_left_avalon_master_writedata),               //              .writedata
+		.waitrequest (motor_run_left_avalon_master_waitrequest),             //              .waitrequest
+		.run         (direction_controller_0_conduit_end_right_motor_run),   //   conduit_end.run
+		.speed       (direction_controller_0_conduit_end_right_motor_speed)  //              .speed
 	);
 
 	motor_run motor_run_right (
-		.clk         (clk_clk),                                   //         clock.clk
-		.reset_n     (~rst_controller_reset_out_reset),           //         reset.reset_n
-		.s_cs        (motor_run_right_avalon_master_chipselect),  // avalon_master.chipselect
-		.s_address   (motor_run_right_avalon_master_address),     //              .address
-		.s_write     (motor_run_right_avalon_master_write),       //              .write
-		.s_writedata (motor_run_right_avalon_master_writedata),   //              .writedata
-		.waitrequest (motor_run_right_avalon_master_waitrequest)  //              .waitrequest
-=======
-		.clk         (clk_clk),                                           //         clock.clk
-		.reset_n     (~rst_controller_reset_out_reset),                   //         reset.reset_n
-		.s_cs        (motor_run_left_avalon_master_chipselect),           // avalon_master.chipselect
-		.s_address   (motor_run_left_avalon_master_address),              //              .address
-		.s_write     (motor_run_left_avalon_master_write),                //              .write
-		.s_writedata (motor_run_left_avalon_master_writedata),            //              .writedata
-		.waitrequest (motor_run_left_avalon_master_waitrequest),          //              .waitrequest
-		.run         (direction_controller_0_conduit_end_left_motor_run)  //   conduit_end.run
-	);
-
-	motor_run motor_run_right (
-		.clk         (clk_clk),                                            //         clock.clk
-		.reset_n     (~rst_controller_reset_out_reset),                    //         reset.reset_n
-		.s_cs        (motor_run_right_avalon_master_chipselect),           // avalon_master.chipselect
-		.s_address   (motor_run_right_avalon_master_address),              //              .address
-		.s_write     (motor_run_right_avalon_master_write),                //              .write
-		.s_writedata (motor_run_right_avalon_master_writedata),            //              .writedata
-		.waitrequest (motor_run_right_avalon_master_waitrequest),          //              .waitrequest
-		.run         (direction_controller_0_conduit_end_right_motor_run)  //   conduit_end.run
->>>>>>> Add direction control
+		.clk         (clk_clk),                                             //         clock.clk
+		.reset_n     (~rst_controller_reset_out_reset),                     //         reset.reset_n
+		.s_cs        (motor_run_right_avalon_master_chipselect),            // avalon_master.chipselect
+		.s_address   (motor_run_right_avalon_master_address),               //              .address
+		.s_write     (motor_run_right_avalon_master_write),                 //              .write
+		.s_writedata (motor_run_right_avalon_master_writedata),             //              .writedata
+		.waitrequest (motor_run_right_avalon_master_waitrequest),           //              .waitrequest
+		.run         (direction_controller_0_conduit_end_left_motor_run),   //   conduit_end.run
+		.speed       (direction_controller_0_conduit_end_left_motor_speed)  //              .speed
 	);
 
 	i2c_opencores mpu_i2c (
@@ -533,11 +386,7 @@ module Qsys (
 		.wb_we_i    (mm_interconnect_2_mpu_i2c_avalon_slave_0_write),       //                 .write
 		.wb_stb_i   (mm_interconnect_2_mpu_i2c_avalon_slave_0_chipselect),  //                 .chipselect
 		.wb_ack_o   (mm_interconnect_2_mpu_i2c_avalon_slave_0_waitrequest), //                 .waitrequest_n
-<<<<<<< HEAD
-		.wb_inta_o  (irq_synchronizer_001_receiver_irq)                     // interrupt_sender.irq
-=======
 		.wb_inta_o  (irq_synchronizer_receiver_irq)                         // interrupt_sender.irq
->>>>>>> Add direction control
 	);
 
 	Qsys_mpu_int mpu_int (
@@ -606,17 +455,10 @@ module Qsys (
 	);
 
 	sonic_distance sonic_distance_0 (
-<<<<<<< HEAD
-		.av_mm_cs       (mm_interconnect_1_sonic_distance_0_avalon_slave_0_chipselect), // avalon_slave_0.chipselect
-		.av_mm_address  (mm_interconnect_1_sonic_distance_0_avalon_slave_0_address),    //               .address
-		.av_mm_read     (mm_interconnect_1_sonic_distance_0_avalon_slave_0_read),       //               .read
-		.av_mm_readdata (mm_interconnect_1_sonic_distance_0_avalon_slave_0_readdata),   //               .readdata
-=======
 		.av_mm_cs       (mm_interconnect_2_sonic_distance_0_avalon_slave_0_chipselect), // avalon_slave_0.chipselect
 		.av_mm_address  (mm_interconnect_2_sonic_distance_0_avalon_slave_0_address),    //               .address
 		.av_mm_read     (mm_interconnect_2_sonic_distance_0_avalon_slave_0_read),       //               .read
 		.av_mm_readdata (mm_interconnect_2_sonic_distance_0_avalon_slave_0_readdata),   //               .readdata
->>>>>>> Add direction control
 		.av_mm_clk      (clk_clk),                                                      //     clock_sink.clk
 		.av_mm_rst      (~rst_controller_reset_out_reset),                              //     reset_sink.reset_n
 		.sonic_echo     (sonic_distance_0_conduit_end_echo),                            //    conduit_end.echo
@@ -626,13 +468,8 @@ module Qsys (
 	Qsys_sw sw (
 		.clk      (clk_clk),                          //                 clk.clk
 		.reset_n  (~rst_controller_reset_out_reset),  //               reset.reset_n
-<<<<<<< HEAD
-		.address  (mm_interconnect_1_sw_s1_address),  //                  s1.address
-		.readdata (mm_interconnect_1_sw_s1_readdata), //                    .readdata
-=======
 		.address  (mm_interconnect_3_sw_s1_address),  //                  s1.address
 		.readdata (mm_interconnect_3_sw_s1_readdata), //                    .readdata
->>>>>>> Add direction control
 		.in_port  (sw_external_connection_export)     // external_connection.export
 	);
 
@@ -670,71 +507,6 @@ module Qsys (
 	);
 
 	Qsys_mm_interconnect_0 mm_interconnect_0 (
-		.clk_0_clk_clk                                     (clk_clk),                                                  //                                   clk_0_clk.clk
-		.motor_run_right_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                           // motor_run_right_reset_reset_bridge_in_reset.reset
-		.motor_run_right_avalon_master_address             (motor_run_right_avalon_master_address),                    //               motor_run_right_avalon_master.address
-		.motor_run_right_avalon_master_waitrequest         (motor_run_right_avalon_master_waitrequest),                //                                            .waitrequest
-		.motor_run_right_avalon_master_chipselect          (motor_run_right_avalon_master_chipselect),                 //                                            .chipselect
-		.motor_run_right_avalon_master_write               (motor_run_right_avalon_master_write),                      //                                            .write
-		.motor_run_right_avalon_master_writedata           (motor_run_right_avalon_master_writedata),                  //                                            .writedata
-		.dc_motor_right_avalon_slave_address               (mm_interconnect_0_dc_motor_right_avalon_slave_address),    //                 dc_motor_right_avalon_slave.address
-		.dc_motor_right_avalon_slave_write                 (mm_interconnect_0_dc_motor_right_avalon_slave_write),      //                                            .write
-		.dc_motor_right_avalon_slave_read                  (mm_interconnect_0_dc_motor_right_avalon_slave_read),       //                                            .read
-		.dc_motor_right_avalon_slave_readdata              (mm_interconnect_0_dc_motor_right_avalon_slave_readdata),   //                                            .readdata
-		.dc_motor_right_avalon_slave_writedata             (mm_interconnect_0_dc_motor_right_avalon_slave_writedata),  //                                            .writedata
-		.dc_motor_right_avalon_slave_chipselect            (mm_interconnect_0_dc_motor_right_avalon_slave_chipselect)  //                                            .chipselect
-	);
-
-	Qsys_mm_interconnect_1 mm_interconnect_1 (
-<<<<<<< HEAD
-		.clk_0_clk_clk                                    (clk_clk),                                                      //                                  clk_0_clk.clk
-		.motor_run_left_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                               // motor_run_left_reset_reset_bridge_in_reset.reset
-		.mm_clock_crossing_bridge_0_m0_address            (mm_clock_crossing_bridge_0_m0_address),                        //              mm_clock_crossing_bridge_0_m0.address
-		.mm_clock_crossing_bridge_0_m0_waitrequest        (mm_clock_crossing_bridge_0_m0_waitrequest),                    //                                           .waitrequest
-		.mm_clock_crossing_bridge_0_m0_burstcount         (mm_clock_crossing_bridge_0_m0_burstcount),                     //                                           .burstcount
-		.mm_clock_crossing_bridge_0_m0_byteenable         (mm_clock_crossing_bridge_0_m0_byteenable),                     //                                           .byteenable
-		.mm_clock_crossing_bridge_0_m0_read               (mm_clock_crossing_bridge_0_m0_read),                           //                                           .read
-		.mm_clock_crossing_bridge_0_m0_readdata           (mm_clock_crossing_bridge_0_m0_readdata),                       //                                           .readdata
-		.mm_clock_crossing_bridge_0_m0_readdatavalid      (mm_clock_crossing_bridge_0_m0_readdatavalid),                  //                                           .readdatavalid
-		.mm_clock_crossing_bridge_0_m0_write              (mm_clock_crossing_bridge_0_m0_write),                          //                                           .write
-		.mm_clock_crossing_bridge_0_m0_writedata          (mm_clock_crossing_bridge_0_m0_writedata),                      //                                           .writedata
-		.mm_clock_crossing_bridge_0_m0_debugaccess        (mm_clock_crossing_bridge_0_m0_debugaccess),                    //                                           .debugaccess
-		.motor_run_left_avalon_master_address             (motor_run_left_avalon_master_address),                         //               motor_run_left_avalon_master.address
-		.motor_run_left_avalon_master_waitrequest         (motor_run_left_avalon_master_waitrequest),                     //                                           .waitrequest
-		.motor_run_left_avalon_master_chipselect          (motor_run_left_avalon_master_chipselect),                      //                                           .chipselect
-		.motor_run_left_avalon_master_write               (motor_run_left_avalon_master_write),                           //                                           .write
-		.motor_run_left_avalon_master_writedata           (motor_run_left_avalon_master_writedata),                       //                                           .writedata
-		.adc_ltc2308_0_slave_address                      (mm_interconnect_1_adc_ltc2308_0_slave_address),                //                        adc_ltc2308_0_slave.address
-		.adc_ltc2308_0_slave_write                        (mm_interconnect_1_adc_ltc2308_0_slave_write),                  //                                           .write
-		.adc_ltc2308_0_slave_read                         (mm_interconnect_1_adc_ltc2308_0_slave_read),                   //                                           .read
-		.adc_ltc2308_0_slave_readdata                     (mm_interconnect_1_adc_ltc2308_0_slave_readdata),               //                                           .readdata
-		.adc_ltc2308_0_slave_writedata                    (mm_interconnect_1_adc_ltc2308_0_slave_writedata),              //                                           .writedata
-		.adc_ltc2308_0_slave_chipselect                   (mm_interconnect_1_adc_ltc2308_0_slave_chipselect),             //                                           .chipselect
-		.dc_motor_left_avalon_slave_address               (mm_interconnect_1_dc_motor_left_avalon_slave_address),         //                 dc_motor_left_avalon_slave.address
-		.dc_motor_left_avalon_slave_write                 (mm_interconnect_1_dc_motor_left_avalon_slave_write),           //                                           .write
-		.dc_motor_left_avalon_slave_read                  (mm_interconnect_1_dc_motor_left_avalon_slave_read),            //                                           .read
-		.dc_motor_left_avalon_slave_readdata              (mm_interconnect_1_dc_motor_left_avalon_slave_readdata),        //                                           .readdata
-		.dc_motor_left_avalon_slave_writedata             (mm_interconnect_1_dc_motor_left_avalon_slave_writedata),       //                                           .writedata
-		.dc_motor_left_avalon_slave_chipselect            (mm_interconnect_1_dc_motor_left_avalon_slave_chipselect),      //                                           .chipselect
-		.esp32_io_s1_address                              (mm_interconnect_1_esp32_io_s1_address),                        //                                esp32_io_s1.address
-		.esp32_io_s1_readdata                             (mm_interconnect_1_esp32_io_s1_readdata),                       //                                           .readdata
-		.ir_rx_avalon_slave_write                         (mm_interconnect_1_ir_rx_avalon_slave_write),                   //                         ir_rx_avalon_slave.write
-		.ir_rx_avalon_slave_read                          (mm_interconnect_1_ir_rx_avalon_slave_read),                    //                                           .read
-		.ir_rx_avalon_slave_readdata                      (mm_interconnect_1_ir_rx_avalon_slave_readdata),                //                                           .readdata
-		.ir_rx_avalon_slave_writedata                     (mm_interconnect_1_ir_rx_avalon_slave_writedata),               //                                           .writedata
-		.ir_rx_avalon_slave_chipselect                    (mm_interconnect_1_ir_rx_avalon_slave_chipselect),              //                                           .chipselect
-		.LED_s1_address                                   (mm_interconnect_1_led_s1_address),                             //                                     LED_s1.address
-		.LED_s1_write                                     (mm_interconnect_1_led_s1_write),                               //                                           .write
-		.LED_s1_readdata                                  (mm_interconnect_1_led_s1_readdata),                            //                                           .readdata
-		.LED_s1_writedata                                 (mm_interconnect_1_led_s1_writedata),                           //                                           .writedata
-		.LED_s1_chipselect                                (mm_interconnect_1_led_s1_chipselect),                          //                                           .chipselect
-		.sonic_distance_0_avalon_slave_0_address          (mm_interconnect_1_sonic_distance_0_avalon_slave_0_address),    //            sonic_distance_0_avalon_slave_0.address
-		.sonic_distance_0_avalon_slave_0_read             (mm_interconnect_1_sonic_distance_0_avalon_slave_0_read),       //                                           .read
-		.sonic_distance_0_avalon_slave_0_readdata         (mm_interconnect_1_sonic_distance_0_avalon_slave_0_readdata),   //                                           .readdata
-		.sonic_distance_0_avalon_slave_0_chipselect       (mm_interconnect_1_sonic_distance_0_avalon_slave_0_chipselect), //                                           .chipselect
-		.sw_s1_address                                    (mm_interconnect_1_sw_s1_address),                              //                                      sw_s1.address
-		.sw_s1_readdata                                   (mm_interconnect_1_sw_s1_readdata)                              //                                           .readdata
-=======
 		.clk_0_clk_clk                                    (clk_clk),                                                 //                                  clk_0_clk.clk
 		.motor_run_left_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                          // motor_run_left_reset_reset_bridge_in_reset.reset
 		.motor_run_left_avalon_master_address             (motor_run_left_avalon_master_address),                    //               motor_run_left_avalon_master.address
@@ -742,13 +514,28 @@ module Qsys (
 		.motor_run_left_avalon_master_chipselect          (motor_run_left_avalon_master_chipselect),                 //                                           .chipselect
 		.motor_run_left_avalon_master_write               (motor_run_left_avalon_master_write),                      //                                           .write
 		.motor_run_left_avalon_master_writedata           (motor_run_left_avalon_master_writedata),                  //                                           .writedata
-		.dc_motor_left_avalon_slave_address               (mm_interconnect_1_dc_motor_left_avalon_slave_address),    //                 dc_motor_left_avalon_slave.address
-		.dc_motor_left_avalon_slave_write                 (mm_interconnect_1_dc_motor_left_avalon_slave_write),      //                                           .write
-		.dc_motor_left_avalon_slave_read                  (mm_interconnect_1_dc_motor_left_avalon_slave_read),       //                                           .read
-		.dc_motor_left_avalon_slave_readdata              (mm_interconnect_1_dc_motor_left_avalon_slave_readdata),   //                                           .readdata
-		.dc_motor_left_avalon_slave_writedata             (mm_interconnect_1_dc_motor_left_avalon_slave_writedata),  //                                           .writedata
-		.dc_motor_left_avalon_slave_chipselect            (mm_interconnect_1_dc_motor_left_avalon_slave_chipselect)  //                                           .chipselect
->>>>>>> Add direction control
+		.dc_motor_left_avalon_slave_address               (mm_interconnect_0_dc_motor_left_avalon_slave_address),    //                 dc_motor_left_avalon_slave.address
+		.dc_motor_left_avalon_slave_write                 (mm_interconnect_0_dc_motor_left_avalon_slave_write),      //                                           .write
+		.dc_motor_left_avalon_slave_read                  (mm_interconnect_0_dc_motor_left_avalon_slave_read),       //                                           .read
+		.dc_motor_left_avalon_slave_readdata              (mm_interconnect_0_dc_motor_left_avalon_slave_readdata),   //                                           .readdata
+		.dc_motor_left_avalon_slave_writedata             (mm_interconnect_0_dc_motor_left_avalon_slave_writedata),  //                                           .writedata
+		.dc_motor_left_avalon_slave_chipselect            (mm_interconnect_0_dc_motor_left_avalon_slave_chipselect)  //                                           .chipselect
+	);
+
+	Qsys_mm_interconnect_1 mm_interconnect_1 (
+		.clk_0_clk_clk                                     (clk_clk),                                                  //                                   clk_0_clk.clk
+		.motor_run_right_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                           // motor_run_right_reset_reset_bridge_in_reset.reset
+		.motor_run_right_avalon_master_address             (motor_run_right_avalon_master_address),                    //               motor_run_right_avalon_master.address
+		.motor_run_right_avalon_master_waitrequest         (motor_run_right_avalon_master_waitrequest),                //                                            .waitrequest
+		.motor_run_right_avalon_master_chipselect          (motor_run_right_avalon_master_chipselect),                 //                                            .chipselect
+		.motor_run_right_avalon_master_write               (motor_run_right_avalon_master_write),                      //                                            .write
+		.motor_run_right_avalon_master_writedata           (motor_run_right_avalon_master_writedata),                  //                                            .writedata
+		.dc_motor_right_avalon_slave_address               (mm_interconnect_1_dc_motor_right_avalon_slave_address),    //                 dc_motor_right_avalon_slave.address
+		.dc_motor_right_avalon_slave_write                 (mm_interconnect_1_dc_motor_right_avalon_slave_write),      //                                            .write
+		.dc_motor_right_avalon_slave_read                  (mm_interconnect_1_dc_motor_right_avalon_slave_read),       //                                            .read
+		.dc_motor_right_avalon_slave_readdata              (mm_interconnect_1_dc_motor_right_avalon_slave_readdata),   //                                            .readdata
+		.dc_motor_right_avalon_slave_writedata             (mm_interconnect_1_dc_motor_right_avalon_slave_writedata),  //                                            .writedata
+		.dc_motor_right_avalon_slave_chipselect            (mm_interconnect_1_dc_motor_right_avalon_slave_chipselect)  //                                            .chipselect
 	);
 
 	Qsys_mm_interconnect_2 mm_interconnect_2 (
@@ -826,13 +613,10 @@ module Qsys (
 		.onchip_memory2_0_s1_byteenable                  (mm_interconnect_2_onchip_memory2_0_s1_byteenable),                //                                          .byteenable
 		.onchip_memory2_0_s1_chipselect                  (mm_interconnect_2_onchip_memory2_0_s1_chipselect),                //                                          .chipselect
 		.onchip_memory2_0_s1_clken                       (mm_interconnect_2_onchip_memory2_0_s1_clken),                     //                                          .clken
-<<<<<<< HEAD
-=======
 		.sonic_distance_0_avalon_slave_0_address         (mm_interconnect_2_sonic_distance_0_avalon_slave_0_address),       //           sonic_distance_0_avalon_slave_0.address
 		.sonic_distance_0_avalon_slave_0_read            (mm_interconnect_2_sonic_distance_0_avalon_slave_0_read),          //                                          .read
 		.sonic_distance_0_avalon_slave_0_readdata        (mm_interconnect_2_sonic_distance_0_avalon_slave_0_readdata),      //                                          .readdata
 		.sonic_distance_0_avalon_slave_0_chipselect      (mm_interconnect_2_sonic_distance_0_avalon_slave_0_chipselect),    //                                          .chipselect
->>>>>>> Add direction control
 		.sysid_qsys_control_slave_address                (mm_interconnect_2_sysid_qsys_control_slave_address),              //                  sysid_qsys_control_slave.address
 		.sysid_qsys_control_slave_readdata               (mm_interconnect_2_sysid_qsys_control_slave_readdata),             //                                          .readdata
 		.timer_0_s1_address                              (mm_interconnect_2_timer_0_s1_address),                            //                                timer_0_s1.address
@@ -849,8 +633,6 @@ module Qsys (
 		.uart_bt_avalon_rs232_slave_chipselect           (mm_interconnect_2_uart_bt_avalon_rs232_slave_chipselect)          //                                          .chipselect
 	);
 
-<<<<<<< HEAD
-=======
 	Qsys_mm_interconnect_3 mm_interconnect_3 (
 		.clk_0_clk_clk                                                   (clk_clk),                                          //                                                 clk_0_clk.clk
 		.mm_clock_crossing_bridge_0_m0_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                   // mm_clock_crossing_bridge_0_m0_reset_reset_bridge_in_reset.reset
@@ -886,7 +668,6 @@ module Qsys (
 		.sw_s1_readdata                                                  (mm_interconnect_3_sw_s1_readdata)                  //                                                          .readdata
 	);
 
->>>>>>> Add direction control
 	Qsys_irq_mapper irq_mapper (
 		.clk           (pll_0_outclk0_clk),                  //       clk.clk
 		.reset         (rst_controller_001_reset_out_reset), // clk_reset.reset

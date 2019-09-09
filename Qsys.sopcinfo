@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="Qsys" kind="Qsys" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
-<<<<<<< HEAD
- <!-- 2019.09.04.22:47:45 -->
+ <!-- 2019.09.09.23:45:44 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1567601264</value>
-=======
- <!-- 2019.09.05.13:49:47 -->
- <!-- A collection of modules and connections -->
- <parameter name="AUTO_GENERATION_ID">
-  <type>java.lang.Integer</type>
-  <value>1567655386</value>
->>>>>>> Add direction control
+  <value>1568036743</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -1743,9 +1735,9 @@ parameters are a RESULT of the module parameters. -->
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
-    <moduleName>motor_run_right</moduleName>
+    <moduleName>direction_controller_0</moduleName>
     <slaveName>clock</slaveName>
-    <name>motor_run_right.clock</name>
+    <name>direction_controller_0.clock</name>
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
@@ -1755,15 +1747,12 @@ parameters are a RESULT of the module parameters. -->
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
-<<<<<<< HEAD
-=======
-    <moduleName>direction_controller_0</moduleName>
+    <moduleName>motor_run_right</moduleName>
     <slaveName>clock</slaveName>
-    <name>direction_controller_0.clock</name>
+    <name>motor_run_right.clock</name>
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
->>>>>>> Add direction control
     <moduleName>sonic_distance_0</moduleName>
     <slaveName>clock_sink</slaveName>
     <name>sonic_distance_0.clock_sink</name>
@@ -2006,7 +1995,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-    <value>16</value>
+    <value>4</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -2014,7 +2003,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressUnits">
     <type>com.altera.sopcmodel.avalon.EAddrBurstUnits</type>
-    <value>WORDS</value>
+    <value>SYMBOLS</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -2198,7 +2187,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="readWaitStates">
     <type>int</type>
-    <value>1</value>
+    <value>0</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -2206,7 +2195,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="readWaitTime">
     <type>int</type>
-    <value>1</value>
+    <value>0</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -2353,11 +2342,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="associatedReset">
     <type>java.lang.String</type>
-<<<<<<< HEAD
-    <value></value>
-=======
     <value>reset</value>
->>>>>>> Add direction control
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -2552,7 +2537,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-    <value>16</value>
+    <value>4</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -2560,7 +2545,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressUnits">
     <type>com.altera.sopcmodel.avalon.EAddrBurstUnits</type>
-    <value>WORDS</value>
+    <value>SYMBOLS</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -2744,7 +2729,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="readWaitStates">
     <type>int</type>
-    <value>1</value>
+    <value>0</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -2752,7 +2737,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="readWaitTime">
     <type>int</type>
-    <value>1</value>
+    <value>0</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -2899,11 +2884,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="associatedReset">
     <type>java.lang.String</type>
-<<<<<<< HEAD
-    <value></value>
-=======
     <value>reset</value>
->>>>>>> Add direction control
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -2948,8 +2929,6 @@ parameters are a RESULT of the module parameters. -->
   </interface>
  </module>
  <module
-<<<<<<< HEAD
-=======
    name="direction_controller_0"
    kind="direction_controller"
    version="1.0"
@@ -3151,6 +3130,12 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>run</role>
    </port>
+   <port>
+    <name>left_motor_speed</name>
+    <direction>Output</direction>
+    <width>21</width>
+    <role>speed</role>
+   </port>
   </interface>
   <interface name="conduit_end_right_motor" kind="conduit_end" version="18.1">
    <!-- The connection points exposed by a module instance for the
@@ -3196,10 +3181,60 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>run</role>
    </port>
+   <port>
+    <name>right_motor_speed</name>
+    <direction>Output</direction>
+    <width>21</width>
+    <role>speed</role>
+   </port>
+  </interface>
+  <interface name="conduit_end_led" kind="conduit_end" version="18.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value>clock</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value>reset</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>LED</name>
+    <direction>Output</direction>
+    <width>8</width>
+    <role>readdata</role>
+   </port>
   </interface>
  </module>
  <module
->>>>>>> Add direction control
    name="esp32_io"
    kind="altera_avalon_pio"
    version="18.1"
@@ -5336,11 +5371,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="SYSINFO_ADDR_WIDTH">
    <type>int</type>
-<<<<<<< HEAD
-   <value>7</value>
-=======
    <value>6</value>
->>>>>>> Add direction control
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -5358,11 +5389,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_ADDRESS_WIDTH">
    <type>int</type>
-<<<<<<< HEAD
-   <value>7</value>
-=======
    <value>6</value>
->>>>>>> Add direction control
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -5370,11 +5397,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="HDL_ADDR_WIDTH">
    <type>int</type>
-<<<<<<< HEAD
-   <value>7</value>
-=======
    <value>6</value>
->>>>>>> Add direction control
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -5666,11 +5689,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-<<<<<<< HEAD
-    <value>128</value>
-=======
     <value>64</value>
->>>>>>> Add direction control
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -5999,11 +6018,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>s0_address</name>
     <direction>Input</direction>
-<<<<<<< HEAD
-    <width>7</width>
-=======
     <width>6</width>
->>>>>>> Add direction control
     <role>address</role>
    </port>
    <port>
@@ -6326,11 +6341,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>m0_address</name>
     <direction>Output</direction>
-<<<<<<< HEAD
-    <width>7</width>
-=======
     <width>6</width>
->>>>>>> Add direction control
     <role>address</role>
    </port>
    <port>
@@ -6362,42 +6373,15 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>ir_rx</moduleName>
     <slaveName>avalon_slave</slaveName>
     <name>ir_rx.avalon_slave</name>
-<<<<<<< HEAD
-    <baseAddress>80</baseAddress>
-=======
     <baseAddress>56</baseAddress>
->>>>>>> Add direction control
     <span>4</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
-<<<<<<< HEAD
-    <moduleName>dc_motor_left</moduleName>
-    <slaveName>avalon_slave</slaveName>
-    <name>dc_motor_left.avalon_slave</name>
-    <baseAddress>16</baseAddress>
-    <span>16</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>sonic_distance_0</moduleName>
-    <slaveName>avalon_slave_0</slaveName>
-    <name>sonic_distance_0.avalon_slave_0</name>
-    <baseAddress>72</baseAddress>
-    <span>8</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>LED</moduleName>
-    <slaveName>s1</slaveName>
-    <name>LED.s1</name>
-    <baseAddress>48</baseAddress>
-=======
     <moduleName>LED</moduleName>
     <slaveName>s1</slaveName>
     <name>LED.s1</name>
     <baseAddress>32</baseAddress>
->>>>>>> Add direction control
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -6405,11 +6389,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>esp32_io</moduleName>
     <slaveName>s1</slaveName>
     <name>esp32_io.s1</name>
-<<<<<<< HEAD
-    <baseAddress>32</baseAddress>
-=======
     <baseAddress>16</baseAddress>
->>>>>>> Add direction control
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -6425,11 +6405,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>adc_ltc2308_0</moduleName>
     <slaveName>slave</slaveName>
     <name>adc_ltc2308_0.slave</name>
-<<<<<<< HEAD
-    <baseAddress>64</baseAddress>
-=======
     <baseAddress>48</baseAddress>
->>>>>>> Add direction control
     <span>8</span>
    </memoryBlock>
   </interface>
@@ -7805,7 +7781,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="readWaitTime">
     <type>int</type>
-    <value>1</value>
+    <value>0</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -7905,11 +7881,9 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>avalon_slave</slaveName>
     <name>dc_motor_left.avalon_slave</name>
     <baseAddress>0</baseAddress>
-    <span>16</span>
+    <span>4</span>
    </memoryBlock>
   </interface>
-<<<<<<< HEAD
-=======
   <interface name="conduit_end" kind="conduit_end" version="18.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
@@ -7954,8 +7928,13 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>run</role>
    </port>
+   <port>
+    <name>speed</name>
+    <direction>Input</direction>
+    <width>21</width>
+    <role>speed</role>
+   </port>
   </interface>
->>>>>>> Add direction control
  </module>
  <module
    name="motor_run_right"
@@ -8268,7 +8247,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="readWaitTime">
     <type>int</type>
-    <value>1</value>
+    <value>0</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -8368,11 +8347,9 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>avalon_slave</slaveName>
     <name>dc_motor_right.avalon_slave</name>
     <baseAddress>0</baseAddress>
-    <span>16</span>
+    <span>4</span>
    </memoryBlock>
   </interface>
-<<<<<<< HEAD
-=======
   <interface name="conduit_end" kind="conduit_end" version="18.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
@@ -8417,8 +8394,13 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>run</role>
    </port>
+   <port>
+    <name>speed</name>
+    <direction>Input</direction>
+    <width>21</width>
+    <role>speed</role>
+   </port>
   </interface>
->>>>>>> Add direction control
  </module>
  <module name="mpu_i2c" kind="i2c_opencores" version="12.0" path="mpu_i2c">
   <!-- Describes a single module. Module parameters are
@@ -11535,11 +11517,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dataSlaveMapParam">
    <type>java.lang.String</type>
-<<<<<<< HEAD
-   <value><![CDATA[<address-map><slave name='sw.s1' start='0x0' end='0x10' type='altera_avalon_pio.s1' /><slave name='dc_motor_left.avalon_slave' start='0x10' end='0x20' type='TERASIC_DC_MOTOR_PWM.avalon_slave' /><slave name='esp32_io.s1' start='0x20' end='0x30' type='altera_avalon_pio.s1' /><slave name='LED.s1' start='0x30' end='0x40' type='altera_avalon_pio.s1' /><slave name='adc_ltc2308_0.slave' start='0x40' end='0x48' type='adc_ltc2308.slave' /><slave name='sonic_distance_0.avalon_slave_0' start='0x48' end='0x50' type='sonic_distance.avalon_slave_0' /><slave name='ir_rx.avalon_slave' start='0x50' end='0x54' type='TERASIC_IRM.avalon_slave' /><slave name='onchip_memory2_0.s1' start='0x1080000' end='0x10C93E0' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x1100800' end='0x1101000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_0.s1' start='0x1101000' end='0x1101020' type='altera_avalon_timer.s1' /><slave name='motor_measure_left.avalon_slave_0' start='0x1101020' end='0x1101040' type='motor_measure.avalon_slave_0' /><slave name='mpu_i2c.avalon_slave_0' start='0x1101040' end='0x1101060' type='i2c_opencores.avalon_slave_0' /><slave name='motor_measure_right.avalon_slave_0' start='0x1101060' end='0x1101080' type='motor_measure.avalon_slave_0' /><slave name='mpu_int.s1' start='0x1101080' end='0x1101090' type='altera_avalon_pio.s1' /><slave name='sysid_qsys.control_slave' start='0x1101090' end='0x1101098' type='altera_avalon_sysid_qsys.control_slave' /><slave name='uart_bt.avalon_rs232_slave' start='0x1101098' end='0x11010A0' type='altera_up_avalon_rs232.avalon_rs232_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x11010A0' end='0x11010A8' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></value>
-=======
-   <value><![CDATA[<address-map><slave name='sw.s1' start='0x0' end='0x10' type='altera_avalon_pio.s1' /><slave name='esp32_io.s1' start='0x10' end='0x20' type='altera_avalon_pio.s1' /><slave name='LED.s1' start='0x20' end='0x30' type='altera_avalon_pio.s1' /><slave name='adc_ltc2308_0.slave' start='0x30' end='0x38' type='adc_ltc2308.slave' /><slave name='ir_rx.avalon_slave' start='0x38' end='0x3C' type='TERASIC_IRM.avalon_slave' /><slave name='onchip_memory2_0.s1' start='0x1080000' end='0x10C93E0' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x1100800' end='0x1101000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_0.s1' start='0x1101000' end='0x1101020' type='altera_avalon_timer.s1' /><slave name='motor_measure_left.avalon_slave_0' start='0x1101020' end='0x1101040' type='motor_measure.avalon_slave_0' /><slave name='mpu_i2c.avalon_slave_0' start='0x1101040' end='0x1101060' type='i2c_opencores.avalon_slave_0' /><slave name='motor_measure_right.avalon_slave_0' start='0x1101060' end='0x1101080' type='motor_measure.avalon_slave_0' /><slave name='mpu_int.s1' start='0x1101080' end='0x1101090' type='altera_avalon_pio.s1' /><slave name='sonic_distance_0.avalon_slave_0' start='0x1101090' end='0x1101098' type='sonic_distance.avalon_slave_0' /><slave name='sysid_qsys.control_slave' start='0x1101098' end='0x11010A0' type='altera_avalon_sysid_qsys.control_slave' /><slave name='uart_bt.avalon_rs232_slave' start='0x11010A0' end='0x11010A8' type='altera_up_avalon_rs232.avalon_rs232_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x11010A8' end='0x11010B0' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></value>
->>>>>>> Add direction control
+   <value><![CDATA[<address-map><slave name='sw.s1' start='0x0' end='0x10' type='altera_avalon_pio.s1' /><slave name='esp32_io.s1' start='0x10' end='0x20' type='altera_avalon_pio.s1' /><slave name='LED.s1' start='0x20' end='0x30' type='altera_avalon_pio.s1' /><slave name='adc_ltc2308_0.slave' start='0x30' end='0x38' type='adc_ltc2308.slave' /><slave name='ir_rx.avalon_slave' start='0x38' end='0x3C' type='TERASIC_IRM.avalon_slave' /><slave name='onchip_memory2_0.s1' start='0x1080000' end='0x10C93E0' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x1100800' end='0x1101000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_0.s1' start='0x1101000' end='0x1101020' type='altera_avalon_timer.s1' /><slave name='motor_measure_left.avalon_slave_0' start='0x1101020' end='0x1101040' type='motor_measure.avalon_slave_0' /><slave name='mpu_i2c.avalon_slave_0' start='0x1101040' end='0x1101060' type='i2c_opencores.avalon_slave_0' /><slave name='motor_measure_right.avalon_slave_0' start='0x1101060' end='0x1101080' type='motor_measure.avalon_slave_0' /><slave name='mpu_int.s1' start='0x1101080' end='0x1101090' type='altera_avalon_pio.s1' /><slave name='sysid_qsys.control_slave' start='0x1101090' end='0x1101098' type='altera_avalon_sysid_qsys.control_slave' /><slave name='sonic_distance_0.avalon_slave_0' start='0x1101098' end='0x11010A0' type='sonic_distance.avalon_slave_0' /><slave name='uart_bt.avalon_rs232_slave' start='0x11010A0' end='0x11010A8' type='altera_up_avalon_rs232.avalon_rs232_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x11010A8' end='0x11010B0' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -12216,11 +12194,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>jtag_uart</moduleName>
     <slaveName>avalon_jtag_slave</slaveName>
     <name>jtag_uart.avalon_jtag_slave</name>
-<<<<<<< HEAD
-    <baseAddress>17830048</baseAddress>
-=======
     <baseAddress>17830056</baseAddress>
->>>>>>> Add direction control
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -12228,11 +12202,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>uart_bt</moduleName>
     <slaveName>avalon_rs232_slave</slaveName>
     <name>uart_bt.avalon_rs232_slave</name>
-<<<<<<< HEAD
-    <baseAddress>17830040</baseAddress>
-=======
     <baseAddress>17830048</baseAddress>
->>>>>>> Add direction control
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -12261,16 +12231,10 @@ parameters are a RESULT of the module parameters. -->
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
-<<<<<<< HEAD
-    <moduleName>sysid_qsys</moduleName>
-    <slaveName>control_slave</slaveName>
-    <name>sysid_qsys.control_slave</name>
-    <baseAddress>17830032</baseAddress>
-=======
     <moduleName>sonic_distance_0</moduleName>
     <slaveName>avalon_slave_0</slaveName>
     <name>sonic_distance_0.avalon_slave_0</name>
-    <baseAddress>17830032</baseAddress>
+    <baseAddress>17830040</baseAddress>
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -12278,8 +12242,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>sysid_qsys</moduleName>
     <slaveName>control_slave</slaveName>
     <name>sysid_qsys.control_slave</name>
-    <baseAddress>17830040</baseAddress>
->>>>>>> Add direction control
+    <baseAddress>17830032</baseAddress>
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -12296,53 +12259,22 @@ parameters are a RESULT of the module parameters. -->
     <slaveName>s0</slaveName>
     <name>mm_clock_crossing_bridge_0.s0</name>
     <baseAddress>0</baseAddress>
-<<<<<<< HEAD
-    <span>128</span>
-=======
     <span>64</span>
->>>>>>> Add direction control
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
     <moduleName>ir_rx</moduleName>
     <slaveName>avalon_slave</slaveName>
     <name>ir_rx.avalon_slave</name>
-<<<<<<< HEAD
-    <baseAddress>80</baseAddress>
-=======
     <baseAddress>56</baseAddress>
->>>>>>> Add direction control
     <span>4</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
-<<<<<<< HEAD
-    <moduleName>dc_motor_left</moduleName>
-    <slaveName>avalon_slave</slaveName>
-    <name>dc_motor_left.avalon_slave</name>
-    <baseAddress>16</baseAddress>
-    <span>16</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>sonic_distance_0</moduleName>
-    <slaveName>avalon_slave_0</slaveName>
-    <name>sonic_distance_0.avalon_slave_0</name>
-    <baseAddress>72</baseAddress>
-    <span>8</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>LED</moduleName>
-    <slaveName>s1</slaveName>
-    <name>LED.s1</name>
-    <baseAddress>48</baseAddress>
-=======
     <moduleName>LED</moduleName>
     <slaveName>s1</slaveName>
     <name>LED.s1</name>
     <baseAddress>32</baseAddress>
->>>>>>> Add direction control
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -12350,11 +12282,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>esp32_io</moduleName>
     <slaveName>s1</slaveName>
     <name>esp32_io.s1</name>
-<<<<<<< HEAD
-    <baseAddress>32</baseAddress>
-=======
     <baseAddress>16</baseAddress>
->>>>>>> Add direction control
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -12370,11 +12298,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>adc_ltc2308_0</moduleName>
     <slaveName>slave</slaveName>
     <name>adc_ltc2308_0.slave</name>
-<<<<<<< HEAD
-    <baseAddress>64</baseAddress>
-=======
     <baseAddress>48</baseAddress>
->>>>>>> Add direction control
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -12784,56 +12708,42 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>uart_bt</moduleName>
     <slaveName>interrupt</slaveName>
     <name>uart_bt.interrupt</name>
-    <interruptNumber>3</interruptNumber>
-   </interrupt>
-   <interrupt>
-    <isBridge>false</isBridge>
-<<<<<<< HEAD
-    <moduleName>ir_rx</moduleName>
-    <slaveName>interrupt_sender</slaveName>
-    <name>ir_rx.interrupt_sender</name>
-    <interruptNumber>1</interruptNumber>
+    <interruptNumber>0</interruptNumber>
    </interrupt>
    <interrupt>
     <isBridge>false</isBridge>
     <moduleName>mpu_i2c</moduleName>
     <slaveName>interrupt_sender</slaveName>
     <name>mpu_i2c.interrupt_sender</name>
-    <interruptNumber>2</interruptNumber>
-=======
-    <moduleName>mpu_i2c</moduleName>
-    <slaveName>interrupt_sender</slaveName>
-    <name>mpu_i2c.interrupt_sender</name>
-    <interruptNumber>2</interruptNumber>
+    <interruptNumber>1</interruptNumber>
    </interrupt>
    <interrupt>
     <isBridge>false</isBridge>
     <moduleName>ir_rx</moduleName>
     <slaveName>interrupt_sender</slaveName>
     <name>ir_rx.interrupt_sender</name>
-    <interruptNumber>1</interruptNumber>
->>>>>>> Add direction control
+    <interruptNumber>2</interruptNumber>
    </interrupt>
    <interrupt>
     <isBridge>false</isBridge>
     <moduleName>jtag_uart</moduleName>
     <slaveName>irq</slaveName>
     <name>jtag_uart.irq</name>
-    <interruptNumber>4</interruptNumber>
+    <interruptNumber>3</interruptNumber>
    </interrupt>
    <interrupt>
     <isBridge>false</isBridge>
     <moduleName>timer_0</moduleName>
     <slaveName>irq</slaveName>
     <name>timer_0.irq</name>
-    <interruptNumber>5</interruptNumber>
+    <interruptNumber>4</interruptNumber>
    </interrupt>
    <interrupt>
     <isBridge>false</isBridge>
     <moduleName>mpu_int</moduleName>
     <slaveName>irq</slaveName>
     <name>mpu_int.irq</name>
-    <interruptNumber>0</interruptNumber>
+    <interruptNumber>5</interruptNumber>
    </interrupt>
   </interface>
   <interface name="debug_reset_request" kind="reset_source" version="18.1">
@@ -19663,11 +19573,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-<<<<<<< HEAD
-   <value>1567601264</value>
-=======
-   <value>1567655386</value>
->>>>>>> Add direction control
+   <value>1568036743</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -19687,11 +19593,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-<<<<<<< HEAD
-   <value>1567601264</value>
-=======
-   <value>1567655386</value>
->>>>>>> Add direction control
+   <value>1568036743</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -19707,11 +19609,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-<<<<<<< HEAD
-   <value>1567601264</value>
-=======
-   <value>1567655386</value>
->>>>>>> Add direction control
+   <value>1568036743</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -21654,57 +21552,6 @@ parameters are a RESULT of the module parameters. -->
   </interface>
  </module>
  <connection
-   name="motor_run_right.avalon_master/dc_motor_right.avalon_slave"
-   kind="avalon"
-   version="18.1"
-   start="motor_run_right.avalon_master"
-   end="dc_motor_right.avalon_slave">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x0000</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>motor_run_right</startModule>
-  <startConnectionPoint>avalon_master</startConnectionPoint>
-  <endModule>dc_motor_right</endModule>
-  <endConnectionPoint>avalon_slave</endConnectionPoint>
- </connection>
- <connection
    name="motor_run_left.avalon_master/dc_motor_left.avalon_slave"
    kind="avalon"
    version="18.1"
@@ -21756,6 +21603,57 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>avalon_slave</endConnectionPoint>
  </connection>
  <connection
+   name="motor_run_right.avalon_master/dc_motor_right.avalon_slave"
+   kind="avalon"
+   version="18.1"
+   start="motor_run_right.avalon_master"
+   end="dc_motor_right.avalon_slave">
+  <parameter name="arbitrationPriority">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="baseAddress">
+   <type>java.math.BigInteger</type>
+   <value>0x0000</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="defaultConnection">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>motor_run_right</startModule>
+  <startConnectionPoint>avalon_master</startConnectionPoint>
+  <endModule>dc_motor_right</endModule>
+  <endConnectionPoint>avalon_slave</endConnectionPoint>
+ </connection>
+ <connection
    name="nios2_gen2_0.data_master/jtag_uart.avalon_jtag_slave"
    kind="avalon"
    version="18.1"
@@ -21771,11 +21669,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-<<<<<<< HEAD
-   <value>0x011010a0</value>
-=======
    <value>0x011010a8</value>
->>>>>>> Add direction control
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -21826,11 +21720,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-<<<<<<< HEAD
-   <value>0x01101098</value>
-=======
    <value>0x011010a0</value>
->>>>>>> Add direction control
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -22019,19 +21909,62 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>avalon_slave_0</endConnectionPoint>
  </connection>
  <connection
-<<<<<<< HEAD
-   name="nios2_gen2_0.data_master/sysid_qsys.control_slave"
-   kind="avalon"
-   version="18.1"
-   start="nios2_gen2_0.data_master"
-   end="sysid_qsys.control_slave">
-=======
    name="nios2_gen2_0.data_master/sonic_distance_0.avalon_slave_0"
    kind="avalon"
    version="18.1"
    start="nios2_gen2_0.data_master"
    end="sonic_distance_0.avalon_slave_0">
->>>>>>> Add direction control
+  <parameter name="arbitrationPriority">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="baseAddress">
+   <type>java.math.BigInteger</type>
+   <value>0x01101098</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="defaultConnection">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>nios2_gen2_0</startModule>
+  <startConnectionPoint>data_master</startConnectionPoint>
+  <endModule>sonic_distance_0</endModule>
+  <endConnectionPoint>avalon_slave_0</endConnectionPoint>
+ </connection>
+ <connection
+   name="nios2_gen2_0.data_master/sysid_qsys.control_slave"
+   kind="avalon"
+   version="18.1"
+   start="nios2_gen2_0.data_master"
+   end="sysid_qsys.control_slave">
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -22074,7 +22007,6 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>data_master</startConnectionPoint>
-<<<<<<< HEAD
   <endModule>sysid_qsys</endModule>
   <endConnectionPoint>control_slave</endConnectionPoint>
  </connection>
@@ -22084,17 +22016,6 @@ parameters are a RESULT of the module parameters. -->
    version="18.1"
    start="nios2_gen2_0.data_master"
    end="nios2_gen2_0.debug_mem_slave">
-=======
-  <endModule>sonic_distance_0</endModule>
-  <endConnectionPoint>avalon_slave_0</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.data_master/sysid_qsys.control_slave"
-   kind="avalon"
-   version="18.1"
-   start="nios2_gen2_0.data_master"
-   end="sysid_qsys.control_slave">
->>>>>>> Add direction control
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -22105,11 +22026,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-<<<<<<< HEAD
    <value>0x01100800</value>
-=======
-   <value>0x01101098</value>
->>>>>>> Add direction control
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -22141,7 +22058,6 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>data_master</startConnectionPoint>
-<<<<<<< HEAD
   <endModule>nios2_gen2_0</endModule>
   <endConnectionPoint>debug_mem_slave</endConnectionPoint>
  </connection>
@@ -22151,17 +22067,6 @@ parameters are a RESULT of the module parameters. -->
    version="18.1"
    start="nios2_gen2_0.data_master"
    end="mm_clock_crossing_bridge_0.s0">
-=======
-  <endModule>sysid_qsys</endModule>
-  <endConnectionPoint>control_slave</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.data_master/nios2_gen2_0.debug_mem_slave"
-   kind="avalon"
-   version="18.1"
-   start="nios2_gen2_0.data_master"
-   end="nios2_gen2_0.debug_mem_slave">
->>>>>>> Add direction control
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -22172,11 +22077,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-<<<<<<< HEAD
    <value>0x0000</value>
-=======
-   <value>0x01100800</value>
->>>>>>> Add direction control
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -22208,7 +22109,6 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>data_master</startConnectionPoint>
-<<<<<<< HEAD
   <endModule>mm_clock_crossing_bridge_0</endModule>
   <endConnectionPoint>s0</endConnectionPoint>
  </connection>
@@ -22218,17 +22118,6 @@ parameters are a RESULT of the module parameters. -->
    version="18.1"
    start="nios2_gen2_0.data_master"
    end="timer_0.s1">
-=======
-  <endModule>nios2_gen2_0</endModule>
-  <endConnectionPoint>debug_mem_slave</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.data_master/mm_clock_crossing_bridge_0.s0"
-   kind="avalon"
-   version="18.1"
-   start="nios2_gen2_0.data_master"
-   end="mm_clock_crossing_bridge_0.s0">
->>>>>>> Add direction control
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -22239,11 +22128,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-<<<<<<< HEAD
    <value>0x01101000</value>
-=======
-   <value>0x0000</value>
->>>>>>> Add direction control
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -22275,7 +22160,6 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>data_master</startConnectionPoint>
-<<<<<<< HEAD
   <endModule>timer_0</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
@@ -22285,17 +22169,6 @@ parameters are a RESULT of the module parameters. -->
    version="18.1"
    start="nios2_gen2_0.data_master"
    end="mpu_int.s1">
-=======
-  <endModule>mm_clock_crossing_bridge_0</endModule>
-  <endConnectionPoint>s0</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.data_master/timer_0.s1"
-   kind="avalon"
-   version="18.1"
-   start="nios2_gen2_0.data_master"
-   end="timer_0.s1">
->>>>>>> Add direction control
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -22306,11 +22179,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-<<<<<<< HEAD
    <value>0x01101080</value>
-=======
-   <value>0x01101000</value>
->>>>>>> Add direction control
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -22342,7 +22211,6 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>data_master</startConnectionPoint>
-<<<<<<< HEAD
   <endModule>mpu_int</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
@@ -22352,17 +22220,6 @@ parameters are a RESULT of the module parameters. -->
    version="18.1"
    start="nios2_gen2_0.data_master"
    end="onchip_memory2_0.s1">
-=======
-  <endModule>timer_0</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.data_master/mpu_int.s1"
-   kind="avalon"
-   version="18.1"
-   start="nios2_gen2_0.data_master"
-   end="mpu_int.s1">
->>>>>>> Add direction control
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -22373,11 +22230,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-<<<<<<< HEAD
    <value>0x01080000</value>
-=======
-   <value>0x01101080</value>
->>>>>>> Add direction control
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -22409,7 +22262,6 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>data_master</startConnectionPoint>
-<<<<<<< HEAD
   <endModule>onchip_memory2_0</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
@@ -22469,16 +22321,6 @@ parameters are a RESULT of the module parameters. -->
    kind="avalon"
    version="18.1"
    start="nios2_gen2_0.instruction_master"
-=======
-  <endModule>mpu_int</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.data_master/onchip_memory2_0.s1"
-   kind="avalon"
-   version="18.1"
-   start="nios2_gen2_0.data_master"
->>>>>>> Add direction control
    end="onchip_memory2_0.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -22521,155 +22363,6 @@ parameters are a RESULT of the module parameters. -->
    <valid>true</valid>
   </parameter>
   <startModule>nios2_gen2_0</startModule>
-<<<<<<< HEAD
-  <startConnectionPoint>instruction_master</startConnectionPoint>
-=======
-  <startConnectionPoint>data_master</startConnectionPoint>
->>>>>>> Add direction control
-  <endModule>onchip_memory2_0</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-<<<<<<< HEAD
-   name="mm_clock_crossing_bridge_0.m0/ir_rx.avalon_slave"
-   kind="avalon"
-   version="18.1"
-   start="mm_clock_crossing_bridge_0.m0"
-   end="ir_rx.avalon_slave">
-=======
-   name="nios2_gen2_0.instruction_master/nios2_gen2_0.debug_mem_slave"
-   kind="avalon"
-   version="18.1"
-   start="nios2_gen2_0.instruction_master"
-   end="nios2_gen2_0.debug_mem_slave">
->>>>>>> Add direction control
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-<<<<<<< HEAD
-   <value>0x0050</value>
-=======
-   <value>0x01100800</value>
->>>>>>> Add direction control
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-<<<<<<< HEAD
-  <startModule>mm_clock_crossing_bridge_0</startModule>
-  <startConnectionPoint>m0</startConnectionPoint>
-  <endModule>ir_rx</endModule>
-  <endConnectionPoint>avalon_slave</endConnectionPoint>
- </connection>
- <connection
-   name="mm_clock_crossing_bridge_0.m0/dc_motor_left.avalon_slave"
-   kind="avalon"
-   version="18.1"
-   start="mm_clock_crossing_bridge_0.m0"
-   end="dc_motor_left.avalon_slave">
-=======
-  <startModule>nios2_gen2_0</startModule>
-  <startConnectionPoint>instruction_master</startConnectionPoint>
-  <endModule>nios2_gen2_0</endModule>
-  <endConnectionPoint>debug_mem_slave</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.instruction_master/onchip_memory2_0.s1"
-   kind="avalon"
-   version="18.1"
-   start="nios2_gen2_0.instruction_master"
-   end="onchip_memory2_0.s1">
->>>>>>> Add direction control
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-<<<<<<< HEAD
-   <value>0x0010</value>
-=======
-   <value>0x01080000</value>
->>>>>>> Add direction control
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-<<<<<<< HEAD
-  <startModule>mm_clock_crossing_bridge_0</startModule>
-  <startConnectionPoint>m0</startConnectionPoint>
-  <endModule>dc_motor_left</endModule>
-  <endConnectionPoint>avalon_slave</endConnectionPoint>
- </connection>
- <connection
-   name="mm_clock_crossing_bridge_0.m0/sonic_distance_0.avalon_slave_0"
-   kind="avalon"
-   version="18.1"
-   start="mm_clock_crossing_bridge_0.m0"
-   end="sonic_distance_0.avalon_slave_0">
-=======
-  <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>instruction_master</startConnectionPoint>
   <endModule>onchip_memory2_0</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
@@ -22680,7 +22373,6 @@ parameters are a RESULT of the module parameters. -->
    version="18.1"
    start="mm_clock_crossing_bridge_0.m0"
    end="ir_rx.avalon_slave">
->>>>>>> Add direction control
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -22691,11 +22383,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-<<<<<<< HEAD
-   <value>0x0048</value>
-=======
    <value>0x0038</value>
->>>>>>> Add direction control
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -22727,13 +22415,8 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>mm_clock_crossing_bridge_0</startModule>
   <startConnectionPoint>m0</startConnectionPoint>
-<<<<<<< HEAD
-  <endModule>sonic_distance_0</endModule>
-  <endConnectionPoint>avalon_slave_0</endConnectionPoint>
-=======
   <endModule>ir_rx</endModule>
   <endConnectionPoint>avalon_slave</endConnectionPoint>
->>>>>>> Add direction control
  </connection>
  <connection
    name="mm_clock_crossing_bridge_0.m0/LED.s1"
@@ -22751,11 +22434,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-<<<<<<< HEAD
-   <value>0x0030</value>
-=======
    <value>0x0020</value>
->>>>>>> Add direction control
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -22806,11 +22485,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-<<<<<<< HEAD
-   <value>0x0020</value>
-=======
    <value>0x0010</value>
->>>>>>> Add direction control
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -22912,11 +22587,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-<<<<<<< HEAD
-   <value>0x0040</value>
-=======
    <value>0x0030</value>
->>>>>>> Add direction control
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23114,11 +22785,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clock</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk/motor_run_right.clock"
+   name="clk_0.clk/direction_controller_0.clock"
    kind="clock"
    version="18.1"
    start="clk_0.clk"
-   end="motor_run_right.clock">
+   end="direction_controller_0.clock">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -23137,7 +22808,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_0</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
-  <endModule>motor_run_right</endModule>
+  <endModule>direction_controller_0</endModule>
   <endConnectionPoint>clock</endConnectionPoint>
  </connection>
  <connection
@@ -23168,13 +22839,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clock</endConnectionPoint>
  </connection>
  <connection
-<<<<<<< HEAD
-=======
-   name="clk_0.clk/direction_controller_0.clock"
+   name="clk_0.clk/motor_run_right.clock"
    kind="clock"
    version="18.1"
    start="clk_0.clk"
-   end="direction_controller_0.clock">
+   end="motor_run_right.clock">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -23193,11 +22862,10 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_0</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
-  <endModule>direction_controller_0</endModule>
+  <endModule>motor_run_right</endModule>
   <endConnectionPoint>clock</endConnectionPoint>
  </connection>
  <connection
->>>>>>> Add direction control
    name="clk_0.clk/sonic_distance_0.clock_sink"
    kind="clock"
    version="18.1"
@@ -23630,80 +23298,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clock_sink_adc</endConnectionPoint>
  </connection>
  <connection
-<<<<<<< HEAD
-=======
-   name="motor_run_left.conduit_end/direction_controller_0.conduit_end_left_motor"
-   kind="conduit"
-   version="18.1"
-   start="motor_run_left.conduit_end"
-   end="direction_controller_0.conduit_end_left_motor">
-  <parameter name="endPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="endPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="width">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>motor_run_left</startModule>
-  <startConnectionPoint>conduit_end</startConnectionPoint>
-  <endModule>direction_controller_0</endModule>
-  <endConnectionPoint>conduit_end_left_motor</endConnectionPoint>
- </connection>
- <connection
-   name="motor_run_right.conduit_end/direction_controller_0.conduit_end_right_motor"
+   name="motor_run_right.conduit_end/direction_controller_0.conduit_end_left_motor"
    kind="conduit"
    version="18.1"
    start="motor_run_right.conduit_end"
-   end="direction_controller_0.conduit_end_right_motor">
+   end="direction_controller_0.conduit_end_left_motor">
   <parameter name="endPort">
    <type>com.altera.entityinterfaces.IPort</type>
    <value></value>
@@ -23763,10 +23362,76 @@ parameters are a RESULT of the module parameters. -->
   <startModule>motor_run_right</startModule>
   <startConnectionPoint>conduit_end</startConnectionPoint>
   <endModule>direction_controller_0</endModule>
+  <endConnectionPoint>conduit_end_left_motor</endConnectionPoint>
+ </connection>
+ <connection
+   name="motor_run_left.conduit_end/direction_controller_0.conduit_end_right_motor"
+   kind="conduit"
+   version="18.1"
+   start="motor_run_left.conduit_end"
+   end="direction_controller_0.conduit_end_right_motor">
+  <parameter name="endPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="endPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="width">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>motor_run_left</startModule>
+  <startConnectionPoint>conduit_end</startConnectionPoint>
+  <endModule>direction_controller_0</endModule>
   <endConnectionPoint>conduit_end_right_motor</endConnectionPoint>
  </connection>
  <connection
->>>>>>> Add direction control
    name="nios2_gen2_0.irq/uart_bt.interrupt"
    kind="interrupt"
    version="18.1"
@@ -23774,7 +23439,7 @@ parameters are a RESULT of the module parameters. -->
    end="uart_bt.interrupt">
   <parameter name="irqNumber">
    <type>int</type>
-   <value>3</value>
+   <value>0</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23802,16 +23467,6 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>interrupt</endConnectionPoint>
  </connection>
  <connection
-<<<<<<< HEAD
-   name="nios2_gen2_0.irq/ir_rx.interrupt_sender"
-   kind="interrupt"
-   version="18.1"
-   start="nios2_gen2_0.irq"
-   end="ir_rx.interrupt_sender">
-  <parameter name="irqNumber">
-   <type>int</type>
-   <value>1</value>
-=======
    name="nios2_gen2_0.irq/mpu_i2c.interrupt_sender"
    kind="interrupt"
    version="18.1"
@@ -23819,8 +23474,7 @@ parameters are a RESULT of the module parameters. -->
    end="mpu_i2c.interrupt_sender">
   <parameter name="irqNumber">
    <type>int</type>
-   <value>2</value>
->>>>>>> Add direction control
+   <value>1</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23844,20 +23498,6 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>irq</startConnectionPoint>
-<<<<<<< HEAD
-  <endModule>ir_rx</endModule>
-  <endConnectionPoint>interrupt_sender</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.irq/mpu_i2c.interrupt_sender"
-   kind="interrupt"
-   version="18.1"
-   start="nios2_gen2_0.irq"
-   end="mpu_i2c.interrupt_sender">
-  <parameter name="irqNumber">
-   <type>int</type>
-   <value>2</value>
-=======
   <endModule>mpu_i2c</endModule>
   <endConnectionPoint>interrupt_sender</endConnectionPoint>
  </connection>
@@ -23869,8 +23509,7 @@ parameters are a RESULT of the module parameters. -->
    end="ir_rx.interrupt_sender">
   <parameter name="irqNumber">
    <type>int</type>
-   <value>1</value>
->>>>>>> Add direction control
+   <value>2</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23894,11 +23533,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>irq</startConnectionPoint>
-<<<<<<< HEAD
-  <endModule>mpu_i2c</endModule>
-=======
   <endModule>ir_rx</endModule>
->>>>>>> Add direction control
   <endConnectionPoint>interrupt_sender</endConnectionPoint>
  </connection>
  <connection
@@ -23909,7 +23544,7 @@ parameters are a RESULT of the module parameters. -->
    end="jtag_uart.irq">
   <parameter name="irqNumber">
    <type>int</type>
-   <value>4</value>
+   <value>3</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23944,7 +23579,7 @@ parameters are a RESULT of the module parameters. -->
    end="timer_0.irq">
   <parameter name="irqNumber">
    <type>int</type>
-   <value>5</value>
+   <value>4</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -23979,7 +23614,7 @@ parameters are a RESULT of the module parameters. -->
    end="mpu_int.irq">
   <parameter name="irqNumber">
    <type>int</type>
-   <value>0</value>
+   <value>5</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -24466,11 +24101,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk_reset/motor_run_right.reset"
+   name="clk_0.clk_reset/direction_controller_0.reset"
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
-   end="motor_run_right.reset">
+   end="direction_controller_0.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -24489,7 +24124,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_0</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
-  <endModule>motor_run_right</endModule>
+  <endModule>direction_controller_0</endModule>
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
@@ -24520,13 +24155,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-<<<<<<< HEAD
-=======
-   name="clk_0.clk_reset/direction_controller_0.reset"
+   name="clk_0.clk_reset/motor_run_right.reset"
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
-   end="direction_controller_0.reset">
+   end="motor_run_right.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -24545,11 +24178,10 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_0</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
-  <endModule>direction_controller_0</endModule>
+  <endModule>motor_run_right</endModule>
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
->>>>>>> Add direction control
    name="clk_0.clk_reset/onchip_memory2_0.reset1"
    kind="reset"
    version="18.1"
@@ -24747,11 +24379,7 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
-<<<<<<< HEAD
-  <instanceCount>24</instanceCount>
-=======
   <instanceCount>25</instanceCount>
->>>>>>> Add direction control
   <name>clock_sink</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
@@ -24759,11 +24387,7 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
-<<<<<<< HEAD
-  <instanceCount>23</instanceCount>
-=======
   <instanceCount>24</instanceCount>
->>>>>>> Add direction control
   <name>reset_sink</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
@@ -24779,11 +24403,7 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
-<<<<<<< HEAD
-  <instanceCount>14</instanceCount>
-=======
-  <instanceCount>19</instanceCount>
->>>>>>> Add direction control
+  <instanceCount>20</instanceCount>
   <name>conduit_end</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
@@ -24848,8 +24468,6 @@ parameters are a RESULT of the module parameters. -->
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
-<<<<<<< HEAD
-=======
   <name>direction_controller</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
@@ -24858,7 +24476,6 @@ parameters are a RESULT of the module parameters. -->
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
->>>>>>> Add direction control
   <name>TERASIC_IRM</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
@@ -25010,11 +24627,7 @@ parameters are a RESULT of the module parameters. -->
   <version>17.1</version>
  </plugin>
  <plugin>
-<<<<<<< HEAD
-  <instanceCount>22</instanceCount>
-=======
   <instanceCount>21</instanceCount>
->>>>>>> Add direction control
   <name>avalon</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
@@ -25022,11 +24635,7 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
-<<<<<<< HEAD
-  <instanceCount>24</instanceCount>
-=======
   <instanceCount>25</instanceCount>
->>>>>>> Add direction control
   <name>clock</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
@@ -25034,8 +24643,6 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
-<<<<<<< HEAD
-=======
   <instanceCount>2</instanceCount>
   <name>conduit</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
@@ -25044,7 +24651,6 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
->>>>>>> Add direction control
   <instanceCount>6</instanceCount>
   <name>interrupt</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
@@ -25053,11 +24659,7 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
-<<<<<<< HEAD
-  <instanceCount>26</instanceCount>
-=======
   <instanceCount>27</instanceCount>
->>>>>>> Add direction control
   <name>reset</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>

@@ -56,7 +56,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "MTRR_N",
+					"strict" : false
+				},
+				{
 					"name" : "MTR_PWMB",
+					"strict" : false
+				},
+				{
+					"name" : "MTRL_P",
 					"strict" : false
 				},
 				{
@@ -76,6 +84,38 @@
 					"strict" : false
 				},
 				{
+					"name" : "GPIO_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_1[7]",
+					"strict" : false
+				},
+				{
 					"name" : "MPU_SDA_SDI",
 					"strict" : false
 				},
@@ -85,14 +125,6 @@
 				},
 				{
 					"name" : "MPU_INT",
-					"strict" : false
-				},
-				{
-					"name" : "ESP32_CMD[0]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
@@ -113,6 +145,14 @@
 				},
 				{
 					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ESP32_CMD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
@@ -140,11 +180,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "ADC_SDO",
+					"name" : "SONIC_ECHO",
 					"strict" : false
 				},
 				{
-					"name" : "SONIC_ECHO",
+					"name" : "ADC_SDO",
 					"strict" : false
 				}
 			]

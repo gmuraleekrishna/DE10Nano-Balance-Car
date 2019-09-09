@@ -26,7 +26,7 @@ module obstacle_avoider (
 		s_address = `SONIC_REG;
 		s_read = 1'b1;
 		s_cs = 1'b1;
-		distance_measurement = s_readdata[21:0];
+		distance_measurement = s_readdata;
 	end
 
 	always_comb begin

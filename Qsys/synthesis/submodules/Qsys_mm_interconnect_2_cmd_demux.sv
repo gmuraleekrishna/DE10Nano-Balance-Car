@@ -29,15 +29,9 @@
 // Generation parameters:
 //   output_name:         Qsys_mm_interconnect_2_cmd_demux
 //   ST_DATA_W:           103
-<<<<<<< HEAD
-//   ST_CHANNEL_W:        11
-//   NUM_OUTPUTS:         11
-//   VALID_WIDTH:         11
-=======
 //   ST_CHANNEL_W:        12
 //   NUM_OUTPUTS:         12
 //   VALID_WIDTH:         12
->>>>>>> Add direction control
 // ------------------------------------------
 
 //------------------------------------------
@@ -51,15 +45,9 @@ module Qsys_mm_interconnect_2_cmd_demux
     // -------------------
     // Sink
     // -------------------
-<<<<<<< HEAD
-    input  [11-1      : 0]   sink_valid,
-    input  [103-1    : 0]   sink_data, // ST_DATA_W=103
-    input  [11-1 : 0]   sink_channel, // ST_CHANNEL_W=11
-=======
     input  [12-1      : 0]   sink_valid,
     input  [103-1    : 0]   sink_data, // ST_DATA_W=103
     input  [12-1 : 0]   sink_channel, // ST_CHANNEL_W=12
->>>>>>> Add direction control
     input                         sink_startofpacket,
     input                         sink_endofpacket,
     output                        sink_ready,
@@ -69,127 +57,81 @@ module Qsys_mm_interconnect_2_cmd_demux
     // -------------------
     output reg                      src0_valid,
     output reg [103-1    : 0] src0_data, // ST_DATA_W=103
-<<<<<<< HEAD
-    output reg [11-1 : 0] src0_channel, // ST_CHANNEL_W=11
-=======
     output reg [12-1 : 0] src0_channel, // ST_CHANNEL_W=12
->>>>>>> Add direction control
     output reg                      src0_startofpacket,
     output reg                      src0_endofpacket,
     input                           src0_ready,
 
     output reg                      src1_valid,
     output reg [103-1    : 0] src1_data, // ST_DATA_W=103
-<<<<<<< HEAD
-    output reg [11-1 : 0] src1_channel, // ST_CHANNEL_W=11
-=======
     output reg [12-1 : 0] src1_channel, // ST_CHANNEL_W=12
->>>>>>> Add direction control
     output reg                      src1_startofpacket,
     output reg                      src1_endofpacket,
     input                           src1_ready,
 
     output reg                      src2_valid,
     output reg [103-1    : 0] src2_data, // ST_DATA_W=103
-<<<<<<< HEAD
-    output reg [11-1 : 0] src2_channel, // ST_CHANNEL_W=11
-=======
     output reg [12-1 : 0] src2_channel, // ST_CHANNEL_W=12
->>>>>>> Add direction control
     output reg                      src2_startofpacket,
     output reg                      src2_endofpacket,
     input                           src2_ready,
 
     output reg                      src3_valid,
     output reg [103-1    : 0] src3_data, // ST_DATA_W=103
-<<<<<<< HEAD
-    output reg [11-1 : 0] src3_channel, // ST_CHANNEL_W=11
-=======
     output reg [12-1 : 0] src3_channel, // ST_CHANNEL_W=12
->>>>>>> Add direction control
     output reg                      src3_startofpacket,
     output reg                      src3_endofpacket,
     input                           src3_ready,
 
     output reg                      src4_valid,
     output reg [103-1    : 0] src4_data, // ST_DATA_W=103
-<<<<<<< HEAD
-    output reg [11-1 : 0] src4_channel, // ST_CHANNEL_W=11
-=======
     output reg [12-1 : 0] src4_channel, // ST_CHANNEL_W=12
->>>>>>> Add direction control
     output reg                      src4_startofpacket,
     output reg                      src4_endofpacket,
     input                           src4_ready,
 
     output reg                      src5_valid,
     output reg [103-1    : 0] src5_data, // ST_DATA_W=103
-<<<<<<< HEAD
-    output reg [11-1 : 0] src5_channel, // ST_CHANNEL_W=11
-=======
     output reg [12-1 : 0] src5_channel, // ST_CHANNEL_W=12
->>>>>>> Add direction control
     output reg                      src5_startofpacket,
     output reg                      src5_endofpacket,
     input                           src5_ready,
 
     output reg                      src6_valid,
     output reg [103-1    : 0] src6_data, // ST_DATA_W=103
-<<<<<<< HEAD
-    output reg [11-1 : 0] src6_channel, // ST_CHANNEL_W=11
-=======
     output reg [12-1 : 0] src6_channel, // ST_CHANNEL_W=12
->>>>>>> Add direction control
     output reg                      src6_startofpacket,
     output reg                      src6_endofpacket,
     input                           src6_ready,
 
     output reg                      src7_valid,
     output reg [103-1    : 0] src7_data, // ST_DATA_W=103
-<<<<<<< HEAD
-    output reg [11-1 : 0] src7_channel, // ST_CHANNEL_W=11
-=======
     output reg [12-1 : 0] src7_channel, // ST_CHANNEL_W=12
->>>>>>> Add direction control
     output reg                      src7_startofpacket,
     output reg                      src7_endofpacket,
     input                           src7_ready,
 
     output reg                      src8_valid,
     output reg [103-1    : 0] src8_data, // ST_DATA_W=103
-<<<<<<< HEAD
-    output reg [11-1 : 0] src8_channel, // ST_CHANNEL_W=11
-=======
     output reg [12-1 : 0] src8_channel, // ST_CHANNEL_W=12
->>>>>>> Add direction control
     output reg                      src8_startofpacket,
     output reg                      src8_endofpacket,
     input                           src8_ready,
 
     output reg                      src9_valid,
     output reg [103-1    : 0] src9_data, // ST_DATA_W=103
-<<<<<<< HEAD
-    output reg [11-1 : 0] src9_channel, // ST_CHANNEL_W=11
-=======
     output reg [12-1 : 0] src9_channel, // ST_CHANNEL_W=12
->>>>>>> Add direction control
     output reg                      src9_startofpacket,
     output reg                      src9_endofpacket,
     input                           src9_ready,
 
     output reg                      src10_valid,
     output reg [103-1    : 0] src10_data, // ST_DATA_W=103
-<<<<<<< HEAD
-    output reg [11-1 : 0] src10_channel, // ST_CHANNEL_W=11
-=======
     output reg [12-1 : 0] src10_channel, // ST_CHANNEL_W=12
->>>>>>> Add direction control
     output reg                      src10_startofpacket,
     output reg                      src10_endofpacket,
     input                           src10_ready,
 
-<<<<<<< HEAD
-=======
     output reg                      src11_valid,
     output reg [103-1    : 0] src11_data, // ST_DATA_W=103
     output reg [12-1 : 0] src11_channel, // ST_CHANNEL_W=12
@@ -197,7 +139,6 @@ module Qsys_mm_interconnect_2_cmd_demux
     output reg                      src11_endofpacket,
     input                           src11_ready,
 
->>>>>>> Add direction control
 
     // -------------------
     // Clock & Reset
@@ -209,11 +150,7 @@ module Qsys_mm_interconnect_2_cmd_demux
 
 );
 
-<<<<<<< HEAD
-    localparam NUM_OUTPUTS = 11;
-=======
     localparam NUM_OUTPUTS = 12;
->>>>>>> Add direction control
     wire [NUM_OUTPUTS - 1 : 0] ready_vector;
 
     // -------------------
@@ -297,8 +234,6 @@ module Qsys_mm_interconnect_2_cmd_demux
 
         src10_valid         = sink_channel[10] && sink_valid[10];
 
-<<<<<<< HEAD
-=======
         src11_data          = sink_data;
         src11_startofpacket = sink_startofpacket;
         src11_endofpacket   = sink_endofpacket;
@@ -306,7 +241,6 @@ module Qsys_mm_interconnect_2_cmd_demux
 
         src11_valid         = sink_channel[11] && sink_valid[11];
 
->>>>>>> Add direction control
     end
 
     // -------------------
@@ -323,10 +257,7 @@ module Qsys_mm_interconnect_2_cmd_demux
     assign ready_vector[8] = src8_ready;
     assign ready_vector[9] = src9_ready;
     assign ready_vector[10] = src10_ready;
-<<<<<<< HEAD
-=======
     assign ready_vector[11] = src11_ready;
->>>>>>> Add direction control
 
     assign sink_ready = |(sink_channel & ready_vector);
 

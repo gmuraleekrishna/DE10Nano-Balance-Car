@@ -1,0 +1,48 @@
+`timescale 1ns/1ps
+module PID_Copied(
+	input	clk,
+	input reset_n,
+	
+   input	wire [7:0] process,
+	output reg [1:0] direction,
+	output reg signed [3:0] drive,
+	output [7:0] LED
+);
+
+   integer signed error;
+   integer signed int_error_new;
+   integer signed int_error_old;
+	
+	
+	reg [3:0] linear_value;
+	
+	
+	module linearizer(
+		.process(process),
+		.value(linear_value)
+	);
+	
+	
+	
+	`define TARGET 4'd6
+	`define KP 1
+	`define KI 1
+
+   assign error = `TARGET - linear_value;
+   assign int_error_new = error + int_error_old;
+	assign LED = process;
+	always@(posedge clk or negedge nRst) begin
+		if(!nRst) begin
+	      direction      <= 8'd0;	
+         int_error_old  <= 8'd0;
+		end else begin 
+         drive <= (Kp*error); // + (Ki*int_error_new)
+         int_error_old <= int_error_new;
+			if (drive == 4'd0) direction <= 2'd0; //straight
+			else if (drive < 4'd0) direction <= 2'd1; //left
+			else if (drive > 4'd0) direction <= 2'd2; //right
+			else if (drive == 4'd1 && drive == 4'd11) direction <= 2'd3; //left
+			else direction <= 2'd3; //straight
+		end
+	end
+endmodule 

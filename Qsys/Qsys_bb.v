@@ -11,9 +11,10 @@ module Qsys (
 	dc_motor_right_conduit_end_motor_in1,
 	dc_motor_right_conduit_end_motor_in2,
 	dc_motor_right_conduit_end_pwm,
+	direction_controller_0_conduit_end_led_readdata,
+	direction_controller_0_conduit_leds_array_export,
 	esp32_io_external_connection_export,
 	ir_rx_conduit_end_export,
-	led_external_connection_export,
 	motor_measure_left_conduit_end_ab,
 	motor_measure_right_conduit_end_ab,
 	mpu_i2c_export_scl_pad_io,
@@ -37,9 +38,10 @@ module Qsys (
 	output		dc_motor_right_conduit_end_motor_in1;
 	output		dc_motor_right_conduit_end_motor_in2;
 	output		dc_motor_right_conduit_end_pwm;
+	output	[7:0]	direction_controller_0_conduit_end_led_readdata;
+	inout	[7:0]	direction_controller_0_conduit_leds_array_export;
 	input	[2:0]	esp32_io_external_connection_export;
 	input		ir_rx_conduit_end_export;
-	output	[7:0]	led_external_connection_export;
 	input	[1:0]	motor_measure_left_conduit_end_ab;
 	input	[1:0]	motor_measure_right_conduit_end_ab;
 	inout		mpu_i2c_export_scl_pad_io;
